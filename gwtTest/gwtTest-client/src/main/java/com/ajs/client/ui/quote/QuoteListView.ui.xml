@@ -1,0 +1,51 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+             xmlns:g='urn:import:com.google.gwt.user.client.ui'
+        >
+
+    <ui:style>
+        .border {
+            border-top: solid #dcdcdc;
+            border-right: solid #dcdcdc;
+            border-bottom: solid #dcdcdc;
+            border-left: solid #dcdcdc;
+            border-image: none;
+            border-width: 2px;
+        }
+        .floatRight {
+            float: right;
+        }
+
+        .paddingContent
+        {
+            padding-top:15px;
+            padding-left:25px;
+            padding-right: 25px;
+            padding-bottom: 25px;
+        }
+
+        .paddingButton
+        {
+            padding-bottom: 60px;
+            width: 1350px;
+        }
+
+        .bgwhite {
+            background: #f5f5f5
+        }
+
+    </ui:style>
+    <g:HTMLPanel>
+        <g:SimplePanel ui:field="contentWrapperPanel" height="775px" addStyleNames='{style.bgwhite}'>
+
+            <g:FlowPanel addStyleNames='{style.border} {style.paddingContent}'>
+                <g:FlowPanel addStyleNames='{style.paddingButton}'>
+                    <g:Button ui:field='btnAddQuote' text='Add Quote' addStyleNames='{style.floatRight}'></g:Button>
+                    <g:Button ui:field='btnProcessDeletes' text='Delete Items' addStyleNames='{style.floatRight}'></g:Button>
+                </g:FlowPanel>
+
+                <g:FlowPanel ui:field="gridPanel"></g:FlowPanel>
+            </g:FlowPanel>
+        </g:SimplePanel>
+    </g:HTMLPanel>
+</ui:UiBinder>

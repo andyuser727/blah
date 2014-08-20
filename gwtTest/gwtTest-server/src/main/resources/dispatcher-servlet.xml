@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:jee="http://www.springframework.org/schema/jee" xmlns:tx="http://www.springframework.org/schema/tx" xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context-3.0.xsd
+    http://www.springframework.org/schema/jee
+    http://www.springframework.org/schema/jee/spring-jee-3.0.xsd
+    http://www.springframework.org/schema/tx
+    http://www.springframework.org/schema/tx/spring-tx.xsd
+    http://www.springframework.org/schema/util
+    http://www.springframework.org/schema/util/spring-util-3.0.xsd">
+
+    <context:annotation-config/>
+
+    <context:component-scan base-package="com.ajs"/>
+
+    <tx:annotation-driven proxy-target-class="true"/>
+
+    <bean id="transactionManager" class="org.springframework.orm.hibernate3.HibernateTransactionManager">
+        <property name="sessionFactory" ref="sessionFactory" />
+    </bean>
+
+    <!--FIND OUT ABOUT THIS!-->
+
+    <!--<bean id="transactionInterceptor"-->
+          <!--class="org.springframework.transaction.interceptor.TransactionInterceptor">-->
+        <!--<property name="transactionManager" ref="transactionManager" />-->
+        <!--<property name="transactionAttributeSource">-->
+            <!--<value>-->
+                <!--com.ajs.dao.EmployeeDao.save*=PROPAGATION_REQUIRED-->
+                <!--com.ajs.dao.EmployeeDao.findAll*=PROPAGATION_REQUIRED-->
+            <!--</value>-->
+        <!--</property>-->
+    <!--</bean>-->
+
+
+    <tx:annotation-driven/>
+
+    <!--<bean id="hibernateFilter" class="org.springframework.orm.hibernate3.support.OpenSessionInViewFilter"/>-->
+
+    <!-- JNDI Lookup to access dataSource and tx manager - see META-INF/context.xml and WEB-INF/web.xml -->
+    <jee:jndi-lookup id="dataSource" jndi-name="jdbc/MySql" expected-type="javax.sql.DataSource"/>
+
+    <bean id="sessionFactory" class="org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean">
+        <property name="dataSource" ref="dataSource"/>
+        <property name="annotatedClasses">
+            <list>
+                <value>com.ajs.domain.Product</value>
+                <value>com.ajs.domain.Employee</value>
+                <value>com.ajs.domain.Category</value>
+                <value>com.ajs.domain.Item</value>
+                <value>com.ajs.domain.Invoice</value>
+                <value>com.ajs.domain.Person</value>
+                <value>com.ajs.domain.Party</value>
+                <value>com.ajs.domain.Customer</value>
+                <value>com.ajs.domain.InvoiceItemRlship</value>
+                <value>com.ajs.domain.Quote</value>
+                <value>com.ajs.domain.QuoteItemRlship</value>
+                <value>com.ajs.domain.CustomerOrder</value>
+                <value>com.ajs.domain.CustomerOrderItemRlship</value>
+                <value>com.ajs.domain.Payment</value>
+                <value>com.ajs.domain.PaymentInvoiceAllocation</value>
+            </list>
+        </property>
+        <!--having both of these seems to make spring give -->
+        <!--getter not found for id in non annotated classes! -->
+        <!--<property name="mappingResources">-->
+
+        <!--<list>-->
+        <!--<value>Test.hbm.xml</value>-->
+        <!--</list>-->
+        <!--</property>-->
+        <property name="configLocations" ref="hibernateCfgLocations"/>
+
+        <property name="hibernateProperties">
+            <props>
+                <prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect</prop>
+                <!--<prop key="hibernate.dialect">org.hibernate.dialect.H2Dialect</prop>-->
+                <!--<prop key="hibernate.dialect">org.hibernate.dialect.SQLServerDialect</prop>-->
+                <prop key="hibernate.show_sql">true</prop>
+                <prop key="hibernate.hbm2ddl.auto">update</prop>
+                <prop key="hibernate.cache.use_second_level_cache">true</prop>
+                <prop key="hibernate.cache.region.factory_class">net.sf.ehcache.hibernate.EhCacheRegionFactory</prop>
+                <prop key="net.sf.ehcache.configurationResourceName">/ehcache-cfg.xml</prop>
+            </props>
+        </property>
+    </bean>
+
+    <util:list id="hibernateCfgLocations">
+        <value>classpath:hibernate-config.cfg.xml</value>
+    </util:list>
+
+    <!-- Maps the request through to a concrete controller instance -->
+    <bean id="urlMapping" class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+        <property name="mappings">
+            <value>
+                /**/app.rpc=appController
+            </value>
+        </property>
+    </bean>
+
+    <!-- GwtRpcController wraps our service in customerOrder to decode the incoming -->
+    <!-- request then delegates processing of the call to the POJO service -->
+    <!-- and then encodes the return value forwarding the response. -->
+    <bean id="appController" class="com.ajs.controller.GwtRpcController">
+        <property name="remoteService">
+            <bean class="com.ajs.service.AppServiceImpl"/>
+        </property>
+    </bean>
+
+</beans>

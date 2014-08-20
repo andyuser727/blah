@@ -1,0 +1,76 @@
+/*new location starts*/
+.mapWidget{}
+.mapWidget .form-container{ background: #f0f1f1;
+    border-bottom: 1px solid #ccc;
+    font-size: 18px;
+    padding: 25px;}
+.mapWidget .form-container .text{ width: 202px;
+    border: 0px;
+    border-bottom: 1px black solid;
+    padding-bottom: 1em;
+    font-size: 18px;
+    font-weight: 300;
+    text-transform: uppercase;
+    background: #f0f1f1; margin: 0 0 0 10px; }
+.mapWidget .form-container .text{}
+.mapWidget .form-container .button{}
+.map-container
+{clear: left;
+    float: left;
+    height: 500px;
+    width: 100%;}
+.map-container #left-side {float: left;
+    width: 330px;
+    height: 500px;
+    overflow-y: auto;}
+.map-container #left-side  #holder{ display: block;
+    clear: left;
+    float: left;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width:100%;
+    margin-left:0px;}
+.map-container #left-side  #holder .location{ position:relative; display: block;
+    clear: left;
+    float: left;
+    cursor: pointer;
+    width: 100%;
+    border: 1px solid #f2f2f2;
+    padding: 15px 15px 60px 15px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 1;
+    background: #f2f2f2!important;
+    border-bottom: 1px solid #ccc;}
+
+.map-container #left-side  #holder .location.active{ webkit-box-shadow: 0 0 8px rgba(82, 168, 236, 0.7);
+    -moz-box-shadow: 0 0 8px rgba(82, 168, 236, 0.7);
+    box-shadow: 0 0 8px rgba(82, 168, 236, 0.7);
+    border: 1px solid rgba(82, 168, 236, 0.9);
+    -webkit-transition: border 0.2s linear 0s,box-shadow 0.2s linear 0s;
+    -moz-transition: border 0.2s linear 0s,box-shadow 0.2s linear 0s;
+    -o-transition: border 0.2s linear 0s,box-shadow 0.2s linear 0s;
+    transition: border 0.2s linear 0s,box-shadow 0.2s linear 0s;
+    z-index: 2;
+    background: #fff!important;}
+.map-container #left-side  #holder .name{font-size: 18px;}
+.map-container #left-side  #holder .distance{font-size: 18px;}
+.map-container #left-side  #holder .city,  .map-container #left-side  #holder .postal{font-size: 15px;}
+.map-container #left-side  #holder .takepart{position: absolute;
+    bottom: 10px;
+    right: 20px;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 2em;
+    text-decoration: none;}
+.map-container #left-side  #holder .takepart:before{font-size: 1em;
+    content: "\279e";
+    display: block;
+    margin-bottom: -15px;}
+.map-container #map { position:relative; overflow:hidden;}

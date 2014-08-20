@@ -1,0 +1,113 @@
+<?xml version='1.0' encoding='UTF-8'?><wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://incident.cxf.example.camel.apache.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns1="http://schemas.xmlsoap.org/soap/http" name="IncidentService" targetNamespace="http://incident.cxf.example.camel.apache.org/">
+  <wsdl:types>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://incident.cxf.example.camel.apache.org/" attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://incident.cxf.example.camel.apache.org/">
+  <xs:complexType name="inputStatusIncident">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="incidentId" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="outputStatusIncident">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="status" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="inputReportIncident">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="details" type="xs:string"/>
+      <xs:element minOccurs="0" name="email" type="xs:string"/>
+      <xs:element minOccurs="0" name="familyName" type="xs:string"/>
+      <xs:element minOccurs="0" name="givenName" type="xs:string"/>
+      <xs:element minOccurs="0" name="incidentDate" type="xs:string"/>
+      <xs:element minOccurs="0" name="incidentId" type="xs:string"/>
+      <xs:element minOccurs="0" name="phone" type="xs:string"/>
+      <xs:element minOccurs="0" name="summary" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="outputReportIncident">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="code" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="statusIncident" type="statusIncident"/>
+  <xs:complexType name="statusIncident">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="inputStatusIncident"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="statusIncidentResponse" type="statusIncidentResponse"/>
+  <xs:complexType name="statusIncidentResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="outputStatusIncident"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="reportIncident" type="reportIncident"/>
+  <xs:complexType name="reportIncident">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="inputReportIncident"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="reportIncidentResponse" type="reportIncidentResponse"/>
+  <xs:complexType name="reportIncidentResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="outputReportIncident"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
+  </wsdl:types>
+  <wsdl:message name="statusIncident">
+    <wsdl:part element="tns:statusIncident" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="statusIncidentResponse">
+    <wsdl:part element="tns:statusIncidentResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="reportIncident">
+    <wsdl:part element="tns:reportIncident" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="reportIncidentResponse">
+    <wsdl:part element="tns:reportIncidentResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="IncidentServicePortType">
+    <wsdl:operation name="statusIncident">
+      <wsdl:input message="tns:statusIncident" name="statusIncident">
+    </wsdl:input>
+      <wsdl:output message="tns:statusIncidentResponse" name="statusIncidentResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="reportIncident">
+      <wsdl:input message="tns:reportIncident" name="reportIncident">
+    </wsdl:input>
+      <wsdl:output message="tns:reportIncidentResponse" name="reportIncidentResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="IncidentServiceSoapBinding" type="tns:IncidentServicePortType">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="statusIncident">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="statusIncident">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="statusIncidentResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="reportIncident">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="reportIncident">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="reportIncidentResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="IncidentService">
+    <wsdl:port binding="tns:IncidentServiceSoapBinding" name="IncidentServicePort">
+      <soap:address location="http://localhost:8086/webservices/incident"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

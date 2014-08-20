@@ -1,0 +1,34 @@
+Jul 1, 2013 7:01:05 PM org.apache.catalina.core.AprLifecycleListener init
+INFO: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: .:/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java
+Jul 1, 2013 7:01:05 PM org.apache.coyote.http11.Http11Protocol init
+INFO: Initializing Coyote HTTP/1.1 on http-8080
+Jul 1, 2013 7:01:05 PM org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 389 ms
+Jul 1, 2013 7:01:05 PM org.apache.catalina.core.StandardService start
+INFO: Starting service Catalina
+Jul 1, 2013 7:01:05 PM org.apache.catalina.core.StandardEngine start
+INFO: Starting Servlet Engine: Apache Tomcat/6.0.37
+Jul 1, 2013 7:01:05 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory docs
+Jul 1, 2013 7:01:05 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory examples
+Jul 1, 2013 7:01:05 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory host-manager
+Jul 1, 2013 7:01:06 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory manager
+Jul 1, 2013 7:01:06 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory ROOT
+Jul 1, 2013 7:01:06 PM org.apache.coyote.http11.Http11Protocol start
+INFO: Starting Coyote HTTP/1.1 on http-8080
+Jul 1, 2013 7:01:06 PM org.apache.jk.common.ChannelSocket init
+INFO: JK: ajp13 listening on /0.0.0.0:8009
+Jul 1, 2013 7:01:06 PM org.apache.jk.server.JkMain start
+INFO: Jk running ID=0 time=0/13  config=null
+Jul 1, 2013 7:01:06 PM org.apache.catalina.startup.Catalina start
+INFO: Server startup in 588 ms
+Jul 1, 2013 7:03:06 PM org.apache.coyote.http11.Http11Protocol pause
+INFO: Pausing Coyote HTTP/1.1 on http-8080
+Jul 1, 2013 7:03:07 PM org.apache.catalina.core.StandardService stop
+INFO: Stopping service Catalina
+Jul 1, 2013 7:03:07 PM org.apache.coyote.http11.Http11Protocol destroy
+INFO: Stopping Coyote HTTP/1.1 on http-8080

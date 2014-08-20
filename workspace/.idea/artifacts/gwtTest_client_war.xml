@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="gwtTest-client:war">
+    <output-path>$PROJECT_DIR$/../gwtTest/gwtTest-client/target</output-path>
+    <root id="archive" name="gwtTest-client-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="gwtTest-client:war exploded" />
+    </root>
+  </artifact>
+</component>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/gwtTest.iml" filepath="$PROJECT_DIR$/gwtTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gwtTest-client.iml" filepath="$PROJECT_DIR$/gwtTest-client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gwtTest-dao.iml" filepath="$PROJECT_DIR$/gwtTest-dao.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gwtTest-gwtBase.iml" filepath="$PROJECT_DIR$/gwtTest-gwtBase.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gwtTest-model.iml" filepath="$PROJECT_DIR$/gwtTest-model.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gwtTest-repository.iml" filepath="$PROJECT_DIR$/gwtTest-repository.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gwtTest-server.iml" filepath="$PROJECT_DIR$/gwtTest-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gwtTest-service.iml" filepath="$PROJECT_DIR$/gwtTest-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gwtTest-shared.iml" filepath="$PROJECT_DIR$/gwtTest-shared.iml" />
+    </modules>
+  </component>
+</project>
+

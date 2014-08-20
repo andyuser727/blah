@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding" useUTFGuessing="true" native2AsciiForPropertiesFiles="false">
+    <file url="file://$PROJECT_DIR$/../gwtTest" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../gwtTest/gwtTest-client" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../gwtTest/gwtTest-dao" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../gwtTest/gwtTest-gwtBase" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../gwtTest/gwtTest-model" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../gwtTest/gwtTest-repository" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../gwtTest/gwtTest-server" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../gwtTest/gwtTest-service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../gwtTest/gwtTest-shared" charset="UTF-8" />
+  </component>
+</project>
+

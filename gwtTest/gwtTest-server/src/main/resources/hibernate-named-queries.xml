@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <query name="findAllCategories">
+        <![CDATA[
+            select c
+            from Category as c
+            where c.code like :partialCode
+        ]]>
+    </query>
+
+    <query name="findAllInvoices">
+        <![CDATA[
+            select i
+            from Invoice as i
+            where i.customerReference like :partialCode
+        ]]>
+    </query>
+
+    <query name="allInvoices">
+        <![CDATA[
+            select i
+            from Invoice as i
+        ]]>
+    </query>
+
+    <query name="listInvoiceIds">
+        <![CDATA[
+            select i.id
+            from Invoice as i
+        ]]>
+    </query>
+
+    <query name="findAllCustomers">
+        <![CDATA[
+            select c
+            from Customer as c
+            where c.surName like :partialCode
+        ]]>
+    </query>
+
+    <query name="findAllItemsExcludeIds">
+        <![CDATA[
+            select i
+            from Item as i
+            where i.id not in (:ids)
+        ]]>
+    </query>
+
+</hibernate-mapping>

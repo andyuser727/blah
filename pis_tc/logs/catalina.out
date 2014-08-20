@@ -1,0 +1,1184 @@
+Jul 1, 2013 7:01:05 PM org.apache.catalina.core.AprLifecycleListener init
+INFO: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: .:/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java
+Jul 1, 2013 7:01:05 PM org.apache.coyote.http11.Http11Protocol init
+INFO: Initializing Coyote HTTP/1.1 on http-8080
+Jul 1, 2013 7:01:05 PM org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 389 ms
+Jul 1, 2013 7:01:05 PM org.apache.catalina.core.StandardService start
+INFO: Starting service Catalina
+Jul 1, 2013 7:01:05 PM org.apache.catalina.core.StandardEngine start
+INFO: Starting Servlet Engine: Apache Tomcat/6.0.37
+Jul 1, 2013 7:01:05 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory docs
+Jul 1, 2013 7:01:05 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory examples
+Jul 1, 2013 7:01:05 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory host-manager
+Jul 1, 2013 7:01:06 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory manager
+Jul 1, 2013 7:01:06 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory ROOT
+Jul 1, 2013 7:01:06 PM org.apache.coyote.http11.Http11Protocol start
+INFO: Starting Coyote HTTP/1.1 on http-8080
+Jul 1, 2013 7:01:06 PM org.apache.jk.common.ChannelSocket init
+INFO: JK: ajp13 listening on /0.0.0.0:8009
+Jul 1, 2013 7:01:06 PM org.apache.jk.server.JkMain start
+INFO: Jk running ID=0 time=0/13  config=null
+Jul 1, 2013 7:01:06 PM org.apache.catalina.startup.Catalina start
+INFO: Server startup in 588 ms
+Jul 1, 2013 7:03:06 PM org.apache.coyote.http11.Http11Protocol pause
+INFO: Pausing Coyote HTTP/1.1 on http-8080
+Jul 1, 2013 7:03:07 PM org.apache.catalina.core.StandardService stop
+INFO: Stopping service Catalina
+Jul 1, 2013 7:03:07 PM org.apache.coyote.http11.Http11Protocol destroy
+INFO: Stopping Coyote HTTP/1.1 on http-8080
+Nov 16, 2013 6:54:39 PM org.apache.catalina.core.AprLifecycleListener init
+INFO: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: .:/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java
+Nov 16, 2013 6:54:39 PM org.apache.coyote.http11.Http11Protocol init
+SEVERE: Error initializing endpoint
+java.net.BindException: Address already in use <null>:8080
+	at org.apache.tomcat.util.net.JIoEndpoint.init(JIoEndpoint.java:549)
+	at org.apache.coyote.http11.Http11Protocol.init(Http11Protocol.java:180)
+	at org.apache.catalina.connector.Connector.initialize(Connector.java:1123)
+	at org.apache.catalina.core.StandardService.initialize(StandardService.java:703)
+	at org.apache.catalina.core.StandardServer.initialize(StandardServer.java:838)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:538)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:562)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.catalina.startup.Bootstrap.load(Bootstrap.java:261)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:413)
+Caused by: java.net.BindException: Address already in use
+	at java.net.PlainSocketImpl.socketBind(Native Method)
+	at java.net.PlainSocketImpl.socketBind(PlainSocketImpl.java:521)
+	at java.net.PlainSocketImpl.bind(PlainSocketImpl.java:414)
+	at java.net.ServerSocket.bind(ServerSocket.java:326)
+	at java.net.ServerSocket.<init>(ServerSocket.java:192)
+	at java.net.ServerSocket.<init>(ServerSocket.java:148)
+	at org.apache.tomcat.util.net.DefaultServerSocketFactory.createSocket(DefaultServerSocketFactory.java:50)
+	at org.apache.tomcat.util.net.JIoEndpoint.init(JIoEndpoint.java:538)
+	... 12 more
+Nov 16, 2013 6:54:39 PM org.apache.catalina.core.StandardService initialize
+SEVERE: Failed to initialize connector [Connector[HTTP/1.1-8080]]
+LifecycleException:  Protocol handler initialization failed: java.net.BindException: Address already in use <null>:8080
+	at org.apache.catalina.connector.Connector.initialize(Connector.java:1125)
+	at org.apache.catalina.core.StandardService.initialize(StandardService.java:703)
+	at org.apache.catalina.core.StandardServer.initialize(StandardServer.java:838)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:538)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:562)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.catalina.startup.Bootstrap.load(Bootstrap.java:261)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:413)
+Nov 16, 2013 6:54:39 PM org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 408 ms
+Nov 16, 2013 6:54:39 PM org.apache.catalina.core.StandardService start
+INFO: Starting service Catalina
+Nov 16, 2013 6:54:39 PM org.apache.catalina.core.StandardEngine start
+INFO: Starting Servlet Engine: Apache Tomcat/6.0.37
+Nov 16, 2013 6:54:39 PM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deploying configuration descriptor gwtTest.xml
+Nov 16, 2013 6:54:39 PM org.apache.catalina.core.StandardContext resourcesStart
+SEVERE: Error starting static Resources
+java.lang.IllegalArgumentException: Document base /Users/AndySmith/test_tomcat/webapps/gwtTest does not exist or is not a readable directory
+	at org.apache.naming.resources.FileDirContext.setDocBase(FileDirContext.java:142)
+	at org.apache.catalina.core.StandardContext.resourcesStart(StandardContext.java:4320)
+	at org.apache.catalina.core.StandardContext.start(StandardContext.java:4489)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:799)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:779)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:601)
+	at org.apache.catalina.startup.HostConfig.deployDescriptor(HostConfig.java:675)
+	at org.apache.catalina.startup.HostConfig.deployDescriptors(HostConfig.java:601)
+	at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:502)
+	at org.apache.catalina.startup.HostConfig.start(HostConfig.java:1317)
+	at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:324)
+	at org.apache.catalina.util.LifecycleSupport.fireLifecycleEvent(LifecycleSupport.java:142)
+	at org.apache.catalina.core.ContainerBase.start(ContainerBase.java:1065)
+	at org.apache.catalina.core.StandardHost.start(StandardHost.java:840)
+	at org.apache.catalina.core.ContainerBase.start(ContainerBase.java:1057)
+	at org.apache.catalina.core.StandardEngine.start(StandardEngine.java:463)
+	at org.apache.catalina.core.StandardService.start(StandardService.java:525)
+	at org.apache.catalina.core.StandardServer.start(StandardServer.java:754)
+	at org.apache.catalina.startup.Catalina.start(Catalina.java:595)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:289)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:414)
+Nov 16, 2013 6:54:39 PM org.apache.catalina.core.StandardContext start
+SEVERE: Error in resourceStart()
+Nov 16, 2013 6:54:39 PM org.apache.catalina.core.StandardContext start
+SEVERE: Error getConfigured
+Nov 16, 2013 6:54:39 PM org.apache.catalina.core.StandardContext start
+SEVERE: Context [/gwtTest] startup failed due to previous errors
+Nov 16, 2013 6:54:39 PM org.apache.catalina.core.StandardContext stop
+INFO: Container org.apache.catalina.core.ContainerBase.[Catalina].[localhost].[/gwtTest] has not been started
+Nov 16, 2013 6:54:39 PM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deploying configuration descriptor host-manager.xml
+Nov 16, 2013 6:54:39 PM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deploying configuration descriptor manager.xml
+Nov 16, 2013 6:54:40 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory docs
+Nov 16, 2013 6:54:40 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory examples
+Nov 16, 2013 6:54:40 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory ROOT
+Nov 16, 2013 6:54:40 PM org.apache.coyote.http11.Http11Protocol start
+SEVERE: Error starting endpoint
+java.net.BindException: Address already in use <null>:8080
+	at org.apache.tomcat.util.net.JIoEndpoint.init(JIoEndpoint.java:549)
+	at org.apache.tomcat.util.net.JIoEndpoint.start(JIoEndpoint.java:565)
+	at org.apache.coyote.http11.Http11Protocol.start(Http11Protocol.java:207)
+	at org.apache.catalina.connector.Connector.start(Connector.java:1196)
+	at org.apache.catalina.core.StandardService.start(StandardService.java:540)
+	at org.apache.catalina.core.StandardServer.start(StandardServer.java:754)
+	at org.apache.catalina.startup.Catalina.start(Catalina.java:595)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:289)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:414)
+Caused by: java.net.BindException: Address already in use
+	at java.net.PlainSocketImpl.socketBind(Native Method)
+	at java.net.PlainSocketImpl.socketBind(PlainSocketImpl.java:521)
+	at java.net.PlainSocketImpl.bind(PlainSocketImpl.java:414)
+	at java.net.ServerSocket.bind(ServerSocket.java:326)
+	at java.net.ServerSocket.<init>(ServerSocket.java:192)
+	at java.net.ServerSocket.<init>(ServerSocket.java:148)
+	at org.apache.tomcat.util.net.DefaultServerSocketFactory.createSocket(DefaultServerSocketFactory.java:50)
+	at org.apache.tomcat.util.net.JIoEndpoint.init(JIoEndpoint.java:538)
+	... 12 more
+Nov 16, 2013 6:54:40 PM org.apache.catalina.core.StandardService start
+SEVERE: Failed to start connector [Connector[HTTP/1.1-8080]]
+LifecycleException:  service.getName(): "Catalina";  Protocol handler start failed: java.net.BindException: Address already in use <null>:8080
+	at org.apache.catalina.connector.Connector.start(Connector.java:1203)
+	at org.apache.catalina.core.StandardService.start(StandardService.java:540)
+	at org.apache.catalina.core.StandardServer.start(StandardServer.java:754)
+	at org.apache.catalina.startup.Catalina.start(Catalina.java:595)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:289)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:414)
+Nov 16, 2013 6:54:40 PM org.apache.jk.common.ChannelSocket init
+INFO: Port busy 8009 java.net.BindException: Address already in use
+Nov 16, 2013 6:54:40 PM org.apache.jk.common.ChannelSocket init
+SEVERE: Can't find free port 8009 8009
+Nov 16, 2013 6:54:40 PM org.apache.jk.server.JkMain start
+INFO: Jk running ID=0 time=0/9  config=null
+Nov 16, 2013 6:54:40 PM org.apache.catalina.startup.Catalina start
+INFO: Server startup in 625 ms
+Nov 16, 2013 6:54:40 PM org.apache.catalina.core.StandardServer await
+SEVERE: StandardServer.await: create[8005]: 
+java.net.BindException: Address already in use
+	at java.net.PlainSocketImpl.socketBind(Native Method)
+	at java.net.PlainSocketImpl.socketBind(PlainSocketImpl.java:521)
+	at java.net.PlainSocketImpl.bind(PlainSocketImpl.java:414)
+	at java.net.ServerSocket.bind(ServerSocket.java:326)
+	at java.net.ServerSocket.<init>(ServerSocket.java:192)
+	at org.apache.catalina.core.StandardServer.await(StandardServer.java:406)
+	at org.apache.catalina.startup.Catalina.await(Catalina.java:676)
+	at org.apache.catalina.startup.Catalina.start(Catalina.java:628)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:289)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:414)
+Nov 16, 2013 6:54:40 PM org.apache.coyote.http11.Http11Protocol pause
+INFO: Pausing Coyote HTTP/1.1 on http-8080
+Nov 16, 2013 6:54:41 PM org.apache.catalina.core.StandardService stop
+INFO: Stopping service Catalina
+Nov 16, 2013 6:54:41 PM org.apache.coyote.http11.Http11Protocol destroy
+INFO: Stopping Coyote HTTP/1.1 on http-8080
+Nov 16, 2013 7:03:44 PM org.apache.catalina.core.AprLifecycleListener init
+INFO: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: .:/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java
+Nov 16, 2013 7:03:44 PM org.apache.coyote.http11.Http11Protocol init
+INFO: Initializing Coyote HTTP/1.1 on http-8080
+Nov 16, 2013 7:03:44 PM org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 399 ms
+Nov 16, 2013 7:03:44 PM org.apache.catalina.core.StandardService start
+INFO: Starting service Catalina
+Nov 16, 2013 7:03:44 PM org.apache.catalina.core.StandardEngine start
+INFO: Starting Servlet Engine: Apache Tomcat/6.0.37
+Nov 16, 2013 7:03:44 PM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deploying configuration descriptor gwtTest.xml
+Nov 16, 2013 7:03:44 PM org.apache.catalina.core.StandardContext resourcesStart
+SEVERE: Error starting static Resources
+java.lang.IllegalArgumentException: Document base /Users/AndySmith/test_tomcat/webapps/gwtTest does not exist or is not a readable directory
+	at org.apache.naming.resources.FileDirContext.setDocBase(FileDirContext.java:142)
+	at org.apache.catalina.core.StandardContext.resourcesStart(StandardContext.java:4320)
+	at org.apache.catalina.core.StandardContext.start(StandardContext.java:4489)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:799)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:779)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:601)
+	at org.apache.catalina.startup.HostConfig.deployDescriptor(HostConfig.java:675)
+	at org.apache.catalina.startup.HostConfig.deployDescriptors(HostConfig.java:601)
+	at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:502)
+	at org.apache.catalina.startup.HostConfig.start(HostConfig.java:1317)
+	at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:324)
+	at org.apache.catalina.util.LifecycleSupport.fireLifecycleEvent(LifecycleSupport.java:142)
+	at org.apache.catalina.core.ContainerBase.start(ContainerBase.java:1065)
+	at org.apache.catalina.core.StandardHost.start(StandardHost.java:840)
+	at org.apache.catalina.core.ContainerBase.start(ContainerBase.java:1057)
+	at org.apache.catalina.core.StandardEngine.start(StandardEngine.java:463)
+	at org.apache.catalina.core.StandardService.start(StandardService.java:525)
+	at org.apache.catalina.core.StandardServer.start(StandardServer.java:754)
+	at org.apache.catalina.startup.Catalina.start(Catalina.java:595)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:289)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:414)
+Nov 16, 2013 7:03:44 PM org.apache.catalina.core.StandardContext start
+SEVERE: Error in resourceStart()
+Nov 16, 2013 7:03:44 PM org.apache.catalina.core.StandardContext start
+SEVERE: Error getConfigured
+Nov 16, 2013 7:03:44 PM org.apache.catalina.core.StandardContext start
+SEVERE: Context [/gwtTest] startup failed due to previous errors
+Nov 16, 2013 7:03:44 PM org.apache.catalina.core.StandardContext stop
+INFO: Container org.apache.catalina.core.ContainerBase.[Catalina].[localhost].[/gwtTest] has not been started
+Nov 16, 2013 7:03:44 PM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deploying configuration descriptor host-manager.xml
+Nov 16, 2013 7:03:45 PM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deploying configuration descriptor manager.xml
+Nov 16, 2013 7:03:45 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory docs
+Nov 16, 2013 7:03:45 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory examples
+Nov 16, 2013 7:03:45 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory ROOT
+Nov 16, 2013 7:03:45 PM org.apache.coyote.http11.Http11Protocol start
+INFO: Starting Coyote HTTP/1.1 on http-8080
+Nov 16, 2013 7:03:45 PM org.apache.jk.common.ChannelSocket init
+INFO: JK: ajp13 listening on /0.0.0.0:8009
+Nov 16, 2013 7:03:45 PM org.apache.jk.server.JkMain start
+INFO: Jk running ID=0 time=0/12  config=null
+Nov 16, 2013 7:03:45 PM org.apache.catalina.startup.Catalina start
+INFO: Server startup in 616 ms
+Nov 16, 2013 7:04:27 PM org.apache.coyote.http11.Http11Protocol pause
+INFO: Pausing Coyote HTTP/1.1 on http-8080
+Nov 16, 2013 7:04:28 PM org.apache.catalina.core.StandardService stop
+INFO: Stopping service Catalina
+Nov 16, 2013 7:04:28 PM org.apache.coyote.http11.Http11Protocol destroy
+INFO: Stopping Coyote HTTP/1.1 on http-8080
+Dec 14, 2013 5:29:03 PM org.apache.catalina.core.AprLifecycleListener init
+INFO: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: .:/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java
+Dec 14, 2013 5:29:04 PM org.apache.coyote.http11.Http11Protocol init
+INFO: Initializing Coyote HTTP/1.1 on http-8080
+Dec 14, 2013 5:29:04 PM org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 389 ms
+Dec 14, 2013 5:29:04 PM org.apache.catalina.core.StandardService start
+INFO: Starting service Catalina
+Dec 14, 2013 5:29:04 PM org.apache.catalina.core.StandardEngine start
+INFO: Starting Servlet Engine: Apache Tomcat/6.0.37
+Dec 14, 2013 5:29:04 PM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deploying configuration descriptor gwtTest.xml
+Dec 14, 2013 5:29:04 PM org.apache.catalina.core.StandardContext resourcesStart
+SEVERE: Error starting static Resources
+java.lang.IllegalArgumentException: Document base /Users/AndySmith/test_tomcat/webapps/gwtTest does not exist or is not a readable directory
+	at org.apache.naming.resources.FileDirContext.setDocBase(FileDirContext.java:142)
+	at org.apache.catalina.core.StandardContext.resourcesStart(StandardContext.java:4320)
+	at org.apache.catalina.core.StandardContext.start(StandardContext.java:4489)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:799)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:779)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:601)
+	at org.apache.catalina.startup.HostConfig.deployDescriptor(HostConfig.java:675)
+	at org.apache.catalina.startup.HostConfig.deployDescriptors(HostConfig.java:601)
+	at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:502)
+	at org.apache.catalina.startup.HostConfig.start(HostConfig.java:1317)
+	at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:324)
+	at org.apache.catalina.util.LifecycleSupport.fireLifecycleEvent(LifecycleSupport.java:142)
+	at org.apache.catalina.core.ContainerBase.start(ContainerBase.java:1065)
+	at org.apache.catalina.core.StandardHost.start(StandardHost.java:840)
+	at org.apache.catalina.core.ContainerBase.start(ContainerBase.java:1057)
+	at org.apache.catalina.core.StandardEngine.start(StandardEngine.java:463)
+	at org.apache.catalina.core.StandardService.start(StandardService.java:525)
+	at org.apache.catalina.core.StandardServer.start(StandardServer.java:754)
+	at org.apache.catalina.startup.Catalina.start(Catalina.java:595)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:289)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:414)
+Dec 14, 2013 5:29:04 PM org.apache.catalina.core.StandardContext start
+SEVERE: Error in resourceStart()
+Dec 14, 2013 5:29:04 PM org.apache.catalina.core.StandardContext start
+SEVERE: Error getConfigured
+Dec 14, 2013 5:29:04 PM org.apache.catalina.core.StandardContext start
+SEVERE: Context [/gwtTest] startup failed due to previous errors
+Dec 14, 2013 5:29:04 PM org.apache.catalina.core.StandardContext stop
+INFO: Container org.apache.catalina.core.ContainerBase.[Catalina].[localhost].[/gwtTest] has not been started
+Dec 14, 2013 5:29:04 PM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deploying configuration descriptor host-manager.xml
+Dec 14, 2013 5:29:04 PM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deploying configuration descriptor manager.xml
+Dec 14, 2013 5:29:04 PM org.apache.catalina.startup.HostConfig deployWAR
+INFO: Deploying web application archive gwttestl.war
+17:29:05,700  INFO Version:37 - Hibernate Commons Annotations 3.2.0.Final
+17:29:05,707  INFO Environment:593 - Hibernate 3.6.2.Final
+17:29:05,709  INFO Environment:626 - hibernate.properties not found
+17:29:05,712  INFO Environment:804 - Bytecode provider name : javassist
+17:29:05,715  INFO Environment:685 - using JDK 1.4 java.sql.Timestamp handling
+17:29:05,759 DEBUG DefaultIdentifierGeneratorFactory:100 - Registering IdentifierGenerator strategy [uuid2] -> [class org.hibernate.id.UUIDGenerator]
+17:29:05,760 DEBUG DefaultIdentifierGeneratorFactory:100 - Registering IdentifierGenerator strategy [guid] -> [class org.hibernate.id.GUIDGenerator]
+17:29:05,762 DEBUG DefaultIdentifierGeneratorFactory:100 - Registering IdentifierGenerator strategy [uuid] -> [class org.hibernate.id.UUIDHexGenerator]
+17:29:05,762 DEBUG DefaultIdentifierGeneratorFactory:100 - Registering IdentifierGenerator strategy [uuid.hex] -> [class org.hibernate.id.UUIDHexGenerator]
+17:29:05,764 DEBUG DefaultIdentifierGeneratorFactory:100 - Registering IdentifierGenerator strategy [hilo] -> [class org.hibernate.id.TableHiLoGenerator]
+17:29:05,765 DEBUG DefaultIdentifierGeneratorFactory:100 - Registering IdentifierGenerator strategy [assigned] -> [class org.hibernate.id.Assigned]
+17:29:05,767 DEBUG DefaultIdentifierGeneratorFactory:100 - Registering IdentifierGenerator strategy [identity] -> [class org.hibernate.id.IdentityGenerator]
+17:29:05,768 DEBUG DefaultIdentifierGeneratorFactory:100 - Registering IdentifierGenerator strategy [select] -> [class org.hibernate.id.SelectGenerator]
+17:29:05,769 DEBUG DefaultIdentifierGeneratorFactory:100 - Registering IdentifierGenerator strategy [sequence] -> [class org.hibernate.id.SequenceGenerator]
+17:29:05,770 DEBUG DefaultIdentifierGeneratorFactory:100 - Registering IdentifierGenerator strategy [seqhilo] -> [class org.hibernate.id.SequenceHiLoGenerator]
+17:29:05,771 DEBUG DefaultIdentifierGeneratorFactory:100 - Registering IdentifierGenerator strategy [increment] -> [class org.hibernate.id.IncrementGenerator]
+17:29:05,773 DEBUG DefaultIdentifierGeneratorFactory:100 - Registering IdentifierGenerator strategy [foreign] -> [class org.hibernate.id.ForeignGenerator]
+17:29:05,774 DEBUG DefaultIdentifierGeneratorFactory:100 - Registering IdentifierGenerator strategy [sequence-identity] -> [class org.hibernate.id.SequenceIdentityGenerator]
+17:29:05,775 DEBUG DefaultIdentifierGeneratorFactory:100 - Registering IdentifierGenerator strategy [enhanced-sequence] -> [class org.hibernate.id.enhanced.SequenceStyleGenerator]
+17:29:05,776 DEBUG DefaultIdentifierGeneratorFactory:100 - Registering IdentifierGenerator strategy [enhanced-table] -> [class org.hibernate.id.enhanced.TableGenerator]
+17:29:05,816 DEBUG Configuration:3968 - Processing hbm.xml files
+17:29:05,817 DEBUG Configuration:3998 - Process annotated classes
+17:29:05,821  INFO AnnotationBinder:532 - Binding entity from annotated class: com.ajs.domain.PersistentObject
+17:29:05,843 DEBUG Ejb3Column:192 - Binding column: Ejb3DiscriminatorColumn{logicalColumnName'DTYPE', discriminatorTypeName='string'}
+17:29:05,845 DEBUG AnnotationBinder:1019 - no value specified for 'javax.persistence.sharedCache.mode'; using UNSPECIFIED
+17:29:05,852 DEBUG EntityBinder:364 - Import with entity name PersistentObject
+17:29:05,857  INFO EntityBinder:530 - Bind entity com.ajs.domain.PersistentObject on table PersistentObject
+17:29:05,884 DEBUG Ejb3Column:192 - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(PersistentObject), mappingColumn=ID, insertable=true, updatable=true, unique=false}
+17:29:05,888 DEBUG PropertyBinder:175 - binding property id with lazy=false
+17:29:05,891 DEBUG SimpleValueBinder:303 - building SimpleValue for id
+17:29:05,892 DEBUG PropertyBinder:255 - Building property id
+17:29:05,896  INFO AnnotationBinder:532 - Binding entity from annotated class: com.ajs.domain.Product
+17:29:05,897 DEBUG AnnotationBinder:1019 - no value specified for 'javax.persistence.sharedCache.mode'; using UNSPECIFIED
+17:29:05,898 DEBUG EntityBinder:364 - Import with entity name Product
+17:29:05,898  WARN AnnotationBinder:602 - Illegal use of @Table in a subclass of a SINGLE_TABLE hierarchy: com.ajs.domain.Product
+17:29:05,907 DEBUG Ejb3Column:192 - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(PersistentObject), mappingColumn=DESCRIPTION, insertable=true, updatable=true, unique=false}
+17:29:05,907 DEBUG PropertyBinder:175 - binding property description with lazy=false
+17:29:05,908 DEBUG SimpleValueBinder:303 - building SimpleValue for description
+17:29:05,908 DEBUG PropertyBinder:255 - Building property description
+17:29:05,909 DEBUG Ejb3Column:192 - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(PersistentObject), mappingColumn=NAME, insertable=true, updatable=true, unique=false}
+17:29:05,909 DEBUG PropertyBinder:175 - binding property name with lazy=false
+17:29:05,910 DEBUG SimpleValueBinder:303 - building SimpleValue for name
+17:29:05,910 DEBUG PropertyBinder:255 - Building property name
+17:29:05,911  INFO AnnotationBinder:532 - Binding entity from annotated class: com.ajs.domain.Employee
+17:29:05,911 DEBUG AnnotationBinder:1019 - no value specified for 'javax.persistence.sharedCache.mode'; using UNSPECIFIED
+17:29:05,912 DEBUG EntityBinder:364 - Import with entity name Employee
+17:29:05,912  WARN AnnotationBinder:602 - Illegal use of @Table in a subclass of a SINGLE_TABLE hierarchy: com.ajs.domain.Employee
+17:29:05,913 DEBUG Ejb3Column:192 - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(PersistentObject), mappingColumn=FIRST_NAME, insertable=true, updatable=true, unique=false}
+17:29:05,914 DEBUG PropertyBinder:175 - binding property firstName with lazy=false
+17:29:05,914 DEBUG SimpleValueBinder:303 - building SimpleValue for firstName
+17:29:05,915 DEBUG PropertyBinder:255 - Building property firstName
+17:29:05,915 DEBUG Ejb3Column:192 - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(PersistentObject), mappingColumn=LAST_NAME, insertable=true, updatable=true, unique=false}
+17:29:05,916 DEBUG PropertyBinder:175 - binding property lastName with lazy=false
+17:29:05,916 DEBUG SimpleValueBinder:303 - building SimpleValue for lastName
+17:29:05,917 DEBUG PropertyBinder:255 - Building property lastName
+17:29:05,918 DEBUG Ejb3Column:192 - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(PersistentObject), mappingColumn=salary, insertable=true, updatable=true, unique=false}
+17:29:05,918 DEBUG PropertyBinder:175 - binding property salary with lazy=false
+17:29:05,919 DEBUG SimpleValueBinder:303 - building SimpleValue for salary
+17:29:05,919 DEBUG PropertyBinder:255 - Building property salary
+17:29:05,920  INFO AnnotationBinder:532 - Binding entity from annotated class: com.ajs.domain.Category
+17:29:05,920 DEBUG AnnotationBinder:1019 - no value specified for 'javax.persistence.sharedCache.mode'; using UNSPECIFIED
+17:29:05,921 DEBUG EntityBinder:364 - Import with entity name Category
+17:29:05,921  WARN AnnotationBinder:602 - Illegal use of @Table in a subclass of a SINGLE_TABLE hierarchy: com.ajs.domain.Category
+17:29:05,925 DEBUG Ejb3Column:192 - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(PersistentObject), mappingColumn=CODE, insertable=true, updatable=true, unique=false}
+17:29:05,926 DEBUG PropertyBinder:175 - binding property code with lazy=false
+17:29:05,926 DEBUG SimpleValueBinder:303 - building SimpleValue for code
+17:29:05,927 DEBUG PropertyBinder:255 - Building property code
+17:29:05,927 DEBUG Ejb3Column:192 - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(PersistentObject), mappingColumn=DESCRIPTION, insertable=true, updatable=true, unique=false}
+17:29:05,928 DEBUG PropertyBinder:175 - binding property description with lazy=false
+17:29:05,928 DEBUG SimpleValueBinder:303 - building SimpleValue for description
+17:29:05,929 DEBUG PropertyBinder:255 - Building property description
+17:29:05,930 DEBUG Ejb3Column:192 - Binding column: Ejb3JoinColumn{logicalColumnName='null', referencedColumn='null', mappedBy='category'}
+17:29:05,930 DEBUG Ejb3Column:192 - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(PersistentObject), mappingColumn=items, insertable=true, updatable=true, unique=false}
+17:29:05,932 DEBUG Ejb3Column:192 - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(PersistentObject), mappingColumn=null, insertable=true, updatable=true, unique=false}
+17:29:05,943 DEBUG Ejb3Column:192 - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(PersistentObject), mappingColumn=element, insertable=true, updatable=true, unique=false}
+17:29:05,944 DEBUG Ejb3Column:192 - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(PersistentObject), mappingColumn=items_KEY, insertable=true, updatable=true, unique=false}
+17:29:05,945 DEBUG Ejb3Column:192 - Binding column: Ejb3JoinColumn{logicalColumnName='items_KEY', referencedColumn='null', mappedBy='null'}
+17:29:05,947 DEBUG Ejb3Column:192 - Binding column: Ejb3JoinColumn{logicalColumnName='null', referencedColumn='null', mappedBy='category'}
+17:29:05,948 DEBUG Ejb3Column:192 - Binding column: Ejb3JoinColumn{logicalColumnName='null', referencedColumn='null', mappedBy='category'}
+17:29:05,949 DEBUG CollectionBinder:377 - Collection role: com.ajs.domain.Category.items
+17:29:05,951 DEBUG PropertyBinder:255 - Building property items
+17:29:05,954  INFO AnnotationBinder:532 - Binding entity from annotated class: com.ajs.domain.Item
+17:29:05,955 DEBUG AnnotationBinder:1019 - no value specified for 'javax.persistence.sharedCache.mode'; using UNSPECIFIED
+17:29:05,955 DEBUG EntityBinder:364 - Import with entity name Item
+17:29:05,956  WARN AnnotationBinder:602 - Illegal use of @Table in a subclass of a SINGLE_TABLE hierarchy: com.ajs.domain.Item
+17:29:05,961 DEBUG Ejb3Column:192 - Binding column: Ejb3JoinColumn{logicalColumnName='CATEGORY_ID', referencedColumn='', mappedBy=''}
+17:29:05,961 DEBUG Ejb3Column:192 - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(PersistentObject), mappingColumn=category, insertable=true, updatable=true, unique=false}
+17:29:05,963 DEBUG PropertyBinder:255 - Building property category
+17:29:05,964 DEBUG Ejb3Column:192 - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(PersistentObject), mappingColumn=CODE, insertable=true, updatable=true, unique=false}
+17:29:05,964 DEBUG PropertyBinder:175 - binding property code with lazy=false
+17:29:05,965 DEBUG SimpleValueBinder:303 - building SimpleValue for code
+17:29:05,965 DEBUG PropertyBinder:255 - Building property code
+17:29:05,966 DEBUG Ejb3Column:192 - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(PersistentObject), mappingColumn=DESCRIPTION, insertable=true, updatable=true, unique=false}
+17:29:05,966 DEBUG PropertyBinder:175 - binding property description with lazy=false
+17:29:05,967 DEBUG SimpleValueBinder:303 - building SimpleValue for description
+17:29:05,967 DEBUG PropertyBinder:255 - Building property description
+17:29:05,969 DEBUG SimpleValueBinder:341 - Setting SimpleValue typeName for id
+17:29:05,969 DEBUG SimpleValueBinder:341 - Setting SimpleValue typeName for description
+17:29:05,970 DEBUG SimpleValueBinder:341 - Setting SimpleValue typeName for name
+17:29:05,970 DEBUG SimpleValueBinder:341 - Setting SimpleValue typeName for firstName
+17:29:05,970 DEBUG SimpleValueBinder:341 - Setting SimpleValue typeName for lastName
+17:29:05,971 DEBUG SimpleValueBinder:341 - Setting SimpleValue typeName for salary
+17:29:05,971 DEBUG SimpleValueBinder:341 - Setting SimpleValue typeName for code
+17:29:05,972 DEBUG SimpleValueBinder:341 - Setting SimpleValue typeName for description
+17:29:05,972 DEBUG SimpleValueBinder:341 - Setting SimpleValue typeName for code
+17:29:05,973 DEBUG SimpleValueBinder:341 - Setting SimpleValue typeName for description
+17:29:05,974 DEBUG Configuration:1439 - processing fk mappings (*ToOne and JoinedSubclass)
+17:29:05,980 DEBUG Configuration:1681 - processing extends queue
+17:29:05,980 DEBUG Configuration:1735 - processing extends queue
+17:29:05,981 DEBUG Configuration:1684 - processing collection mappings
+17:29:05,981 DEBUG CollectionSecondPass:63 - Second pass for collection: com.ajs.domain.Category.items
+17:29:05,982 DEBUG CollectionBinder:735 - Binding a OneToMany: com.ajs.domain.Category.items through a foreign key
+17:29:05,983  INFO CollectionBinder:762 - Mapping collection: com.ajs.domain.Category.items -> PersistentObject
+17:29:05,985 DEBUG TableBinder:341 - Retrieving property com.ajs.domain.Item.category
+17:29:05,986 DEBUG CollectionSecondPass:79 - Mapped collection key: CATEGORY_ID, one-to-many: com.ajs.domain.Item
+17:29:05,986 DEBUG Configuration:1694 - processing native query and ResultSetMapping mappings
+17:29:05,986 DEBUG Configuration:1702 - processing association property references
+17:29:05,987 DEBUG Configuration:1724 - processing foreign key constraints
+17:29:05,987 DEBUG Configuration:1793 - resolving reference to class: com.ajs.domain.Category
+17:29:05,992  INFO Configuration:1649 - Hibernate Validator not found: ignoring
+17:29:05,994 DEBUG Configuration:1827 - Preparing to build session factory with filters : {}
+17:29:05,994 DEBUG Configuration:3968 - Processing hbm.xml files
+17:29:05,995 DEBUG Configuration:3998 - Process annotated classes
+17:29:05,995 DEBUG Configuration:1439 - processing fk mappings (*ToOne and JoinedSubclass)
+17:29:05,996 DEBUG Configuration:1681 - processing extends queue
+17:29:05,996 DEBUG Configuration:1735 - processing extends queue
+17:29:05,997 DEBUG Configuration:1684 - processing collection mappings
+17:29:05,997 DEBUG Configuration:1694 - processing native query and ResultSetMapping mappings
+17:29:05,998 DEBUG Configuration:1702 - processing association property references
+17:29:05,998 DEBUG Configuration:1724 - processing foreign key constraints
+17:29:05,999 DEBUG Configuration:1793 - resolving reference to class: com.ajs.domain.Category
+17:29:06,001 DEBUG Configuration:1869 - Legacy Validator not present in classpath, ignoring event listener registration
+17:29:06,004 DEBUG HibernateSearchEventListenerRegister:231 - Search not present in classpath, ignoring event listener registration.
+17:29:06,004  INFO HibernateSearchEventListenerRegister:75 - Unable to find org.hibernate.search.event.FullTextIndexEventListener on the classpath. Hibernate Search is not enabled.
+17:29:06,009  INFO ConnectionProviderFactory:173 - Initializing connection provider: org.springframework.orm.hibernate3.LocalDataSourceConnectionProvider
+17:29:06,276  INFO SettingsFactory:117 - Database ->
+       name : Microsoft SQL Server
+    version : 11.00.2100
+      major : 11
+      minor : 0
+17:29:06,276  INFO SettingsFactory:123 - Driver ->
+       name : Microsoft JDBC Driver 4.0 for SQL Server
+    version : 4.0.2206.100
+      major : 4
+      minor : 0
+17:29:06,294  INFO Dialect:135 - Using dialect: org.hibernate.dialect.SQLServerDialect
+17:29:06,305  INFO JdbcSupportLoader:108 - Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+17:29:06,306  INFO TransactionFactoryFactory:62 - Transaction strategy: org.springframework.orm.hibernate3.SpringTransactionFactory
+17:29:06,307  INFO TransactionManagerLookupFactory:80 - No TransactionManagerLookup configured (in JTA environment, use of read-write or transactional second-level cache is not recommended)
+17:29:06,307  INFO SettingsFactory:179 - Automatic flush during beforeCompletion(): disabled
+17:29:06,308  INFO SettingsFactory:183 - Automatic session close at end of transaction: disabled
+17:29:06,308  INFO SettingsFactory:198 - Scrollable result sets: enabled
+17:29:06,309 DEBUG SettingsFactory:202 - Wrap result sets: disabled
+17:29:06,309  INFO SettingsFactory:206 - JDBC3 getGeneratedKeys(): enabled
+17:29:06,309  INFO SettingsFactory:214 - Connection release mode: auto
+17:29:06,310  INFO SettingsFactory:241 - Default batch fetch size: 1
+17:29:06,310  INFO SettingsFactory:245 - Generate SQL with comments: disabled
+17:29:06,310  INFO SettingsFactory:249 - Order SQL updates by primary key: disabled
+17:29:06,310  INFO SettingsFactory:253 - Order SQL inserts for batching: disabled
+17:29:06,311  INFO SettingsFactory:431 - Query translator: org.hibernate.hql.ast.ASTQueryTranslatorFactory
+17:29:06,312  INFO ASTQueryTranslatorFactory:47 - Using ASTQueryTranslatorFactory
+17:29:06,313  INFO SettingsFactory:261 - Query language substitutions: {}
+17:29:06,313  INFO SettingsFactory:266 - JPA-QL strict compliance: disabled
+17:29:06,313  INFO SettingsFactory:271 - Second-level cache: enabled
+17:29:06,313  INFO SettingsFactory:275 - Query cache: disabled
+17:29:06,314  INFO SettingsFactory:406 - Cache region factory : org.hibernate.cache.impl.NoCachingRegionFactory
+17:29:06,315  INFO SettingsFactory:285 - Optimize cache for minimal puts: disabled
+17:29:06,315  INFO SettingsFactory:294 - Structured second-level cache entries: disabled
+17:29:06,319  INFO SettingsFactory:314 - Echoing all SQL to stdout
+17:29:06,320  INFO SettingsFactory:323 - Statistics: disabled
+17:29:06,320  INFO SettingsFactory:327 - Deleted entity synthetic identifier rollback: disabled
+17:29:06,320  INFO SettingsFactory:343 - Default entity-mode: pojo
+17:29:06,321  INFO SettingsFactory:347 - Named query checking : enabled
+17:29:06,321  INFO SettingsFactory:351 - Check Nullability in Core (should be disabled when Bean Validation is on): enabled
+17:29:06,335  INFO SessionFactoryImpl:202 - building session factory
+17:29:06,338 DEBUG SessionFactoryImpl:206 - Statistics initialized [enabled=false]}
+17:29:06,340  INFO BasicTypeRegistry:150 - Type registration [wrapper_materialized_blob] overrides previous : org.hibernate.type.WrappedMaterializedBlobType@3e9d9edd
+17:29:06,340  INFO BasicTypeRegistry:150 - Type registration [blob] overrides previous : org.hibernate.type.BlobType@5e28df48
+17:29:06,340  INFO BasicTypeRegistry:150 - Type registration [java.sql.Blob] overrides previous : org.hibernate.type.BlobType@5e28df48
+17:29:06,341  INFO BasicTypeRegistry:150 - Type registration [materialized_blob] overrides previous : org.hibernate.type.MaterializedBlobType@4d5b2043
+17:29:06,341  INFO BasicTypeRegistry:150 - Type registration [characters_clob] overrides previous : org.hibernate.type.PrimitiveCharacterArrayClobType@19a33662
+17:29:06,341  INFO BasicTypeRegistry:150 - Type registration [wrapper_characters_clob] overrides previous : org.hibernate.type.CharacterArrayClobType@2a476914
+17:29:06,341  INFO BasicTypeRegistry:150 - Type registration [materialized_clob] overrides previous : org.hibernate.type.MaterializedClobType@3643b5bb
+17:29:06,342  INFO BasicTypeRegistry:150 - Type registration [clob] overrides previous : org.hibernate.type.ClobType@175023d2
+17:29:06,342  INFO BasicTypeRegistry:150 - Type registration [java.sql.Clob] overrides previous : org.hibernate.type.ClobType@175023d2
+17:29:06,343 DEBUG SessionFactoryImpl:228 - Session factory constructed with filter configurations : {}
+17:29:06,343 DEBUG SessionFactoryImpl:232 - instantiating session factory with properties: {java.vendor=Apple Inc., sun.java.launcher=SUN_STANDARD, catalina.base=/Users/AndySmith/test_tomcat, sun.management.compiler=HotSpot 64-Bit Tiered Compilers, catalina.useNaming=true, os.name=Mac OS X, sun.boot.class.path=/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/jsfd.jar:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/classes.jar:/System/Library/Frameworks/JavaVM.framework/Frameworks/JavaRuntimeSupport.framework/Resources/Java/JavaRuntimeSupport.jar:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/ui.jar:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/laf.jar:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/sunrsasign.jar:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/jsse.jar:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/jce.jar:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/charsets.jar, java.util.logging.config.file=/Users/AndySmith/test_tomcat/conf/logging.properties, hibernate.current_session_context_class=org.springframework.orm.hibernate3.SpringSessionContext, java.vm.specification.vendor=Sun Microsystems Inc., java.runtime.version=1.6.0_65-b14-462-11M4609, user.name=AndySmith, shared.loader=, awt.nativeDoubleBuffering=true, tomcat.util.buf.StringCache.byte.enabled=true, user.language=en, java.naming.factory.initial=org.apache.naming.java.javaURLContextFactory, sun.boot.library.path=/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Libraries, java.version=1.6.0_65, java.util.logging.manager=org.apache.juli.ClassLoaderLogManager, user.timezone=Europe/London, sun.arch.data.model=64, http.nonProxyHosts=local|*.local|169.254/16|*.169.254/16, java.endorsed.dirs=/Users/AndySmith/test_tomcat/endorsed, sun.cpu.isalist=, sun.jnu.encoding=MacRoman, file.encoding.pkg=sun.io, package.access=sun.,org.apache.catalina.,org.apache.coyote.,org.apache.tomcat.,org.apache.jasper.,sun.beans., file.separator=/, java.specification.name=Java Platform API Specification, java.class.version=50.0, user.country=US, java.home=/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home, java.vm.info=mixed mode, os.version=10.7.5, hibernate.transaction.factory_class=org.springframework.orm.hibernate3.SpringTransactionFactory, path.separator=:, java.vm.version=20.65-b04-462, java.awt.printerjob=apple.awt.CPrinterJob, sun.io.unicode.encoding=UnicodeLittle, awt.toolkit=apple.awt.CToolkit, socksNonProxyHosts=local|*.local|169.254/16|*.169.254/16, ftp.nonProxyHosts=local|*.local|169.254/16|*.169.254/16, package.definition=sun.,java.,org.apache.catalina.,org.apache.coyote.,org.apache.tomcat.,org.apache.jasper., java.naming.factory.url.pkgs=org.apache.naming, user.home=/Users/AndySmith, java.specification.vendor=Sun Microsystems Inc., hibernate.hbm2ddl.auto=create, java.library.path=.:/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java, java.vendor.url=http://www.apple.com/, java.vm.vendor=Apple Inc., gopherProxySet=false, hibernate.dialect=org.hibernate.dialect.SQLServerDialect, common.loader=${catalina.base}/lib,${catalina.base}/lib/*.jar,${catalina.home}/lib,${catalina.home}/lib/*.jar, java.runtime.name=Java(TM) SE Runtime Environment, sun.java.command=org.apache.catalina.startup.Bootstrap start, java.class.path=/Users/AndySmith/test_tomcat/bin/bootstrap.jar, hibernate.bytecode.use_reflection_optimizer=false, java.vm.specification.name=Java Virtual Machine Specification, java.vm.specification.version=1.0, catalina.home=/Users/AndySmith/test_tomcat, sun.cpu.endian=little, sun.os.patch.level=unknown, hibernate.connection.provider_class=org.springframework.orm.hibernate3.LocalDataSourceConnectionProvider, java.io.tmpdir=/Users/AndySmith/test_tomcat/temp, java.vendor.url.bug=http://bugreport.apple.com/, server.loader=, mrj.build=11M4609, os.arch=x86_64, java.awt.graphicsenv=apple.awt.CGraphicsEnvironment, java.ext.dirs=/Library/Java/Extensions:/System/Library/Java/Extensions:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home/lib/ext, user.dir=/Users/AndySmith/test_tomcat/bin, mrj.version=1070.1.6.0_65-462, line.separator=
+, java.vm.name=Java HotSpot(TM) 64-Bit Server VM, file.encoding=MacRoman, java.specification.version=1.6, hibernate.show_sql=true}
+17:29:06,356 DEBUG DefaultIdentifierGeneratorFactory:90 - Setting dialect [org.hibernate.dialect.SQLServerDialect]
+17:29:06,450 DEBUG AbstractEntityPersister:2952 - Static SQL for entity: com.ajs.domain.Category
+17:29:06,450 DEBUG AbstractEntityPersister:2957 -  Version select: select ID from PersistentObject where ID =?
+17:29:06,450 DEBUG AbstractEntityPersister:2960 -  Snapshot select: select category_.ID, category_.CODE as CODE0_, category_.DESCRIPTION as DESCRIPT3_0_ from PersistentObject category_ where category_.ID=?
+17:29:06,451 DEBUG AbstractEntityPersister:2963 -  Insert 0: insert into PersistentObject (CODE, DESCRIPTION, DTYPE, ID) values (?, ?, 'Category', ?)
+17:29:06,451 DEBUG AbstractEntityPersister:2964 -  Update 0: update PersistentObject set CODE=?, DESCRIPTION=? where ID=?
+17:29:06,451 DEBUG AbstractEntityPersister:2965 -  Delete 0: delete from PersistentObject where ID=?
+17:29:06,451 DEBUG AbstractEntityPersister:2969 -  Identity insert: insert into PersistentObject (CODE, DESCRIPTION, DTYPE) values (?, ?, 'Category')
+17:29:06,455 DEBUG AbstractEntityPersister:2952 - Static SQL for entity: com.ajs.domain.Employee
+17:29:06,455 DEBUG AbstractEntityPersister:2957 -  Version select: select ID from PersistentObject where ID =?
+17:29:06,456 DEBUG AbstractEntityPersister:2960 -  Snapshot select: select employee_.ID, employee_.FIRST_NAME as FIRST5_0_, employee_.LAST_NAME as LAST6_0_, employee_.salary as salary0_ from PersistentObject employee_ where employee_.ID=?
+17:29:06,456 DEBUG AbstractEntityPersister:2963 -  Insert 0: insert into PersistentObject (FIRST_NAME, LAST_NAME, salary, DTYPE, ID) values (?, ?, ?, 'Employee', ?)
+17:29:06,456 DEBUG AbstractEntityPersister:2964 -  Update 0: update PersistentObject set FIRST_NAME=?, LAST_NAME=?, salary=? where ID=?
+17:29:06,457 DEBUG AbstractEntityPersister:2965 -  Delete 0: delete from PersistentObject where ID=?
+17:29:06,457 DEBUG AbstractEntityPersister:2969 -  Identity insert: insert into PersistentObject (FIRST_NAME, LAST_NAME, salary, DTYPE) values (?, ?, ?, 'Employee')
+17:29:06,461 DEBUG AbstractEntityPersister:2952 - Static SQL for entity: com.ajs.domain.Item
+17:29:06,461 DEBUG AbstractEntityPersister:2957 -  Version select: select ID from PersistentObject where ID =?
+17:29:06,461 DEBUG AbstractEntityPersister:2960 -  Snapshot select: select item_.ID, item_.CATEGORY_ID as CATEGORY9_0_, item_.CODE as CODE0_, item_.DESCRIPTION as DESCRIPT3_0_ from PersistentObject item_ where item_.ID=?
+17:29:06,461 DEBUG AbstractEntityPersister:2963 -  Insert 0: insert into PersistentObject (CATEGORY_ID, CODE, DESCRIPTION, DTYPE, ID) values (?, ?, ?, 'Item', ?)
+17:29:06,462 DEBUG AbstractEntityPersister:2964 -  Update 0: update PersistentObject set CATEGORY_ID=?, CODE=?, DESCRIPTION=? where ID=?
+17:29:06,462 DEBUG AbstractEntityPersister:2965 -  Delete 0: delete from PersistentObject where ID=?
+17:29:06,462 DEBUG AbstractEntityPersister:2969 -  Identity insert: insert into PersistentObject (CATEGORY_ID, CODE, DESCRIPTION, DTYPE) values (?, ?, ?, 'Item')
+17:29:06,465 DEBUG AbstractEntityPersister:2952 - Static SQL for entity: com.ajs.domain.Product
+17:29:06,466 DEBUG AbstractEntityPersister:2957 -  Version select: select ID from PersistentObject where ID =?
+17:29:06,466 DEBUG AbstractEntityPersister:2960 -  Snapshot select: select product_.ID, product_.DESCRIPTION as DESCRIPT3_0_, product_.NAME as NAME0_ from PersistentObject product_ where product_.ID=?
+17:29:06,466 DEBUG AbstractEntityPersister:2963 -  Insert 0: insert into PersistentObject (DESCRIPTION, NAME, DTYPE, ID) values (?, ?, 'Product', ?)
+17:29:06,466 DEBUG AbstractEntityPersister:2964 -  Update 0: update PersistentObject set DESCRIPTION=?, NAME=? where ID=?
+17:29:06,467 DEBUG AbstractEntityPersister:2965 -  Delete 0: delete from PersistentObject where ID=?
+17:29:06,467 DEBUG AbstractEntityPersister:2969 -  Identity insert: insert into PersistentObject (DESCRIPTION, NAME, DTYPE) values (?, ?, 'Product')
+17:29:06,470 DEBUG AbstractEntityPersister:2952 - Static SQL for entity: com.ajs.domain.PersistentObject
+17:29:06,470 DEBUG AbstractEntityPersister:2957 -  Version select: select ID from PersistentObject where ID =?
+17:29:06,470 DEBUG AbstractEntityPersister:2960 -  Snapshot select: select persistent_.ID from PersistentObject persistent_ where persistent_.ID=?
+17:29:06,470 DEBUG AbstractEntityPersister:2963 -  Insert 0: insert into PersistentObject (DTYPE, ID) values ('PersistentObject', ?)
+17:29:06,471 DEBUG AbstractEntityPersister:2964 -  Update 0: null
+17:29:06,471 DEBUG AbstractEntityPersister:2965 -  Delete 0: delete from PersistentObject where ID=?
+17:29:06,471 DEBUG AbstractEntityPersister:2969 -  Identity insert: insert into PersistentObject (DTYPE) values ('PersistentObject')
+17:29:06,477 DEBUG AbstractCollectionPersister:610 - Static SQL for collection: com.ajs.domain.Category.items
+17:29:06,477 DEBUG AbstractCollectionPersister:612 -  Row insert: update PersistentObject set CATEGORY_ID=? where ID=?
+17:29:06,478 DEBUG AbstractCollectionPersister:618 -  Row delete: update PersistentObject set CATEGORY_ID=null where CATEGORY_ID=? and ID=?
+17:29:06,478 DEBUG AbstractCollectionPersister:621 -  One-shot delete: update PersistentObject set CATEGORY_ID=null where CATEGORY_ID=?
+17:29:06,495 DEBUG EntityLoader:123 - Static select for entity com.ajs.domain.Category [NONE]: select category0_.ID as ID0_0_, category0_.CODE as CODE0_0_, category0_.DESCRIPTION as DESCRIPT3_0_0_ from PersistentObject category0_ where category0_.ID=? and category0_.DTYPE='Category'
+17:29:06,495 DEBUG EntityLoader:123 - Static select for entity com.ajs.domain.Category [READ]: select category0_.ID as ID0_0_, category0_.CODE as CODE0_0_, category0_.DESCRIPTION as DESCRIPT3_0_0_ from PersistentObject category0_ where category0_.ID=? and category0_.DTYPE='Category'
+17:29:06,495 DEBUG EntityLoader:123 - Static select for entity com.ajs.domain.Category [UPGRADE]: select category0_.ID as ID0_0_, category0_.CODE as CODE0_0_, category0_.DESCRIPTION as DESCRIPT3_0_0_ from PersistentObject category0_ with (updlock, rowlock) where category0_.ID=? and category0_.DTYPE='Category'
+17:29:06,496 DEBUG EntityLoader:123 - Static select for entity com.ajs.domain.Category [UPGRADE_NOWAIT]: select category0_.ID as ID0_0_, category0_.CODE as CODE0_0_, category0_.DESCRIPTION as DESCRIPT3_0_0_ from PersistentObject category0_ with (updlock, rowlock) where category0_.ID=? and category0_.DTYPE='Category'
+17:29:06,496 DEBUG EntityLoader:123 - Static select for entity com.ajs.domain.Category [FORCE]: select category0_.ID as ID0_0_, category0_.CODE as CODE0_0_, category0_.DESCRIPTION as DESCRIPT3_0_0_ from PersistentObject category0_ where category0_.ID=? and category0_.DTYPE='Category'
+17:29:06,496 DEBUG EntityLoader:123 - Static select for entity com.ajs.domain.Category [PESSIMISTIC_READ]: select category0_.ID as ID0_0_, category0_.CODE as CODE0_0_, category0_.DESCRIPTION as DESCRIPT3_0_0_ from PersistentObject category0_ with (holdlock, rowlock) where category0_.ID=? and category0_.DTYPE='Category'
+17:29:06,497 DEBUG EntityLoader:123 - Static select for entity com.ajs.domain.Category [PESSIMISTIC_WRITE]: select category0_.ID as ID0_0_, category0_.CODE as CODE0_0_, category0_.DESCRIPTION as DESCRIPT3_0_0_ from PersistentObject category0_ with (updlock, rowlock) where category0_.ID=? and category0_.DTYPE='Category'
+17:29:06,497 DEBUG EntityLoader:123 - Static select for entity com.ajs.domain.Category [PESSIMISTIC_FORCE_INCREMENT]: select category0_.ID as ID0_0_, category0_.CODE as CODE0_0_, category0_.DESCRIPTION as DESCRIPT3_0_0_ from PersistentObject category0_ where category0_.ID=? and category0_.DTYPE='Category'
+17:29:06,498 DEBUG EntityLoader:123 - Static select for entity com.ajs.domain.Category [OPTIMISTIC]: select category0_.ID as ID0_0_, category0_.CODE as CODE0_0_, category0_.DESCRIPTION as DESCRIPT3_0_0_ from PersistentObject category0_ where category0_.ID=? and category0_.DTYPE='Category'
+17:29:06,498 DEBUG EntityLoader:123 - Static select for entity com.ajs.domain.Category [OPTIMISTIC_FORCE_INCREMENT]: select category0_.ID as ID0_0_, category0_.CODE as CODE0_0_, category0_.DESCRIPTION as DESCRIPT3_0_0_ from PersistentObject category0_ where category0_.ID=? and category0_.DTYPE='Category'
+17:29:06,504 DEBUG EntityLoader:56 - Static select for action ACTION_MERGE on entity com.ajs.domain.Category: select category0_.ID as ID0_0_, category0_.CODE as CODE0_0_, category0_.DESCRIPTION as DESCRIPT3_0_0_ from PersistentObject category0_ where category0_.ID=? and category0_.DTYPE='Category'
+17:29:06,504 DEBUG EntityLoader:56 - Static select for action ACTION_REFRESH on entity com.ajs.domain.Category: select category0_.ID as ID0_0_, category0_.CODE as CODE0_0_, category0_.DESCRIPTION as DESCRIPT3_0_0_ from PersistentObject category0_ where category0_.ID=? and category0_.DTYPE='Category'
+17:29:06,506 DEBUG EntityLoader:123 - Static select for entity com.ajs.domain.Employee [NONE]: select employee0_.ID as ID0_0_, employee0_.FIRST_NAME as FIRST5_0_0_, employee0_.LAST_NAME as LAST6_0_0_, employee0_.salary as salary0_0_ from PersistentObject employee0_ where employee0_.ID=? and employee0_.DTYPE='Employee'
+17:29:06,509 DEBUG EntityLoader:123 - Static select for entity com.ajs.domain.Employee [READ]: select employee0_.ID as ID0_0_, employee0_.FIRST_NAME as FIRST5_0_0_, employee0_.LAST_NAME as LAST6_0_0_, employee0_.salary as salary0_0_ from PersistentObject employee0_ where employee0_.ID=? and employee0_.DTYPE='Employee'
+17:29:06,509 DEBUG EntityLoader:123 - Static select for entity com.ajs.domain.Employee [UPGRADE]: select employee0_.ID as ID0_0_, employee0_.FIRST_NAME as FIRST5_0_0_, employee0_.LAST_NAME as LAST6_0_0_, employee0_.salary as salary0_0_ from PersistentObject employee0_ with (updlock, rowlock) where employee0_.ID=? and employee0_.DTYPE='Employee'
+17:29:06,510 DEBUG EntityLoader:123 - Static select for entity com.ajs.domain.Employee [UPGRADE_NOWAIT]: select employee0_.ID as ID0_0_, employee0_.FIRST_NAME as FIRST5_0_0_, employee0_.LAST_NAME as LAST6_0_0_, employee0_.salary as salary0_0_ from PersistentObject employee0_ with (updlock, rowlock) where employee0_.ID=? and employee0_.DTYPE='Employee'
+17:29:06,510 DEBUG EntityLoader:123 - Static select for entity com.ajs.domain.Employee [FORCE]: select employee0_.ID as ID0_0_, employee0_.FIRST_NAME as FIRST5_0_0_, employee0_.LAST_NAME as LAST6_0_0_, employee0_.salary as salary0_0_ from PersistentObject employee0_ where employee0_.ID=? and employee0_.DTYPE='Employee'
+17:29:06,510 DEBUG EntityLoader:123 - Static select for entity com.ajs.domain.Employee [PESSIMISTIC_READ]: select employee0_.ID as ID0_0_, employee0_.FIRST_NAME as FIRST5_0_0_, employee0_.LAST_NAME as LAST6_0_0_, employee0_.salary as salary0_0_ from PersistentObject employee0_ with (holdlock, rowlock) where employee0_.ID=? and employee0_.DTYPE='Employee'
+17:29:06,511 DEBUG EntityLoader:123 - Static select for entity com.ajs.domain.Employee [PESSIMISTIC_WRITE]: select employee0_.ID as ID0_0_, employee0_.FIRST_NAME as FIRST5_0_0_, employee0_.LAST_NAME as LAST6_0_0_, employee0_.salary as salary0_0_ from PersistentObject employee0_ with (updlock, rowlock) where employee0_.ID=? and employee0_.DTYPE='Employee'
+17:29:06,511 DEBUG EntityLoader:123 - Static select for entity com.ajs.domain.Employee [PESSIMISTIC_FORCE_INCREMENT]: select employee0_.ID as ID0_0_, employee0_.FIRST_NAME as FIRST5_0_0_, employee0_.LAST_NAME as LAST6_0_0_, employee0_.salary as salary0_0_ from PersistentObject employee0_ where employee0_.ID=? and employee0_.DTYPE='Employee'
+17:29:06,511 DEBUG EntityLoader:123 - Static select for entity com.ajs.domain.Employee [OPTIMISTIC]: select employee0_.ID as ID0_0_, employee0_.FIRST_NAME as FIRST5_0_0_, employee0_.LAST_NAME as LAST6_0_0_, employee0_.salary as salary0_0_ from PersistentObject employee0_ where employee0_.ID=? and employee0_.DTYPE='Employee'
+17:29:06,512 DEBUG EntityLoader:123 - Static select for entity com.ajs.domain.Employee [OPTIMISTIC_FORCE_INCREMENT]: select employee0_.ID as ID0_0_, employee0_.FIRST_NAME as FIRST5_0_0_, employee0_.LAST_NAME as LAST6_0_0_, employee0_.salary as salary0_0_ from PersistentObject employee0_ where employee0_.ID=? and employee0_.DTYPE='Employee'
+17:29:06,512 DEBUG EntityLoader:56 - Static select for action ACTION_MERGE on entity com.ajs.domain.Employee: select employee0_.ID as ID0_0_, employee0_.FIRST_NAME as FIRST5_0_0_, employee0_.LAST_NAME as LAST6_0_0_, employee0_.salary as salary0_0_ from PersistentObject employee0_ where employee0_.ID=? and employee0_.DTYPE='Employee'
+17:29:06,512 DEBUG EntityLoader:56 - Static select for action ACTION_REFRESH on entity com.ajs.domain.Employee: select employee0_.ID as ID0_0_, employee0_.FIRST_NAME as FIRST5_0_0_, employee0_.LAST_NAME as LAST6_0_0_, employee0_.salary as salary0_0_ from PersistentObject employee0_ where employee0_.ID=? and employee0_.DTYPE='Employee'
+17:29:06,515 DEBUG EntityLoader:123 - Static select for entity com.ajs.domain.PersistentObject [NONE]: select persistent0_.ID as ID0_1_, persistent0_.DESCRIPTION as DESCRIPT3_0_1_, persistent0_.NAME as NAME0_1_, persistent0_.FIRST_NAME as FIRST5_0_1_, persistent0_.LAST_NAME as LAST6_0_1_, persistent0_.salary as salary0_1_, persistent0_.CODE as CODE0_1_, persistent0_.CATEGORY_ID as CATEGORY9_0_1_, persistent0_.DTYPE as DTYPE0_1_, category1_.ID as ID0_0_, category1_.CODE as CODE0_0_, category1_.DESCRIPTION as DESCRIPT3_0_0_ from PersistentObject persistent0_ left outer join PersistentObject category1_ on persistent0_.CATEGORY_ID=category1_.ID where persistent0_.ID=?
+17:29:06,515 DEBUG EntityLoader:123 - Static select for entity com.ajs.domain.PersistentObject [READ]: select persistent0_.ID as ID0_1_, persistent0_.DESCRIPTION as DESCRIPT3_0_1_, persistent0_.NAME as NAME0_1_, persistent0_.FIRST_NAME as FIRST5_0_1_, persistent0_.LAST_NAME as LAST6_0_1_, persistent0_.salary as salary0_1_, persistent0_.CODE as CODE0_1_, persistent0_.CATEGORY_ID as CATEGORY9_0_1_, persistent0_.DTYPE as DTYPE0_1_, category1_.ID as ID0_0_, category1_.CODE as CODE0_0_, category1_.DESCRIPTION as DESCRIPT3_0_0_ from PersistentObject persistent0_ left outer join PersistentObject category1_ on persistent0_.CATEGORY_ID=category1_.ID where persistent0_.ID=?
+17:29:06,515 DEBUG EntityLoader:123 - Static select for entity com.ajs.domain.PersistentObject [UPGRADE]: select persistent0_.ID as ID0_0_, persistent0_.DESCRIPTION as DESCRIPT3_0_0_, persistent0_.NAME as NAME0_0_, persistent0_.FIRST_NAME as FIRST5_0_0_, persistent0_.LAST_NAME as LAST6_0_0_, persistent0_.salary as salary0_0_, persistent0_.CODE as CODE0_0_, persistent0_.CATEGORY_ID as CATEGORY9_0_0_, persistent0_.DTYPE as DTYPE0_0_ from PersistentObject persistent0_ with (updlock, rowlock) where persistent0_.ID=?
+17:29:06,516 DEBUG EntityLoader:123 - Static select for entity com.ajs.domain.PersistentObject [UPGRADE_NOWAIT]: select persistent0_.ID as ID0_0_, persistent0_.DESCRIPTION as DESCRIPT3_0_0_, persistent0_.NAME as NAME0_0_, persistent0_.FIRST_NAME as FIRST5_0_0_, persistent0_.LAST_NAME as LAST6_0_0_, persistent0_.salary as salary0_0_, persistent0_.CODE as CODE0_0_, persistent0_.CATEGORY_ID as CATEGORY9_0_0_, persistent0_.DTYPE as DTYPE0_0_ from PersistentObject persistent0_ with (updlock, rowlock) where persistent0_.ID=?
+17:29:06,516 DEBUG EntityLoader:123 - Static select for entity com.ajs.domain.PersistentObject [FORCE]: select persistent0_.ID as ID0_0_, persistent0_.DESCRIPTION as DESCRIPT3_0_0_, persistent0_.NAME as NAME0_0_, persistent0_.FIRST_NAME as FIRST5_0_0_, persistent0_.LAST_NAME as LAST6_0_0_, persistent0_.salary as salary0_0_, persistent0_.CODE as CODE0_0_, persistent0_.CATEGORY_ID as CATEGORY9_0_0_, persistent0_.DTYPE as DTYPE0_0_ from PersistentObject persistent0_ where persistent0_.ID=?
+17:29:06,517 DEBUG EntityLoader:123 - Static select for entity com.ajs.domain.PersistentObject [PESSIMISTIC_READ]: select persistent0_.ID as ID0_0_, persistent0_.DESCRIPTION as DESCRIPT3_0_0_, persistent0_.NAME as NAME0_0_, persistent0_.FIRST_NAME as FIRST5_0_0_, persistent0_.LAST_NAME as LAST6_0_0_, persistent0_.salary as salary0_0_, persistent0_.CODE as CODE0_0_, persistent0_.CATEGORY_ID as CATEGORY9_0_0_, persistent0_.DTYPE as DTYPE0_0_ from PersistentObject persistent0_ with (holdlock, rowlock) where persistent0_.ID=?
+17:29:06,517 DEBUG EntityLoader:123 - Static select for entity com.ajs.domain.PersistentObject [PESSIMISTIC_WRITE]: select persistent0_.ID as ID0_0_, persistent0_.DESCRIPTION as DESCRIPT3_0_0_, persistent0_.NAME as NAME0_0_, persistent0_.FIRST_NAME as FIRST5_0_0_, persistent0_.LAST_NAME as LAST6_0_0_, persistent0_.salary as salary0_0_, persistent0_.CODE as CODE0_0_, persistent0_.CATEGORY_ID as CATEGORY9_0_0_, persistent0_.DTYPE as DTYPE0_0_ from PersistentObject persistent0_ with (updlock, rowlock) where persistent0_.ID=?
+17:29:06,517 DEBUG EntityLoader:123 - Static select for entity com.ajs.domain.PersistentObject [PESSIMISTIC_FORCE_INCREMENT]: select persistent0_.ID as ID0_0_, persistent0_.DESCRIPTION as DESCRIPT3_0_0_, persistent0_.NAME as NAME0_0_, persistent0_.FIRST_NAME as FIRST5_0_0_, persistent0_.LAST_NAME as LAST6_0_0_, persistent0_.salary as salary0_0_, persistent0_.CODE as CODE0_0_, persistent0_.CATEGORY_ID as CATEGORY9_0_0_, persistent0_.DTYPE as DTYPE0_0_ from PersistentObject persistent0_ where persistent0_.ID=?
+17:29:06,518 DEBUG EntityLoader:123 - Static select for entity com.ajs.domain.PersistentObject [OPTIMISTIC]: select persistent0_.ID as ID0_1_, persistent0_.DESCRIPTION as DESCRIPT3_0_1_, persistent0_.NAME as NAME0_1_, persistent0_.FIRST_NAME as FIRST5_0_1_, persistent0_.LAST_NAME as LAST6_0_1_, persistent0_.salary as salary0_1_, persistent0_.CODE as CODE0_1_, persistent0_.CATEGORY_ID as CATEGORY9_0_1_, persistent0_.DTYPE as DTYPE0_1_, category1_.ID as ID0_0_, category1_.CODE as CODE0_0_, category1_.DESCRIPTION as DESCRIPT3_0_0_ from PersistentObject persistent0_ left outer join PersistentObject category1_ on persistent0_.CATEGORY_ID=category1_.ID where persistent0_.ID=?
+17:29:06,518 DEBUG EntityLoader:123 - Static select for entity com.ajs.domain.PersistentObject [OPTIMISTIC_FORCE_INCREMENT]: select persistent0_.ID as ID0_1_, persistent0_.DESCRIPTION as DESCRIPT3_0_1_, persistent0_.NAME as NAME0_1_, persistent0_.FIRST_NAME as FIRST5_0_1_, persistent0_.LAST_NAME as LAST6_0_1_, persistent0_.salary as salary0_1_, persistent0_.CODE as CODE0_1_, persistent0_.CATEGORY_ID as CATEGORY9_0_1_, persistent0_.DTYPE as DTYPE0_1_, category1_.ID as ID0_0_, category1_.CODE as CODE0_0_, category1_.DESCRIPTION as DESCRIPT3_0_0_ from PersistentObject persistent0_ left outer join PersistentObject category1_ on persistent0_.CATEGORY_ID=category1_.ID where persistent0_.ID=?
+17:29:06,519 DEBUG EntityLoader:56 - Static select for action ACTION_MERGE on entity com.ajs.domain.PersistentObject: select persistent0_.ID as ID0_0_, persistent0_.DESCRIPTION as DESCRIPT3_0_0_, persistent0_.NAME as NAME0_0_, persistent0_.FIRST_NAME as FIRST5_0_0_, persistent0_.LAST_NAME as LAST6_0_0_, persistent0_.salary as salary0_0_, persistent0_.CODE as CODE0_0_, persistent0_.CATEGORY_ID as CATEGORY9_0_0_, persistent0_.DTYPE as DTYPE0_0_ from PersistentObject persistent0_ where persistent0_.ID=?
+17:29:06,519 DEBUG EntityLoader:56 - Static select for action ACTION_REFRESH on entity com.ajs.domain.PersistentObject: select persistent0_.ID as ID0_0_, persistent0_.DESCRIPTION as DESCRIPT3_0_0_, persistent0_.NAME as NAME0_0_, persistent0_.FIRST_NAME as FIRST5_0_0_, persistent0_.LAST_NAME as LAST6_0_0_, persistent0_.salary as salary0_0_, persistent0_.CODE as CODE0_0_, persistent0_.CATEGORY_ID as CATEGORY9_0_0_, persistent0_.DTYPE as DTYPE0_0_ from PersistentObject persistent0_ where persistent0_.ID=?
+17:29:06,519 DEBUG EntityLoader:123 - Static select for entity com.ajs.domain.Product [NONE]: select product0_.ID as ID0_0_, product0_.DESCRIPTION as DESCRIPT3_0_0_, product0_.NAME as NAME0_0_ from PersistentObject product0_ where product0_.ID=? and product0_.DTYPE='Product'
+17:29:06,520 DEBUG EntityLoader:123 - Static select for entity com.ajs.domain.Product [READ]: select product0_.ID as ID0_0_, product0_.DESCRIPTION as DESCRIPT3_0_0_, product0_.NAME as NAME0_0_ from PersistentObject product0_ where product0_.ID=? and product0_.DTYPE='Product'
+17:29:06,520 DEBUG EntityLoader:123 - Static select for entity com.ajs.domain.Product [UPGRADE]: select product0_.ID as ID0_0_, product0_.DESCRIPTION as DESCRIPT3_0_0_, product0_.NAME as NAME0_0_ from PersistentObject product0_ with (updlock, rowlock) where product0_.ID=? and product0_.DTYPE='Product'
+17:29:06,520 DEBUG EntityLoader:123 - Static select for entity com.ajs.domain.Product [UPGRADE_NOWAIT]: select product0_.ID as ID0_0_, product0_.DESCRIPTION as DESCRIPT3_0_0_, product0_.NAME as NAME0_0_ from PersistentObject product0_ with (updlock, rowlock) where product0_.ID=? and product0_.DTYPE='Product'
+17:29:06,521 DEBUG EntityLoader:123 - Static select for entity com.ajs.domain.Product [FORCE]: select product0_.ID as ID0_0_, product0_.DESCRIPTION as DESCRIPT3_0_0_, product0_.NAME as NAME0_0_ from PersistentObject product0_ where product0_.ID=? and product0_.DTYPE='Product'
+17:29:06,521 DEBUG EntityLoader:123 - Static select for entity com.ajs.domain.Product [PESSIMISTIC_READ]: select product0_.ID as ID0_0_, product0_.DESCRIPTION as DESCRIPT3_0_0_, product0_.NAME as NAME0_0_ from PersistentObject product0_ with (holdlock, rowlock) where product0_.ID=? and product0_.DTYPE='Product'
+17:29:06,521 DEBUG EntityLoader:123 - Static select for entity com.ajs.domain.Product [PESSIMISTIC_WRITE]: select product0_.ID as ID0_0_, product0_.DESCRIPTION as DESCRIPT3_0_0_, product0_.NAME as NAME0_0_ from PersistentObject product0_ with (updlock, rowlock) where product0_.ID=? and product0_.DTYPE='Product'
+17:29:06,522 DEBUG EntityLoader:123 - Static select for entity com.ajs.domain.Product [PESSIMISTIC_FORCE_INCREMENT]: select product0_.ID as ID0_0_, product0_.DESCRIPTION as DESCRIPT3_0_0_, product0_.NAME as NAME0_0_ from PersistentObject product0_ where product0_.ID=? and product0_.DTYPE='Product'
+17:29:06,522 DEBUG EntityLoader:123 - Static select for entity com.ajs.domain.Product [OPTIMISTIC]: select product0_.ID as ID0_0_, product0_.DESCRIPTION as DESCRIPT3_0_0_, product0_.NAME as NAME0_0_ from PersistentObject product0_ where product0_.ID=? and product0_.DTYPE='Product'
+17:29:06,522 DEBUG EntityLoader:123 - Static select for entity com.ajs.domain.Product [OPTIMISTIC_FORCE_INCREMENT]: select product0_.ID as ID0_0_, product0_.DESCRIPTION as DESCRIPT3_0_0_, product0_.NAME as NAME0_0_ from PersistentObject product0_ where product0_.ID=? and product0_.DTYPE='Product'
+17:29:06,523 DEBUG EntityLoader:56 - Static select for action ACTION_MERGE on entity com.ajs.domain.Product: select product0_.ID as ID0_0_, product0_.DESCRIPTION as DESCRIPT3_0_0_, product0_.NAME as NAME0_0_ from PersistentObject product0_ where product0_.ID=? and product0_.DTYPE='Product'
+17:29:06,523 DEBUG EntityLoader:56 - Static select for action ACTION_REFRESH on entity com.ajs.domain.Product: select product0_.ID as ID0_0_, product0_.DESCRIPTION as DESCRIPT3_0_0_, product0_.NAME as NAME0_0_ from PersistentObject product0_ where product0_.ID=? and product0_.DTYPE='Product'
+17:29:06,524 DEBUG EntityLoader:123 - Static select for entity com.ajs.domain.Item [NONE]: select item0_.ID as ID0_1_, item0_.CATEGORY_ID as CATEGORY9_0_1_, item0_.CODE as CODE0_1_, item0_.DESCRIPTION as DESCRIPT3_0_1_, category1_.ID as ID0_0_, category1_.CODE as CODE0_0_, category1_.DESCRIPTION as DESCRIPT3_0_0_ from PersistentObject item0_ left outer join PersistentObject category1_ on item0_.CATEGORY_ID=category1_.ID where item0_.ID=? and item0_.DTYPE='Item'
+17:29:06,524 DEBUG EntityLoader:123 - Static select for entity com.ajs.domain.Item [READ]: select item0_.ID as ID0_1_, item0_.CATEGORY_ID as CATEGORY9_0_1_, item0_.CODE as CODE0_1_, item0_.DESCRIPTION as DESCRIPT3_0_1_, category1_.ID as ID0_0_, category1_.CODE as CODE0_0_, category1_.DESCRIPTION as DESCRIPT3_0_0_ from PersistentObject item0_ left outer join PersistentObject category1_ on item0_.CATEGORY_ID=category1_.ID where item0_.ID=? and item0_.DTYPE='Item'
+17:29:06,524 DEBUG EntityLoader:123 - Static select for entity com.ajs.domain.Item [UPGRADE]: select item0_.ID as ID0_0_, item0_.CATEGORY_ID as CATEGORY9_0_0_, item0_.CODE as CODE0_0_, item0_.DESCRIPTION as DESCRIPT3_0_0_ from PersistentObject item0_ with (updlock, rowlock) where item0_.ID=? and item0_.DTYPE='Item'
+17:29:06,525 DEBUG EntityLoader:123 - Static select for entity com.ajs.domain.Item [UPGRADE_NOWAIT]: select item0_.ID as ID0_0_, item0_.CATEGORY_ID as CATEGORY9_0_0_, item0_.CODE as CODE0_0_, item0_.DESCRIPTION as DESCRIPT3_0_0_ from PersistentObject item0_ with (updlock, rowlock) where item0_.ID=? and item0_.DTYPE='Item'
+17:29:06,525 DEBUG EntityLoader:123 - Static select for entity com.ajs.domain.Item [FORCE]: select item0_.ID as ID0_0_, item0_.CATEGORY_ID as CATEGORY9_0_0_, item0_.CODE as CODE0_0_, item0_.DESCRIPTION as DESCRIPT3_0_0_ from PersistentObject item0_ where item0_.ID=? and item0_.DTYPE='Item'
+17:29:06,525 DEBUG EntityLoader:123 - Static select for entity com.ajs.domain.Item [PESSIMISTIC_READ]: select item0_.ID as ID0_0_, item0_.CATEGORY_ID as CATEGORY9_0_0_, item0_.CODE as CODE0_0_, item0_.DESCRIPTION as DESCRIPT3_0_0_ from PersistentObject item0_ with (holdlock, rowlock) where item0_.ID=? and item0_.DTYPE='Item'
+17:29:06,526 DEBUG EntityLoader:123 - Static select for entity com.ajs.domain.Item [PESSIMISTIC_WRITE]: select item0_.ID as ID0_0_, item0_.CATEGORY_ID as CATEGORY9_0_0_, item0_.CODE as CODE0_0_, item0_.DESCRIPTION as DESCRIPT3_0_0_ from PersistentObject item0_ with (updlock, rowlock) where item0_.ID=? and item0_.DTYPE='Item'
+17:29:06,526 DEBUG EntityLoader:123 - Static select for entity com.ajs.domain.Item [PESSIMISTIC_FORCE_INCREMENT]: select item0_.ID as ID0_0_, item0_.CATEGORY_ID as CATEGORY9_0_0_, item0_.CODE as CODE0_0_, item0_.DESCRIPTION as DESCRIPT3_0_0_ from PersistentObject item0_ where item0_.ID=? and item0_.DTYPE='Item'
+17:29:06,527 DEBUG EntityLoader:123 - Static select for entity com.ajs.domain.Item [OPTIMISTIC]: select item0_.ID as ID0_1_, item0_.CATEGORY_ID as CATEGORY9_0_1_, item0_.CODE as CODE0_1_, item0_.DESCRIPTION as DESCRIPT3_0_1_, category1_.ID as ID0_0_, category1_.CODE as CODE0_0_, category1_.DESCRIPTION as DESCRIPT3_0_0_ from PersistentObject item0_ left outer join PersistentObject category1_ on item0_.CATEGORY_ID=category1_.ID where item0_.ID=? and item0_.DTYPE='Item'
+17:29:06,527 DEBUG EntityLoader:123 - Static select for entity com.ajs.domain.Item [OPTIMISTIC_FORCE_INCREMENT]: select item0_.ID as ID0_1_, item0_.CATEGORY_ID as CATEGORY9_0_1_, item0_.CODE as CODE0_1_, item0_.DESCRIPTION as DESCRIPT3_0_1_, category1_.ID as ID0_0_, category1_.CODE as CODE0_0_, category1_.DESCRIPTION as DESCRIPT3_0_0_ from PersistentObject item0_ left outer join PersistentObject category1_ on item0_.CATEGORY_ID=category1_.ID where item0_.ID=? and item0_.DTYPE='Item'
+17:29:06,527 DEBUG EntityLoader:56 - Static select for action ACTION_MERGE on entity com.ajs.domain.Item: select item0_.ID as ID0_0_, item0_.CATEGORY_ID as CATEGORY9_0_0_, item0_.CODE as CODE0_0_, item0_.DESCRIPTION as DESCRIPT3_0_0_ from PersistentObject item0_ where item0_.ID=? and item0_.DTYPE='Item'
+17:29:06,528 DEBUG EntityLoader:56 - Static select for action ACTION_REFRESH on entity com.ajs.domain.Item: select item0_.ID as ID0_0_, item0_.CATEGORY_ID as CATEGORY9_0_0_, item0_.CODE as CODE0_0_, item0_.DESCRIPTION as DESCRIPT3_0_0_ from PersistentObject item0_ where item0_.ID=? and item0_.DTYPE='Item'
+17:29:06,532 DEBUG OneToManyLoader:81 - Static select for one-to-many com.ajs.domain.Category.items: select items0_.CATEGORY_ID as CATEGORY9_0_1_, items0_.ID as ID1_, items0_.ID as ID0_0_, items0_.CATEGORY_ID as CATEGORY9_0_0_, items0_.CODE as CODE0_0_, items0_.DESCRIPTION as DESCRIPT3_0_0_ from PersistentObject items0_ where items0_.CATEGORY_ID=?
+17:29:06,533 DEBUG SessionFactoryObjectFactory:61 - initializing class SessionFactoryObjectFactory
+17:29:06,534 DEBUG SessionFactoryObjectFactory:99 - registered: 603c03f5-0ed0-4d1d-896a-2ef65d87c810 (unnamed)
+17:29:06,534  INFO SessionFactoryObjectFactory:105 - Not binding factory to JNDI, no JNDI name configured
+17:29:06,534 DEBUG SessionFactoryImpl:369 - instantiated session factory
+17:29:06,537 DEBUG Configuration:3968 - Processing hbm.xml files
+17:29:06,537 DEBUG Configuration:3998 - Process annotated classes
+17:29:06,537 DEBUG Configuration:1439 - processing fk mappings (*ToOne and JoinedSubclass)
+17:29:06,538 DEBUG Configuration:1681 - processing extends queue
+17:29:06,538 DEBUG Configuration:1735 - processing extends queue
+17:29:06,538 DEBUG Configuration:1684 - processing collection mappings
+17:29:06,538 DEBUG Configuration:1694 - processing native query and ResultSetMapping mappings
+17:29:06,539 DEBUG Configuration:1702 - processing association property references
+17:29:06,539 DEBUG Configuration:1724 - processing foreign key constraints
+17:29:06,539 DEBUG Configuration:1793 - resolving reference to class: com.ajs.domain.Category
+17:29:06,540 DEBUG DefaultIdentifierGeneratorFactory:90 - Setting dialect [org.hibernate.dialect.SQLServerDialect]
+17:29:06,541 DEBUG Configuration:3968 - Processing hbm.xml files
+17:29:06,541 DEBUG Configuration:3998 - Process annotated classes
+17:29:06,542 DEBUG Configuration:1439 - processing fk mappings (*ToOne and JoinedSubclass)
+17:29:06,542 DEBUG Configuration:1681 - processing extends queue
+17:29:06,542 DEBUG Configuration:1735 - processing extends queue
+17:29:06,542 DEBUG Configuration:1684 - processing collection mappings
+17:29:06,542 DEBUG Configuration:1694 - processing native query and ResultSetMapping mappings
+17:29:06,543 DEBUG Configuration:1702 - processing association property references
+17:29:06,543 DEBUG Configuration:1724 - processing foreign key constraints
+17:29:06,543 DEBUG Configuration:1793 - resolving reference to class: com.ajs.domain.Category
+17:29:06,544 DEBUG DefaultIdentifierGeneratorFactory:90 - Setting dialect [org.hibernate.dialect.SQLServerDialect]
+17:29:06,545 DEBUG DefaultIdentifierGeneratorFactory:90 - Setting dialect [org.hibernate.dialect.SQLServerDialect]
+17:29:06,547  INFO SchemaExport:234 - Running hbm2ddl schema export
+17:29:06,548 DEBUG SchemaExport:252 - import file not found: /import.sql
+17:29:06,548  INFO SchemaExport:262 - exporting generated schema to database
+17:29:06,552 DEBUG SchemaExport:415 - alter table PersistentObject drop constraint FKD1FD4D6A9018693
+17:29:06,555 DEBUG SchemaExport:415 - drop table PersistentObject
+17:29:06,558 DEBUG SchemaExport:415 - create table PersistentObject (DTYPE varchar(31) not null, ID numeric(19,0) identity not null, DESCRIPTION varchar(255) null, NAME varchar(255) null, FIRST_NAME varchar(255) null, LAST_NAME varchar(255) null, salary numeric(19,0) null, CODE varchar(255) null, CATEGORY_ID numeric(19,0) null, primary key (ID))
+17:29:06,563 DEBUG SchemaExport:415 - alter table PersistentObject add constraint FKD1FD4D6A9018693 foreign key (CATEGORY_ID) references PersistentObject
+17:29:06,565  INFO SchemaExport:281 - schema export complete
+17:29:06,568 DEBUG SessionFactoryImpl:539 - Checking 0 named HQL queries
+17:29:06,568 DEBUG SessionFactoryImpl:559 - Checking 0 named SQL queries
+17:29:06,754 DEBUG SessionImpl:265 - opened session at timestamp: 13870421467
+17:29:06,768 DEBUG JDBCTransaction:78 - begin
+17:29:06,768 DEBUG ConnectionManager:444 - opening JDBC connection
+17:29:06,768 DEBUG JDBCTransaction:83 - current autocommit status: true
+17:29:06,769 DEBUG JDBCTransaction:86 - disabling autocommit
+17:29:06,771 DEBUG JDBCTransaction:130 - commit
+17:29:06,772 DEBUG JDBCTransaction:223 - re-enabling autocommit
+17:29:06,772 DEBUG JDBCTransaction:143 - committed JDBC Connection
+17:29:06,773 DEBUG ConnectionManager:325 - transaction completed on session with on_close connection release mode; be sure to close the session to release JDBC resources!
+17:29:06,773 DEBUG ConnectionManager:464 - releasing JDBC connection [ (open PreparedStatements: 0, globally: 0) (open ResultSets: 0, globally: 0)]
+17:29:06,774 DEBUG ConnectionManager:325 - transaction completed on session with on_close connection release mode; be sure to close the session to release JDBC resources!
+17:29:06,776 DEBUG SessionImpl:265 - opened session at timestamp: 13870421467
+17:29:06,776 DEBUG JDBCTransaction:78 - begin
+17:29:06,776 DEBUG ConnectionManager:444 - opening JDBC connection
+17:29:06,777 DEBUG JDBCTransaction:83 - current autocommit status: true
+17:29:06,777 DEBUG JDBCTransaction:86 - disabling autocommit
+17:29:06,778 DEBUG JDBCTransaction:130 - commit
+17:29:06,779 DEBUG JDBCTransaction:223 - re-enabling autocommit
+17:29:06,779 DEBUG JDBCTransaction:143 - committed JDBC Connection
+17:29:06,780 DEBUG ConnectionManager:325 - transaction completed on session with on_close connection release mode; be sure to close the session to release JDBC resources!
+17:29:06,780 DEBUG ConnectionManager:464 - releasing JDBC connection [ (open PreparedStatements: 0, globally: 0) (open ResultSets: 0, globally: 0)]
+17:29:06,781 DEBUG ConnectionManager:325 - transaction completed on session with on_close connection release mode; be sure to close the session to release JDBC resources!
+17:29:06,850 DEBUG SessionImpl:265 - opened session at timestamp: 13870421468
+17:29:06,850 DEBUG JDBCTransaction:78 - begin
+17:29:06,851 DEBUG ConnectionManager:444 - opening JDBC connection
+17:29:06,851 DEBUG JDBCTransaction:83 - current autocommit status: true
+17:29:06,851 DEBUG JDBCTransaction:86 - disabling autocommit
+17:29:06,852 DEBUG JDBCTransaction:130 - commit
+17:29:06,853 DEBUG JDBCTransaction:223 - re-enabling autocommit
+17:29:06,853 DEBUG JDBCTransaction:143 - committed JDBC Connection
+17:29:06,854 DEBUG ConnectionManager:325 - transaction completed on session with on_close connection release mode; be sure to close the session to release JDBC resources!
+17:29:06,854 DEBUG ConnectionManager:464 - releasing JDBC connection [ (open PreparedStatements: 0, globally: 0) (open ResultSets: 0, globally: 0)]
+17:29:06,854 DEBUG ConnectionManager:325 - transaction completed on session with on_close connection release mode; be sure to close the session to release JDBC resources!
+17:29:06,855 DEBUG SessionImpl:265 - opened session at timestamp: 13870421468
+17:29:06,855 DEBUG JDBCTransaction:78 - begin
+17:29:06,856 DEBUG ConnectionManager:444 - opening JDBC connection
+17:29:06,856 DEBUG JDBCTransaction:83 - current autocommit status: true
+17:29:06,856 DEBUG JDBCTransaction:86 - disabling autocommit
+17:29:06,857 DEBUG JDBCTransaction:130 - commit
+17:29:06,858 DEBUG JDBCTransaction:223 - re-enabling autocommit
+17:29:06,858 DEBUG JDBCTransaction:143 - committed JDBC Connection
+17:29:06,859 DEBUG ConnectionManager:325 - transaction completed on session with on_close connection release mode; be sure to close the session to release JDBC resources!
+17:29:06,859 DEBUG ConnectionManager:464 - releasing JDBC connection [ (open PreparedStatements: 0, globally: 0) (open ResultSets: 0, globally: 0)]
+17:29:06,859 DEBUG ConnectionManager:325 - transaction completed on session with on_close connection release mode; be sure to close the session to release JDBC resources!
+Dec 14, 2013 5:29:06 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory docs
+Dec 14, 2013 5:29:07 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory examples
+Dec 14, 2013 5:29:07 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory ROOT
+Dec 14, 2013 5:29:07 PM org.apache.coyote.http11.Http11Protocol start
+INFO: Starting Coyote HTTP/1.1 on http-8080
+Dec 14, 2013 5:29:07 PM org.apache.jk.common.ChannelSocket init
+INFO: JK: ajp13 listening on /0.0.0.0:8009
+Dec 14, 2013 5:29:07 PM org.apache.jk.server.JkMain start
+INFO: Jk running ID=0 time=0/12  config=null
+Dec 14, 2013 5:29:07 PM org.apache.catalina.startup.Catalina start
+INFO: Server startup in 3164 ms
+17:29:13,281 DEBUG SessionImpl:265 - opened session at timestamp: 13870421532
+17:29:13,281 DEBUG JDBCTransaction:78 - begin
+17:29:13,281 DEBUG ConnectionManager:444 - opening JDBC connection
+17:29:13,282 DEBUG JDBCTransaction:83 - current autocommit status: true
+17:29:13,282 DEBUG JDBCTransaction:86 - disabling autocommit
+17:29:13,309 DEBUG AbstractBatcher:410 - about to open PreparedStatement (open PreparedStatements: 0, globally: 0)
+17:29:13,310 DEBUG SQL:111 - select this_.ID as ID0_0_, this_.CODE as CODE0_0_, this_.DESCRIPTION as DESCRIPT3_0_0_ from PersistentObject this_ where this_.DTYPE='Category'
+Hibernate: select this_.ID as ID0_0_, this_.CODE as CODE0_0_, this_.DESCRIPTION as DESCRIPT3_0_0_ from PersistentObject this_ where this_.DTYPE='Category'
+17:29:13,340 DEBUG AbstractBatcher:426 - about to open ResultSet (open ResultSets: 0, globally: 0)
+17:29:13,341 DEBUG AbstractBatcher:433 - about to close ResultSet (open ResultSets: 1, globally: 1)
+17:29:13,341 DEBUG AbstractBatcher:418 - about to close PreparedStatement (open PreparedStatements: 1, globally: 1)
+17:29:13,348 DEBUG StatefulPersistenceContext:893 - initializing non-lazy collections
+17:29:13,349 DEBUG JDBCTransaction:130 - commit
+17:29:13,349 DEBUG JDBCTransaction:223 - re-enabling autocommit
+17:29:13,350 DEBUG JDBCTransaction:143 - committed JDBC Connection
+17:29:13,350 DEBUG ConnectionManager:325 - transaction completed on session with on_close connection release mode; be sure to close the session to release JDBC resources!
+17:29:13,351 DEBUG ConnectionManager:464 - releasing JDBC connection [ (open PreparedStatements: 0, globally: 0) (open ResultSets: 0, globally: 0)]
+17:29:13,351 DEBUG ConnectionManager:325 - transaction completed on session with on_close connection release mode; be sure to close the session to release JDBC resources!
+17:29:19,132 DEBUG SessionImpl:265 - opened session at timestamp: 13870421591
+17:29:19,132 DEBUG JDBCTransaction:78 - begin
+17:29:19,132 DEBUG ConnectionManager:444 - opening JDBC connection
+17:29:19,133 DEBUG JDBCTransaction:83 - current autocommit status: true
+17:29:19,133 DEBUG JDBCTransaction:86 - disabling autocommit
+17:29:19,145 DEBUG AbstractSaveEventListener:319 - executing identity-insert immediately
+17:29:19,146 DEBUG AbstractBatcher:410 - about to open PreparedStatement (open PreparedStatements: 0, globally: 0)
+17:29:19,146 DEBUG SQL:111 - insert into PersistentObject (CODE, DESCRIPTION, DTYPE) values (?, ?, 'Category')
+Hibernate: insert into PersistentObject (CODE, DESCRIPTION, DTYPE) values (?, ?, 'Category')
+17:29:19,155 DEBUG IdentifierGeneratorHelper:87 - Natively generated identity: 1
+17:29:19,155 DEBUG AbstractBatcher:418 - about to close PreparedStatement (open PreparedStatements: 1, globally: 1)
+17:29:19,158 DEBUG JDBCTransaction:130 - commit
+17:29:19,159 DEBUG AbstractFlushingEventListener:134 - processing flush-time cascades
+17:29:19,159 DEBUG AbstractFlushingEventListener:177 - dirty checking collections
+17:29:19,161 DEBUG AbstractFlushingEventListener:108 - Flushed: 0 insertions, 0 updates, 0 deletions to 1 objects
+17:29:19,162 DEBUG AbstractFlushingEventListener:114 - Flushed: 0 (re)creations, 0 updates, 0 removals to 0 collections
+17:29:19,163 DEBUG Printer:106 - listing entities:
+17:29:19,163 DEBUG Printer:113 - com.ajs.domain.Category{id=1, items=null, description=qfdwwf, code=qdw}
+17:29:19,164 DEBUG JDBCTransaction:223 - re-enabling autocommit
+17:29:19,165 DEBUG JDBCTransaction:143 - committed JDBC Connection
+17:29:19,165 DEBUG ConnectionManager:325 - transaction completed on session with on_close connection release mode; be sure to close the session to release JDBC resources!
+17:29:19,165 DEBUG ConnectionManager:464 - releasing JDBC connection [ (open PreparedStatements: 0, globally: 0) (open ResultSets: 0, globally: 0)]
+17:29:19,165 DEBUG ConnectionManager:325 - transaction completed on session with on_close connection release mode; be sure to close the session to release JDBC resources!
+17:29:19,171 DEBUG SessionImpl:265 - opened session at timestamp: 13870421591
+17:29:19,172 DEBUG JDBCTransaction:78 - begin
+17:29:19,172 DEBUG ConnectionManager:444 - opening JDBC connection
+17:29:19,172 DEBUG JDBCTransaction:83 - current autocommit status: true
+17:29:19,172 DEBUG JDBCTransaction:86 - disabling autocommit
+17:29:19,174 DEBUG AbstractBatcher:410 - about to open PreparedStatement (open PreparedStatements: 0, globally: 0)
+17:29:19,174 DEBUG SQL:111 - select this_.ID as ID0_0_, this_.CODE as CODE0_0_, this_.DESCRIPTION as DESCRIPT3_0_0_ from PersistentObject this_ where this_.DTYPE='Category'
+Hibernate: select this_.ID as ID0_0_, this_.CODE as CODE0_0_, this_.DESCRIPTION as DESCRIPT3_0_0_ from PersistentObject this_ where this_.DTYPE='Category'
+17:29:19,175 DEBUG AbstractBatcher:426 - about to open ResultSet (open ResultSets: 0, globally: 0)
+17:29:19,179 DEBUG Loader:1322 - result row: EntityKey[com.ajs.domain.Category#1]
+17:29:19,181 DEBUG AbstractBatcher:433 - about to close ResultSet (open ResultSets: 1, globally: 1)
+17:29:19,181 DEBUG AbstractBatcher:418 - about to close PreparedStatement (open PreparedStatements: 1, globally: 1)
+17:29:19,182 DEBUG TwoPhaseLoad:130 - resolving associations for [com.ajs.domain.Category#1]
+17:29:19,188 DEBUG TwoPhaseLoad:255 - done materializing entity [com.ajs.domain.Category#1]
+17:29:19,189 DEBUG StatefulPersistenceContext:893 - initializing non-lazy collections
+17:29:19,189 DEBUG JDBCTransaction:130 - commit
+17:29:19,189 DEBUG AbstractFlushingEventListener:134 - processing flush-time cascades
+17:29:19,190 DEBUG AbstractFlushingEventListener:177 - dirty checking collections
+17:29:19,191 DEBUG Collections:198 - Collection found: [com.ajs.domain.Category.items#1], was: [com.ajs.domain.Category.items#1] (uninitialized)
+17:29:19,191 DEBUG AbstractFlushingEventListener:108 - Flushed: 0 insertions, 0 updates, 0 deletions to 1 objects
+17:29:19,192 DEBUG AbstractFlushingEventListener:114 - Flushed: 0 (re)creations, 0 updates, 0 removals to 1 collections
+17:29:19,192 DEBUG Printer:106 - listing entities:
+17:29:19,192 DEBUG Printer:113 - com.ajs.domain.Category{id=1, items=<uninitialized>, description=qfdwwf, code=qdw}
+17:29:19,193 DEBUG JDBCTransaction:223 - re-enabling autocommit
+17:29:19,194 DEBUG JDBCTransaction:143 - committed JDBC Connection
+17:29:19,194 DEBUG ConnectionManager:325 - transaction completed on session with on_close connection release mode; be sure to close the session to release JDBC resources!
+17:29:19,195 DEBUG ConnectionManager:464 - releasing JDBC connection [ (open PreparedStatements: 0, globally: 0) (open ResultSets: 0, globally: 0)]
+17:29:19,195 DEBUG ConnectionManager:325 - transaction completed on session with on_close connection release mode; be sure to close the session to release JDBC resources!
+17:29:21,504 DEBUG SessionImpl:265 - opened session at timestamp: 13870421615
+17:29:21,505 DEBUG JDBCTransaction:78 - begin
+17:29:21,505 DEBUG ConnectionManager:444 - opening JDBC connection
+17:29:21,505 DEBUG JDBCTransaction:83 - current autocommit status: true
+17:29:21,505 DEBUG JDBCTransaction:86 - disabling autocommit
+17:29:21,509 DEBUG SessionImpl:1022 - initializing proxy: [com.ajs.domain.Category#1]
+17:29:21,509 DEBUG Loader:2022 - loading entity: [com.ajs.domain.Category#1]
+17:29:21,509 DEBUG AbstractBatcher:410 - about to open PreparedStatement (open PreparedStatements: 0, globally: 0)
+17:29:21,513 DEBUG SQL:111 - select category0_.ID as ID0_0_, category0_.CODE as CODE0_0_, category0_.DESCRIPTION as DESCRIPT3_0_0_ from PersistentObject category0_ where category0_.ID=? and category0_.DTYPE='Category'
+Hibernate: select category0_.ID as ID0_0_, category0_.CODE as CODE0_0_, category0_.DESCRIPTION as DESCRIPT3_0_0_ from PersistentObject category0_ where category0_.ID=? and category0_.DTYPE='Category'
+17:29:21,530 DEBUG AbstractBatcher:426 - about to open ResultSet (open ResultSets: 0, globally: 0)
+17:29:21,531 DEBUG Loader:1322 - result row: EntityKey[com.ajs.domain.Category#1]
+17:29:21,531 DEBUG AbstractBatcher:433 - about to close ResultSet (open ResultSets: 1, globally: 1)
+17:29:21,531 DEBUG AbstractBatcher:418 - about to close PreparedStatement (open PreparedStatements: 1, globally: 1)
+17:29:21,532 DEBUG TwoPhaseLoad:130 - resolving associations for [com.ajs.domain.Category#1]
+17:29:21,532 DEBUG TwoPhaseLoad:255 - done materializing entity [com.ajs.domain.Category#1]
+17:29:21,532 DEBUG StatefulPersistenceContext:893 - initializing non-lazy collections
+17:29:21,532 DEBUG Loader:2050 - done entity load
+17:29:21,534 DEBUG Loader:2158 - loading collection: [com.ajs.domain.Category.items#1]
+17:29:21,534 DEBUG AbstractBatcher:410 - about to open PreparedStatement (open PreparedStatements: 0, globally: 0)
+17:29:21,534 DEBUG SQL:111 - select items0_.CATEGORY_ID as CATEGORY9_0_1_, items0_.ID as ID1_, items0_.ID as ID0_0_, items0_.CATEGORY_ID as CATEGORY9_0_0_, items0_.CODE as CODE0_0_, items0_.DESCRIPTION as DESCRIPT3_0_0_ from PersistentObject items0_ where items0_.CATEGORY_ID=?
+Hibernate: select items0_.CATEGORY_ID as CATEGORY9_0_1_, items0_.ID as ID1_, items0_.ID as ID0_0_, items0_.CATEGORY_ID as CATEGORY9_0_0_, items0_.CODE as CODE0_0_, items0_.DESCRIPTION as DESCRIPT3_0_0_ from PersistentObject items0_ where items0_.CATEGORY_ID=?
+17:29:21,537 DEBUG AbstractBatcher:426 - about to open ResultSet (open ResultSets: 0, globally: 0)
+17:29:21,538 DEBUG Loader:1203 - result set contains (possibly empty) collection: [com.ajs.domain.Category.items#1]
+17:29:21,540 DEBUG AbstractBatcher:433 - about to close ResultSet (open ResultSets: 1, globally: 1)
+17:29:21,540 DEBUG AbstractBatcher:418 - about to close PreparedStatement (open PreparedStatements: 1, globally: 1)
+17:29:21,541 DEBUG CollectionLoadContext:241 - 1 collections were found in result set for role: com.ajs.domain.Category.items
+17:29:21,541 DEBUG CollectionLoadContext:284 - collection fully initialized: [com.ajs.domain.Category.items#1]
+17:29:21,541 DEBUG CollectionLoadContext:250 - 1 collections initialized for role: com.ajs.domain.Category.items
+17:29:21,541 DEBUG StatefulPersistenceContext:893 - initializing non-lazy collections
+17:29:21,542 DEBUG Loader:2182 - done loading collection
+17:29:21,542 DEBUG JDBCTransaction:130 - commit
+17:29:21,542 DEBUG AbstractFlushingEventListener:134 - processing flush-time cascades
+17:29:21,543 DEBUG AbstractFlushingEventListener:177 - dirty checking collections
+17:29:21,543 DEBUG Collections:198 - Collection found: [com.ajs.domain.Category.items#1], was: [com.ajs.domain.Category.items#1] (initialized)
+17:29:21,543 DEBUG AbstractFlushingEventListener:108 - Flushed: 0 insertions, 0 updates, 0 deletions to 1 objects
+17:29:21,543 DEBUG AbstractFlushingEventListener:114 - Flushed: 0 (re)creations, 0 updates, 0 removals to 1 collections
+17:29:21,543 DEBUG Printer:106 - listing entities:
+17:29:21,543 DEBUG Printer:113 - com.ajs.domain.Category{id=1, items=[], description=qfdwwf, code=qdw}
+17:29:21,544 DEBUG JDBCTransaction:223 - re-enabling autocommit
+17:29:21,545 DEBUG JDBCTransaction:143 - committed JDBC Connection
+17:29:21,545 DEBUG ConnectionManager:325 - transaction completed on session with on_close connection release mode; be sure to close the session to release JDBC resources!
+17:29:21,545 DEBUG ConnectionManager:464 - releasing JDBC connection [ (open PreparedStatements: 0, globally: 0) (open ResultSets: 0, globally: 0)]
+17:29:21,545 DEBUG ConnectionManager:325 - transaction completed on session with on_close connection release mode; be sure to close the session to release JDBC resources!
+17:29:27,484 DEBUG SessionImpl:265 - opened session at timestamp: 13870421674
+17:29:27,485 DEBUG JDBCTransaction:78 - begin
+17:29:27,485 DEBUG ConnectionManager:444 - opening JDBC connection
+17:29:27,485 DEBUG JDBCTransaction:83 - current autocommit status: true
+17:29:27,485 DEBUG JDBCTransaction:86 - disabling autocommit
+17:29:27,496 DEBUG AbstractSaveEventListener:319 - executing identity-insert immediately
+17:29:27,496 DEBUG AbstractBatcher:410 - about to open PreparedStatement (open PreparedStatements: 0, globally: 0)
+17:29:27,497 DEBUG SQL:111 - insert into PersistentObject (CATEGORY_ID, CODE, DESCRIPTION, DTYPE) values (?, ?, ?, 'Item')
+Hibernate: insert into PersistentObject (CATEGORY_ID, CODE, DESCRIPTION, DTYPE) values (?, ?, ?, 'Item')
+17:29:27,500 DEBUG IdentifierGeneratorHelper:87 - Natively generated identity: 2
+17:29:27,501 DEBUG AbstractBatcher:418 - about to close PreparedStatement (open PreparedStatements: 1, globally: 1)
+17:29:27,501 DEBUG JDBCTransaction:130 - commit
+17:29:27,502 DEBUG AbstractFlushingEventListener:134 - processing flush-time cascades
+17:29:27,502 DEBUG AbstractFlushingEventListener:177 - dirty checking collections
+17:29:27,502 DEBUG AbstractFlushingEventListener:108 - Flushed: 0 insertions, 0 updates, 0 deletions to 1 objects
+17:29:27,502 DEBUG AbstractFlushingEventListener:114 - Flushed: 0 (re)creations, 0 updates, 0 removals to 0 collections
+17:29:27,502 DEBUG Printer:106 - listing entities:
+17:29:27,503 DEBUG Printer:113 - com.ajs.domain.Item{id=2, category=com.ajs.domain.Category#1, description=svde, code=wdfwf}
+17:29:27,503 DEBUG JDBCTransaction:223 - re-enabling autocommit
+17:29:27,504 DEBUG JDBCTransaction:143 - committed JDBC Connection
+17:29:27,504 DEBUG ConnectionManager:325 - transaction completed on session with on_close connection release mode; be sure to close the session to release JDBC resources!
+17:29:27,504 DEBUG ConnectionManager:464 - releasing JDBC connection [ (open PreparedStatements: 0, globally: 0) (open ResultSets: 0, globally: 0)]
+17:29:27,504 DEBUG ConnectionManager:325 - transaction completed on session with on_close connection release mode; be sure to close the session to release JDBC resources!
+17:29:27,509 DEBUG SessionImpl:265 - opened session at timestamp: 13870421675
+17:29:27,509 DEBUG JDBCTransaction:78 - begin
+17:29:27,509 DEBUG ConnectionManager:444 - opening JDBC connection
+17:29:27,509 DEBUG JDBCTransaction:83 - current autocommit status: true
+17:29:27,509 DEBUG JDBCTransaction:86 - disabling autocommit
+17:29:27,510 DEBUG SessionImpl:1022 - initializing proxy: [com.ajs.domain.Category#1]
+17:29:27,510 DEBUG Loader:2022 - loading entity: [com.ajs.domain.Category#1]
+17:29:27,510 DEBUG AbstractBatcher:410 - about to open PreparedStatement (open PreparedStatements: 0, globally: 0)
+17:29:27,511 DEBUG SQL:111 - select category0_.ID as ID0_0_, category0_.CODE as CODE0_0_, category0_.DESCRIPTION as DESCRIPT3_0_0_ from PersistentObject category0_ where category0_.ID=? and category0_.DTYPE='Category'
+Hibernate: select category0_.ID as ID0_0_, category0_.CODE as CODE0_0_, category0_.DESCRIPTION as DESCRIPT3_0_0_ from PersistentObject category0_ where category0_.ID=? and category0_.DTYPE='Category'
+17:29:27,512 DEBUG AbstractBatcher:426 - about to open ResultSet (open ResultSets: 0, globally: 0)
+17:29:27,512 DEBUG Loader:1322 - result row: EntityKey[com.ajs.domain.Category#1]
+17:29:27,512 DEBUG AbstractBatcher:433 - about to close ResultSet (open ResultSets: 1, globally: 1)
+17:29:27,512 DEBUG AbstractBatcher:418 - about to close PreparedStatement (open PreparedStatements: 1, globally: 1)
+17:29:27,513 DEBUG TwoPhaseLoad:130 - resolving associations for [com.ajs.domain.Category#1]
+17:29:27,513 DEBUG TwoPhaseLoad:255 - done materializing entity [com.ajs.domain.Category#1]
+17:29:27,514 DEBUG StatefulPersistenceContext:893 - initializing non-lazy collections
+17:29:27,514 DEBUG Loader:2050 - done entity load
+17:29:27,514 DEBUG Loader:2158 - loading collection: [com.ajs.domain.Category.items#1]
+17:29:27,514 DEBUG AbstractBatcher:410 - about to open PreparedStatement (open PreparedStatements: 0, globally: 0)
+17:29:27,514 DEBUG SQL:111 - select items0_.CATEGORY_ID as CATEGORY9_0_1_, items0_.ID as ID1_, items0_.ID as ID0_0_, items0_.CATEGORY_ID as CATEGORY9_0_0_, items0_.CODE as CODE0_0_, items0_.DESCRIPTION as DESCRIPT3_0_0_ from PersistentObject items0_ where items0_.CATEGORY_ID=?
+Hibernate: select items0_.CATEGORY_ID as CATEGORY9_0_1_, items0_.ID as ID1_, items0_.ID as ID0_0_, items0_.CATEGORY_ID as CATEGORY9_0_0_, items0_.CODE as CODE0_0_, items0_.DESCRIPTION as DESCRIPT3_0_0_ from PersistentObject items0_ where items0_.CATEGORY_ID=?
+17:29:27,515 DEBUG AbstractBatcher:426 - about to open ResultSet (open ResultSets: 0, globally: 0)
+17:29:27,516 DEBUG Loader:1203 - result set contains (possibly empty) collection: [com.ajs.domain.Category.items#1]
+17:29:27,516 DEBUG Loader:1322 - result row: EntityKey[com.ajs.domain.Item#2]
+17:29:27,516 DEBUG Loader:1133 - found row of collection: [com.ajs.domain.Category.items#1]
+17:29:27,517 DEBUG AbstractBatcher:433 - about to close ResultSet (open ResultSets: 1, globally: 1)
+17:29:27,517 DEBUG AbstractBatcher:418 - about to close PreparedStatement (open PreparedStatements: 1, globally: 1)
+17:29:27,517 DEBUG TwoPhaseLoad:130 - resolving associations for [com.ajs.domain.Item#2]
+17:29:27,518 DEBUG TwoPhaseLoad:255 - done materializing entity [com.ajs.domain.Item#2]
+17:29:27,518 DEBUG CollectionLoadContext:241 - 1 collections were found in result set for role: com.ajs.domain.Category.items
+17:29:27,518 DEBUG CollectionLoadContext:284 - collection fully initialized: [com.ajs.domain.Category.items#1]
+17:29:27,518 DEBUG CollectionLoadContext:250 - 1 collections initialized for role: com.ajs.domain.Category.items
+17:29:27,518 DEBUG StatefulPersistenceContext:893 - initializing non-lazy collections
+17:29:27,519 DEBUG Loader:2182 - done loading collection
+17:29:27,519 DEBUG JDBCTransaction:130 - commit
+17:29:27,519 DEBUG AbstractFlushingEventListener:134 - processing flush-time cascades
+17:29:27,519 DEBUG AbstractFlushingEventListener:177 - dirty checking collections
+17:29:27,520 DEBUG Collections:198 - Collection found: [com.ajs.domain.Category.items#1], was: [com.ajs.domain.Category.items#1] (initialized)
+17:29:27,520 DEBUG AbstractFlushingEventListener:108 - Flushed: 0 insertions, 0 updates, 0 deletions to 2 objects
+17:29:27,520 DEBUG AbstractFlushingEventListener:114 - Flushed: 0 (re)creations, 0 updates, 0 removals to 1 collections
+17:29:27,520 DEBUG Printer:106 - listing entities:
+17:29:27,520 DEBUG Printer:113 - com.ajs.domain.Item{id=2, category=com.ajs.domain.Category#1, description=svde, code=wdfwf}
+17:29:27,520 DEBUG Printer:113 - com.ajs.domain.Category{id=1, items=[com.ajs.domain.Item#2], description=qfdwwf, code=qdw}
+17:29:27,521 DEBUG JDBCTransaction:223 - re-enabling autocommit
+17:29:27,522 DEBUG JDBCTransaction:143 - committed JDBC Connection
+17:29:27,522 DEBUG ConnectionManager:325 - transaction completed on session with on_close connection release mode; be sure to close the session to release JDBC resources!
+17:29:27,522 DEBUG ConnectionManager:464 - releasing JDBC connection [ (open PreparedStatements: 0, globally: 0) (open ResultSets: 0, globally: 0)]
+17:29:27,522 DEBUG ConnectionManager:325 - transaction completed on session with on_close connection release mode; be sure to close the session to release JDBC resources!
+19:40:39,660 DEBUG SessionImpl:265 - opened session at timestamp: 13870500396
+19:40:39,660 DEBUG JDBCTransaction:78 - begin
+19:40:39,661 DEBUG ConnectionManager:444 - opening JDBC connection
+19:40:39,661 DEBUG JDBCTransaction:83 - current autocommit status: true
+19:40:39,661 DEBUG JDBCTransaction:86 - disabling autocommit
+19:40:39,663 DEBUG AbstractBatcher:410 - about to open PreparedStatement (open PreparedStatements: 0, globally: 0)
+19:40:39,663 DEBUG SQL:111 - select this_.ID as ID0_0_, this_.CODE as CODE0_0_, this_.DESCRIPTION as DESCRIPT3_0_0_ from PersistentObject this_ where this_.DTYPE='Category'
+Hibernate: select this_.ID as ID0_0_, this_.CODE as CODE0_0_, this_.DESCRIPTION as DESCRIPT3_0_0_ from PersistentObject this_ where this_.DTYPE='Category'
+19:40:39,664 DEBUG AbstractBatcher:426 - about to open ResultSet (open ResultSets: 0, globally: 0)
+19:40:39,665 DEBUG Loader:1322 - result row: EntityKey[com.ajs.domain.Category#1]
+19:40:39,665 DEBUG AbstractBatcher:433 - about to close ResultSet (open ResultSets: 1, globally: 1)
+19:40:39,666 DEBUG AbstractBatcher:418 - about to close PreparedStatement (open PreparedStatements: 1, globally: 1)
+19:40:39,667 DEBUG TwoPhaseLoad:130 - resolving associations for [com.ajs.domain.Category#1]
+19:40:39,667 DEBUG TwoPhaseLoad:255 - done materializing entity [com.ajs.domain.Category#1]
+19:40:39,668 DEBUG StatefulPersistenceContext:893 - initializing non-lazy collections
+19:40:39,668 DEBUG JDBCTransaction:130 - commit
+19:40:39,668 DEBUG AbstractFlushingEventListener:134 - processing flush-time cascades
+19:40:39,669 DEBUG AbstractFlushingEventListener:177 - dirty checking collections
+19:40:39,669 DEBUG Collections:198 - Collection found: [com.ajs.domain.Category.items#1], was: [com.ajs.domain.Category.items#1] (uninitialized)
+19:40:39,670 DEBUG AbstractFlushingEventListener:108 - Flushed: 0 insertions, 0 updates, 0 deletions to 1 objects
+19:40:39,670 DEBUG AbstractFlushingEventListener:114 - Flushed: 0 (re)creations, 0 updates, 0 removals to 1 collections
+19:40:39,671 DEBUG Printer:106 - listing entities:
+19:40:39,671 DEBUG Printer:113 - com.ajs.domain.Category{id=1, items=<uninitialized>, description=qfdwwf, code=qdw}
+19:40:39,672 DEBUG JDBCTransaction:223 - re-enabling autocommit
+19:40:39,673 DEBUG JDBCTransaction:143 - committed JDBC Connection
+19:40:39,673 DEBUG ConnectionManager:325 - transaction completed on session with on_close connection release mode; be sure to close the session to release JDBC resources!
+19:40:39,674 DEBUG ConnectionManager:464 - releasing JDBC connection [ (open PreparedStatements: 0, globally: 0) (open ResultSets: 0, globally: 0)]
+19:40:39,674 DEBUG ConnectionManager:325 - transaction completed on session with on_close connection release mode; be sure to close the session to release JDBC resources!
+19:40:46,538 DEBUG SessionImpl:265 - opened session at timestamp: 13870500465
+19:40:46,538 DEBUG JDBCTransaction:78 - begin
+19:40:46,538 DEBUG ConnectionManager:444 - opening JDBC connection
+19:40:46,539 DEBUG JDBCTransaction:83 - current autocommit status: true
+19:40:46,539 DEBUG JDBCTransaction:86 - disabling autocommit
+19:40:46,540 DEBUG AbstractSaveEventListener:319 - executing identity-insert immediately
+19:40:46,541 DEBUG AbstractBatcher:410 - about to open PreparedStatement (open PreparedStatements: 0, globally: 0)
+19:40:46,541 DEBUG SQL:111 - insert into PersistentObject (CODE, DESCRIPTION, DTYPE) values (?, ?, 'Category')
+Hibernate: insert into PersistentObject (CODE, DESCRIPTION, DTYPE) values (?, ?, 'Category')
+19:40:46,543 DEBUG IdentifierGeneratorHelper:87 - Natively generated identity: 3
+19:40:46,543 DEBUG AbstractBatcher:418 - about to close PreparedStatement (open PreparedStatements: 1, globally: 1)
+19:40:46,544 DEBUG JDBCTransaction:130 - commit
+19:40:46,544 DEBUG AbstractFlushingEventListener:134 - processing flush-time cascades
+19:40:46,544 DEBUG AbstractFlushingEventListener:177 - dirty checking collections
+19:40:46,544 DEBUG AbstractFlushingEventListener:108 - Flushed: 0 insertions, 0 updates, 0 deletions to 1 objects
+19:40:46,545 DEBUG AbstractFlushingEventListener:114 - Flushed: 0 (re)creations, 0 updates, 0 removals to 0 collections
+19:40:46,545 DEBUG Printer:106 - listing entities:
+19:40:46,546 DEBUG Printer:113 - com.ajs.domain.Category{id=3, items=null, description=z, code=}
+19:40:46,547 DEBUG JDBCTransaction:223 - re-enabling autocommit
+19:40:46,548 DEBUG JDBCTransaction:143 - committed JDBC Connection
+19:40:46,548 DEBUG ConnectionManager:325 - transaction completed on session with on_close connection release mode; be sure to close the session to release JDBC resources!
+19:40:46,548 DEBUG ConnectionManager:464 - releasing JDBC connection [ (open PreparedStatements: 0, globally: 0) (open ResultSets: 0, globally: 0)]
+19:40:46,549 DEBUG ConnectionManager:325 - transaction completed on session with on_close connection release mode; be sure to close the session to release JDBC resources!
+19:40:46,554 DEBUG SessionImpl:265 - opened session at timestamp: 13870500465
+19:40:46,554 DEBUG JDBCTransaction:78 - begin
+19:40:46,554 DEBUG ConnectionManager:444 - opening JDBC connection
+19:40:46,555 DEBUG JDBCTransaction:83 - current autocommit status: true
+19:40:46,555 DEBUG JDBCTransaction:86 - disabling autocommit
+19:40:46,556 DEBUG AbstractBatcher:410 - about to open PreparedStatement (open PreparedStatements: 0, globally: 0)
+19:40:46,557 DEBUG SQL:111 - select this_.ID as ID0_0_, this_.CODE as CODE0_0_, this_.DESCRIPTION as DESCRIPT3_0_0_ from PersistentObject this_ where this_.DTYPE='Category'
+Hibernate: select this_.ID as ID0_0_, this_.CODE as CODE0_0_, this_.DESCRIPTION as DESCRIPT3_0_0_ from PersistentObject this_ where this_.DTYPE='Category'
+19:40:46,558 DEBUG AbstractBatcher:426 - about to open ResultSet (open ResultSets: 0, globally: 0)
+19:40:46,558 DEBUG Loader:1322 - result row: EntityKey[com.ajs.domain.Category#1]
+19:40:46,558 DEBUG Loader:1322 - result row: EntityKey[com.ajs.domain.Category#3]
+19:40:46,559 DEBUG AbstractBatcher:433 - about to close ResultSet (open ResultSets: 1, globally: 1)
+19:40:46,559 DEBUG AbstractBatcher:418 - about to close PreparedStatement (open PreparedStatements: 1, globally: 1)
+19:40:46,560 DEBUG TwoPhaseLoad:130 - resolving associations for [com.ajs.domain.Category#1]
+19:40:46,560 DEBUG TwoPhaseLoad:255 - done materializing entity [com.ajs.domain.Category#1]
+19:40:46,560 DEBUG TwoPhaseLoad:130 - resolving associations for [com.ajs.domain.Category#3]
+19:40:46,561 DEBUG TwoPhaseLoad:255 - done materializing entity [com.ajs.domain.Category#3]
+19:40:46,561 DEBUG StatefulPersistenceContext:893 - initializing non-lazy collections
+19:40:46,561 DEBUG JDBCTransaction:130 - commit
+19:40:46,562 DEBUG AbstractFlushingEventListener:134 - processing flush-time cascades
+19:40:46,562 DEBUG AbstractFlushingEventListener:177 - dirty checking collections
+19:40:46,562 DEBUG Collections:198 - Collection found: [com.ajs.domain.Category.items#1], was: [com.ajs.domain.Category.items#1] (uninitialized)
+19:40:46,563 DEBUG Collections:198 - Collection found: [com.ajs.domain.Category.items#3], was: [com.ajs.domain.Category.items#3] (uninitialized)
+19:40:46,563 DEBUG AbstractFlushingEventListener:108 - Flushed: 0 insertions, 0 updates, 0 deletions to 2 objects
+19:40:46,563 DEBUG AbstractFlushingEventListener:114 - Flushed: 0 (re)creations, 0 updates, 0 removals to 2 collections
+19:40:46,564 DEBUG Printer:106 - listing entities:
+19:40:46,564 DEBUG Printer:113 - com.ajs.domain.Category{id=3, items=<uninitialized>, description=z, code=}
+19:40:46,564 DEBUG Printer:113 - com.ajs.domain.Category{id=1, items=<uninitialized>, description=qfdwwf, code=qdw}
+19:40:46,565 DEBUG JDBCTransaction:223 - re-enabling autocommit
+19:40:46,566 DEBUG JDBCTransaction:143 - committed JDBC Connection
+19:40:46,566 DEBUG ConnectionManager:325 - transaction completed on session with on_close connection release mode; be sure to close the session to release JDBC resources!
+19:40:46,570 DEBUG ConnectionManager:464 - releasing JDBC connection [ (open PreparedStatements: 0, globally: 0) (open ResultSets: 0, globally: 0)]
+19:40:46,570 DEBUG ConnectionManager:325 - transaction completed on session with on_close connection release mode; be sure to close the session to release JDBC resources!
+19:40:47,785 DEBUG SessionImpl:265 - opened session at timestamp: 13870500477
+19:40:47,785 DEBUG JDBCTransaction:78 - begin
+19:40:47,785 DEBUG ConnectionManager:444 - opening JDBC connection
+19:40:47,785 DEBUG JDBCTransaction:83 - current autocommit status: true
+19:40:47,785 DEBUG JDBCTransaction:86 - disabling autocommit
+19:40:47,786 DEBUG SessionImpl:1022 - initializing proxy: [com.ajs.domain.Category#3]
+19:40:47,786 DEBUG Loader:2022 - loading entity: [com.ajs.domain.Category#3]
+19:40:47,787 DEBUG AbstractBatcher:410 - about to open PreparedStatement (open PreparedStatements: 0, globally: 0)
+19:40:47,787 DEBUG SQL:111 - select category0_.ID as ID0_0_, category0_.CODE as CODE0_0_, category0_.DESCRIPTION as DESCRIPT3_0_0_ from PersistentObject category0_ where category0_.ID=? and category0_.DTYPE='Category'
+Hibernate: select category0_.ID as ID0_0_, category0_.CODE as CODE0_0_, category0_.DESCRIPTION as DESCRIPT3_0_0_ from PersistentObject category0_ where category0_.ID=? and category0_.DTYPE='Category'
+19:40:47,788 DEBUG AbstractBatcher:426 - about to open ResultSet (open ResultSets: 0, globally: 0)
+19:40:47,788 DEBUG Loader:1322 - result row: EntityKey[com.ajs.domain.Category#3]
+19:40:47,789 DEBUG AbstractBatcher:433 - about to close ResultSet (open ResultSets: 1, globally: 1)
+19:40:47,789 DEBUG AbstractBatcher:418 - about to close PreparedStatement (open PreparedStatements: 1, globally: 1)
+19:40:47,790 DEBUG TwoPhaseLoad:130 - resolving associations for [com.ajs.domain.Category#3]
+19:40:47,790 DEBUG TwoPhaseLoad:255 - done materializing entity [com.ajs.domain.Category#3]
+19:40:47,790 DEBUG StatefulPersistenceContext:893 - initializing non-lazy collections
+19:40:47,791 DEBUG Loader:2050 - done entity load
+19:40:47,791 DEBUG Loader:2158 - loading collection: [com.ajs.domain.Category.items#3]
+19:40:47,791 DEBUG AbstractBatcher:410 - about to open PreparedStatement (open PreparedStatements: 0, globally: 0)
+19:40:47,791 DEBUG SQL:111 - select items0_.CATEGORY_ID as CATEGORY9_0_1_, items0_.ID as ID1_, items0_.ID as ID0_0_, items0_.CATEGORY_ID as CATEGORY9_0_0_, items0_.CODE as CODE0_0_, items0_.DESCRIPTION as DESCRIPT3_0_0_ from PersistentObject items0_ where items0_.CATEGORY_ID=?
+Hibernate: select items0_.CATEGORY_ID as CATEGORY9_0_1_, items0_.ID as ID1_, items0_.ID as ID0_0_, items0_.CATEGORY_ID as CATEGORY9_0_0_, items0_.CODE as CODE0_0_, items0_.DESCRIPTION as DESCRIPT3_0_0_ from PersistentObject items0_ where items0_.CATEGORY_ID=?
+19:40:47,792 DEBUG AbstractBatcher:426 - about to open ResultSet (open ResultSets: 0, globally: 0)
+19:40:47,792 DEBUG Loader:1203 - result set contains (possibly empty) collection: [com.ajs.domain.Category.items#3]
+19:40:47,793 DEBUG AbstractBatcher:433 - about to close ResultSet (open ResultSets: 1, globally: 1)
+19:40:47,793 DEBUG AbstractBatcher:418 - about to close PreparedStatement (open PreparedStatements: 1, globally: 1)
+19:40:47,794 DEBUG CollectionLoadContext:241 - 1 collections were found in result set for role: com.ajs.domain.Category.items
+19:40:47,794 DEBUG CollectionLoadContext:284 - collection fully initialized: [com.ajs.domain.Category.items#3]
+19:40:47,794 DEBUG CollectionLoadContext:250 - 1 collections initialized for role: com.ajs.domain.Category.items
+19:40:47,794 DEBUG StatefulPersistenceContext:893 - initializing non-lazy collections
+19:40:47,794 DEBUG Loader:2182 - done loading collection
+19:40:47,795 DEBUG JDBCTransaction:130 - commit
+19:40:47,795 DEBUG AbstractFlushingEventListener:134 - processing flush-time cascades
+19:40:47,795 DEBUG AbstractFlushingEventListener:177 - dirty checking collections
+19:40:47,795 DEBUG Collections:198 - Collection found: [com.ajs.domain.Category.items#3], was: [com.ajs.domain.Category.items#3] (initialized)
+19:40:47,795 DEBUG AbstractFlushingEventListener:108 - Flushed: 0 insertions, 0 updates, 0 deletions to 1 objects
+19:40:47,795 DEBUG AbstractFlushingEventListener:114 - Flushed: 0 (re)creations, 0 updates, 0 removals to 1 collections
+19:40:47,796 DEBUG Printer:106 - listing entities:
+19:40:47,796 DEBUG Printer:113 - com.ajs.domain.Category{id=3, items=[], description=z, code=}
+19:40:47,796 DEBUG JDBCTransaction:223 - re-enabling autocommit
+19:40:47,797 DEBUG JDBCTransaction:143 - committed JDBC Connection
+19:40:47,797 DEBUG ConnectionManager:325 - transaction completed on session with on_close connection release mode; be sure to close the session to release JDBC resources!
+19:40:47,797 DEBUG ConnectionManager:464 - releasing JDBC connection [ (open PreparedStatements: 0, globally: 0) (open ResultSets: 0, globally: 0)]
+19:40:47,797 DEBUG ConnectionManager:325 - transaction completed on session with on_close connection release mode; be sure to close the session to release JDBC resources!
+19:40:53,957 DEBUG SessionImpl:265 - opened session at timestamp: 13870500539
+19:40:53,958 DEBUG JDBCTransaction:78 - begin
+19:40:53,958 DEBUG ConnectionManager:444 - opening JDBC connection
+19:40:53,958 DEBUG JDBCTransaction:83 - current autocommit status: true
+19:40:53,958 DEBUG JDBCTransaction:86 - disabling autocommit
+19:40:53,959 DEBUG AbstractSaveEventListener:319 - executing identity-insert immediately
+19:40:53,959 DEBUG AbstractBatcher:410 - about to open PreparedStatement (open PreparedStatements: 0, globally: 0)
+19:40:53,960 DEBUG SQL:111 - insert into PersistentObject (CATEGORY_ID, CODE, DESCRIPTION, DTYPE) values (?, ?, ?, 'Item')
+Hibernate: insert into PersistentObject (CATEGORY_ID, CODE, DESCRIPTION, DTYPE) values (?, ?, ?, 'Item')
+19:40:53,961 DEBUG IdentifierGeneratorHelper:87 - Natively generated identity: 4
+19:40:53,961 DEBUG AbstractBatcher:418 - about to close PreparedStatement (open PreparedStatements: 1, globally: 1)
+19:40:53,962 DEBUG JDBCTransaction:130 - commit
+19:40:53,962 DEBUG AbstractFlushingEventListener:134 - processing flush-time cascades
+19:40:53,962 DEBUG AbstractFlushingEventListener:177 - dirty checking collections
+19:40:53,962 DEBUG AbstractFlushingEventListener:108 - Flushed: 0 insertions, 0 updates, 0 deletions to 1 objects
+19:40:53,962 DEBUG AbstractFlushingEventListener:114 - Flushed: 0 (re)creations, 0 updates, 0 removals to 0 collections
+19:40:53,962 DEBUG Printer:106 - listing entities:
+19:40:53,963 DEBUG Printer:113 - com.ajs.domain.Item{id=4, category=com.ajs.domain.Category#3, description=zz, code=zzzzz}
+19:40:53,964 DEBUG JDBCTransaction:223 - re-enabling autocommit
+19:40:53,964 DEBUG JDBCTransaction:143 - committed JDBC Connection
+19:40:53,965 DEBUG ConnectionManager:325 - transaction completed on session with on_close connection release mode; be sure to close the session to release JDBC resources!
+19:40:53,965 DEBUG ConnectionManager:464 - releasing JDBC connection [ (open PreparedStatements: 0, globally: 0) (open ResultSets: 0, globally: 0)]
+19:40:53,965 DEBUG ConnectionManager:325 - transaction completed on session with on_close connection release mode; be sure to close the session to release JDBC resources!
+19:40:53,969 DEBUG SessionImpl:265 - opened session at timestamp: 13870500539
+19:40:53,969 DEBUG JDBCTransaction:78 - begin
+19:40:53,969 DEBUG ConnectionManager:444 - opening JDBC connection
+19:40:53,970 DEBUG JDBCTransaction:83 - current autocommit status: true
+19:40:53,970 DEBUG JDBCTransaction:86 - disabling autocommit
+19:40:53,971 DEBUG SessionImpl:1022 - initializing proxy: [com.ajs.domain.Category#3]
+19:40:53,971 DEBUG Loader:2022 - loading entity: [com.ajs.domain.Category#3]
+19:40:53,971 DEBUG AbstractBatcher:410 - about to open PreparedStatement (open PreparedStatements: 0, globally: 0)
+19:40:53,971 DEBUG SQL:111 - select category0_.ID as ID0_0_, category0_.CODE as CODE0_0_, category0_.DESCRIPTION as DESCRIPT3_0_0_ from PersistentObject category0_ where category0_.ID=? and category0_.DTYPE='Category'
+Hibernate: select category0_.ID as ID0_0_, category0_.CODE as CODE0_0_, category0_.DESCRIPTION as DESCRIPT3_0_0_ from PersistentObject category0_ where category0_.ID=? and category0_.DTYPE='Category'
+19:40:53,972 DEBUG AbstractBatcher:426 - about to open ResultSet (open ResultSets: 0, globally: 0)
+19:40:53,972 DEBUG Loader:1322 - result row: EntityKey[com.ajs.domain.Category#3]
+19:40:53,973 DEBUG AbstractBatcher:433 - about to close ResultSet (open ResultSets: 1, globally: 1)
+19:40:53,973 DEBUG AbstractBatcher:418 - about to close PreparedStatement (open PreparedStatements: 1, globally: 1)
+19:40:53,973 DEBUG TwoPhaseLoad:130 - resolving associations for [com.ajs.domain.Category#3]
+19:40:53,974 DEBUG TwoPhaseLoad:255 - done materializing entity [com.ajs.domain.Category#3]
+19:40:53,974 DEBUG StatefulPersistenceContext:893 - initializing non-lazy collections
+19:40:53,974 DEBUG Loader:2050 - done entity load
+19:40:53,974 DEBUG Loader:2158 - loading collection: [com.ajs.domain.Category.items#3]
+19:40:53,974 DEBUG AbstractBatcher:410 - about to open PreparedStatement (open PreparedStatements: 0, globally: 0)
+19:40:53,974 DEBUG SQL:111 - select items0_.CATEGORY_ID as CATEGORY9_0_1_, items0_.ID as ID1_, items0_.ID as ID0_0_, items0_.CATEGORY_ID as CATEGORY9_0_0_, items0_.CODE as CODE0_0_, items0_.DESCRIPTION as DESCRIPT3_0_0_ from PersistentObject items0_ where items0_.CATEGORY_ID=?
+Hibernate: select items0_.CATEGORY_ID as CATEGORY9_0_1_, items0_.ID as ID1_, items0_.ID as ID0_0_, items0_.CATEGORY_ID as CATEGORY9_0_0_, items0_.CODE as CODE0_0_, items0_.DESCRIPTION as DESCRIPT3_0_0_ from PersistentObject items0_ where items0_.CATEGORY_ID=?
+19:40:53,975 DEBUG AbstractBatcher:426 - about to open ResultSet (open ResultSets: 0, globally: 0)
+19:40:53,976 DEBUG Loader:1203 - result set contains (possibly empty) collection: [com.ajs.domain.Category.items#3]
+19:40:53,976 DEBUG Loader:1322 - result row: EntityKey[com.ajs.domain.Item#4]
+19:40:53,976 DEBUG Loader:1133 - found row of collection: [com.ajs.domain.Category.items#3]
+19:40:53,976 DEBUG AbstractBatcher:433 - about to close ResultSet (open ResultSets: 1, globally: 1)
+19:40:53,977 DEBUG AbstractBatcher:418 - about to close PreparedStatement (open PreparedStatements: 1, globally: 1)
+19:40:53,977 DEBUG TwoPhaseLoad:130 - resolving associations for [com.ajs.domain.Item#4]
+19:40:53,977 DEBUG TwoPhaseLoad:255 - done materializing entity [com.ajs.domain.Item#4]
+19:40:53,978 DEBUG CollectionLoadContext:241 - 1 collections were found in result set for role: com.ajs.domain.Category.items
+19:40:53,978 DEBUG CollectionLoadContext:284 - collection fully initialized: [com.ajs.domain.Category.items#3]
+19:40:53,978 DEBUG CollectionLoadContext:250 - 1 collections initialized for role: com.ajs.domain.Category.items
+19:40:53,978 DEBUG StatefulPersistenceContext:893 - initializing non-lazy collections
+19:40:53,978 DEBUG Loader:2182 - done loading collection
+19:40:53,979 DEBUG JDBCTransaction:130 - commit
+19:40:53,979 DEBUG AbstractFlushingEventListener:134 - processing flush-time cascades
+19:40:53,979 DEBUG AbstractFlushingEventListener:177 - dirty checking collections
+19:40:53,979 DEBUG Collections:198 - Collection found: [com.ajs.domain.Category.items#3], was: [com.ajs.domain.Category.items#3] (initialized)
+19:40:53,979 DEBUG AbstractFlushingEventListener:108 - Flushed: 0 insertions, 0 updates, 0 deletions to 2 objects
+19:40:53,979 DEBUG AbstractFlushingEventListener:114 - Flushed: 0 (re)creations, 0 updates, 0 removals to 1 collections
+19:40:53,980 DEBUG Printer:106 - listing entities:
+19:40:53,980 DEBUG Printer:113 - com.ajs.domain.Category{id=3, items=[com.ajs.domain.Item#4], description=z, code=}
+19:40:53,980 DEBUG Printer:113 - com.ajs.domain.Item{id=4, category=com.ajs.domain.Category#3, description=zz, code=zzzzz}
+19:40:53,981 DEBUG JDBCTransaction:223 - re-enabling autocommit
+19:40:53,981 DEBUG JDBCTransaction:143 - committed JDBC Connection
+19:40:53,981 DEBUG ConnectionManager:325 - transaction completed on session with on_close connection release mode; be sure to close the session to release JDBC resources!
+19:40:53,982 DEBUG ConnectionManager:464 - releasing JDBC connection [ (open PreparedStatements: 0, globally: 0) (open ResultSets: 0, globally: 0)]
+19:40:53,982 DEBUG ConnectionManager:325 - transaction completed on session with on_close connection release mode; be sure to close the session to release JDBC resources!
+19:40:56,456 DEBUG SessionImpl:265 - opened session at timestamp: 13870500564
+19:40:56,456 DEBUG JDBCTransaction:78 - begin
+19:40:56,456 DEBUG ConnectionManager:444 - opening JDBC connection
+19:40:56,456 DEBUG JDBCTransaction:83 - current autocommit status: true
+19:40:56,457 DEBUG JDBCTransaction:86 - disabling autocommit
+19:40:56,458 DEBUG AbstractBatcher:410 - about to open PreparedStatement (open PreparedStatements: 0, globally: 0)
+19:40:56,458 DEBUG SQL:111 - select this_.ID as ID0_0_, this_.CODE as CODE0_0_, this_.DESCRIPTION as DESCRIPT3_0_0_ from PersistentObject this_ where this_.DTYPE='Category'
+Hibernate: select this_.ID as ID0_0_, this_.CODE as CODE0_0_, this_.DESCRIPTION as DESCRIPT3_0_0_ from PersistentObject this_ where this_.DTYPE='Category'
+19:40:56,459 DEBUG AbstractBatcher:426 - about to open ResultSet (open ResultSets: 0, globally: 0)
+19:40:56,459 DEBUG Loader:1322 - result row: EntityKey[com.ajs.domain.Category#1]
+19:40:56,460 DEBUG Loader:1322 - result row: EntityKey[com.ajs.domain.Category#3]
+19:40:56,461 DEBUG AbstractBatcher:433 - about to close ResultSet (open ResultSets: 1, globally: 1)
+19:40:56,461 DEBUG AbstractBatcher:418 - about to close PreparedStatement (open PreparedStatements: 1, globally: 1)
+19:40:56,461 DEBUG TwoPhaseLoad:130 - resolving associations for [com.ajs.domain.Category#1]
+19:40:56,462 DEBUG TwoPhaseLoad:255 - done materializing entity [com.ajs.domain.Category#1]
+19:40:56,462 DEBUG TwoPhaseLoad:130 - resolving associations for [com.ajs.domain.Category#3]
+19:40:56,462 DEBUG TwoPhaseLoad:255 - done materializing entity [com.ajs.domain.Category#3]
+19:40:56,462 DEBUG StatefulPersistenceContext:893 - initializing non-lazy collections
+19:40:56,462 DEBUG JDBCTransaction:130 - commit
+19:40:56,463 DEBUG AbstractFlushingEventListener:134 - processing flush-time cascades
+19:40:56,463 DEBUG AbstractFlushingEventListener:177 - dirty checking collections
+19:40:56,463 DEBUG Collections:198 - Collection found: [com.ajs.domain.Category.items#1], was: [com.ajs.domain.Category.items#1] (uninitialized)
+19:40:56,463 DEBUG Collections:198 - Collection found: [com.ajs.domain.Category.items#3], was: [com.ajs.domain.Category.items#3] (uninitialized)
+19:40:56,463 DEBUG AbstractFlushingEventListener:108 - Flushed: 0 insertions, 0 updates, 0 deletions to 2 objects
+19:40:56,464 DEBUG AbstractFlushingEventListener:114 - Flushed: 0 (re)creations, 0 updates, 0 removals to 2 collections
+19:40:56,464 DEBUG Printer:106 - listing entities:
+19:40:56,464 DEBUG Printer:113 - com.ajs.domain.Category{id=3, items=<uninitialized>, description=z, code=}
+19:40:56,464 DEBUG Printer:113 - com.ajs.domain.Category{id=1, items=<uninitialized>, description=qfdwwf, code=qdw}
+19:40:56,465 DEBUG JDBCTransaction:223 - re-enabling autocommit
+19:40:56,465 DEBUG JDBCTransaction:143 - committed JDBC Connection
+19:40:56,465 DEBUG ConnectionManager:325 - transaction completed on session with on_close connection release mode; be sure to close the session to release JDBC resources!
+19:40:56,466 DEBUG ConnectionManager:464 - releasing JDBC connection [ (open PreparedStatements: 0, globally: 0) (open ResultSets: 0, globally: 0)]
+19:40:56,466 DEBUG ConnectionManager:325 - transaction completed on session with on_close connection release mode; be sure to close the session to release JDBC resources!
+19:40:57,489 DEBUG SessionImpl:265 - opened session at timestamp: 13870500574
+19:40:57,489 DEBUG JDBCTransaction:78 - begin
+19:40:57,489 DEBUG ConnectionManager:444 - opening JDBC connection
+19:40:57,490 DEBUG JDBCTransaction:83 - current autocommit status: true
+19:40:57,490 DEBUG JDBCTransaction:86 - disabling autocommit
+19:40:57,491 DEBUG SessionImpl:1022 - initializing proxy: [com.ajs.domain.Category#3]
+19:40:57,491 DEBUG Loader:2022 - loading entity: [com.ajs.domain.Category#3]
+19:40:57,491 DEBUG AbstractBatcher:410 - about to open PreparedStatement (open PreparedStatements: 0, globally: 0)
+19:40:57,491 DEBUG SQL:111 - select category0_.ID as ID0_0_, category0_.CODE as CODE0_0_, category0_.DESCRIPTION as DESCRIPT3_0_0_ from PersistentObject category0_ where category0_.ID=? and category0_.DTYPE='Category'
+Hibernate: select category0_.ID as ID0_0_, category0_.CODE as CODE0_0_, category0_.DESCRIPTION as DESCRIPT3_0_0_ from PersistentObject category0_ where category0_.ID=? and category0_.DTYPE='Category'
+19:40:57,492 DEBUG AbstractBatcher:426 - about to open ResultSet (open ResultSets: 0, globally: 0)
+19:40:57,492 DEBUG Loader:1322 - result row: EntityKey[com.ajs.domain.Category#3]
+19:40:57,493 DEBUG AbstractBatcher:433 - about to close ResultSet (open ResultSets: 1, globally: 1)
+19:40:57,493 DEBUG AbstractBatcher:418 - about to close PreparedStatement (open PreparedStatements: 1, globally: 1)
+19:40:57,494 DEBUG TwoPhaseLoad:130 - resolving associations for [com.ajs.domain.Category#3]
+19:40:57,494 DEBUG TwoPhaseLoad:255 - done materializing entity [com.ajs.domain.Category#3]
+19:40:57,494 DEBUG StatefulPersistenceContext:893 - initializing non-lazy collections
+19:40:57,494 DEBUG Loader:2050 - done entity load
+19:40:57,496 DEBUG Loader:2158 - loading collection: [com.ajs.domain.Category.items#3]
+19:40:57,496 DEBUG AbstractBatcher:410 - about to open PreparedStatement (open PreparedStatements: 0, globally: 0)
+19:40:57,497 DEBUG SQL:111 - select items0_.CATEGORY_ID as CATEGORY9_0_1_, items0_.ID as ID1_, items0_.ID as ID0_0_, items0_.CATEGORY_ID as CATEGORY9_0_0_, items0_.CODE as CODE0_0_, items0_.DESCRIPTION as DESCRIPT3_0_0_ from PersistentObject items0_ where items0_.CATEGORY_ID=?
+Hibernate: select items0_.CATEGORY_ID as CATEGORY9_0_1_, items0_.ID as ID1_, items0_.ID as ID0_0_, items0_.CATEGORY_ID as CATEGORY9_0_0_, items0_.CODE as CODE0_0_, items0_.DESCRIPTION as DESCRIPT3_0_0_ from PersistentObject items0_ where items0_.CATEGORY_ID=?
+19:40:57,498 DEBUG AbstractBatcher:426 - about to open ResultSet (open ResultSets: 0, globally: 0)
+19:40:57,498 DEBUG Loader:1203 - result set contains (possibly empty) collection: [com.ajs.domain.Category.items#3]
+19:40:57,498 DEBUG Loader:1322 - result row: EntityKey[com.ajs.domain.Item#4]
+19:40:57,498 DEBUG Loader:1133 - found row of collection: [com.ajs.domain.Category.items#3]
+19:40:57,499 DEBUG AbstractBatcher:433 - about to close ResultSet (open ResultSets: 1, globally: 1)
+19:40:57,499 DEBUG AbstractBatcher:418 - about to close PreparedStatement (open PreparedStatements: 1, globally: 1)
+19:40:57,499 DEBUG TwoPhaseLoad:130 - resolving associations for [com.ajs.domain.Item#4]
+19:40:57,500 DEBUG TwoPhaseLoad:255 - done materializing entity [com.ajs.domain.Item#4]
+19:40:57,500 DEBUG CollectionLoadContext:241 - 1 collections were found in result set for role: com.ajs.domain.Category.items
+19:40:57,500 DEBUG CollectionLoadContext:284 - collection fully initialized: [com.ajs.domain.Category.items#3]
+19:40:57,500 DEBUG CollectionLoadContext:250 - 1 collections initialized for role: com.ajs.domain.Category.items
+19:40:57,500 DEBUG StatefulPersistenceContext:893 - initializing non-lazy collections
+19:40:57,501 DEBUG Loader:2182 - done loading collection
+19:40:57,501 DEBUG JDBCTransaction:130 - commit
+19:40:57,501 DEBUG AbstractFlushingEventListener:134 - processing flush-time cascades
+19:40:57,501 DEBUG AbstractFlushingEventListener:177 - dirty checking collections
+19:40:57,501 DEBUG Collections:198 - Collection found: [com.ajs.domain.Category.items#3], was: [com.ajs.domain.Category.items#3] (initialized)
+19:40:57,501 DEBUG AbstractFlushingEventListener:108 - Flushed: 0 insertions, 0 updates, 0 deletions to 2 objects
+19:40:57,502 DEBUG AbstractFlushingEventListener:114 - Flushed: 0 (re)creations, 0 updates, 0 removals to 1 collections
+19:40:57,502 DEBUG Printer:106 - listing entities:
+19:40:57,502 DEBUG Printer:113 - com.ajs.domain.Category{id=3, items=[com.ajs.domain.Item#4], description=z, code=}
+19:40:57,502 DEBUG Printer:113 - com.ajs.domain.Item{id=4, category=com.ajs.domain.Category#3, description=zz, code=zzzzz}
+19:40:57,503 DEBUG JDBCTransaction:223 - re-enabling autocommit
+19:40:57,503 DEBUG JDBCTransaction:143 - committed JDBC Connection
+19:40:57,503 DEBUG ConnectionManager:325 - transaction completed on session with on_close connection release mode; be sure to close the session to release JDBC resources!
+19:40:57,504 DEBUG ConnectionManager:464 - releasing JDBC connection [ (open PreparedStatements: 0, globally: 0) (open ResultSets: 0, globally: 0)]
+19:40:57,504 DEBUG ConnectionManager:325 - transaction completed on session with on_close connection release mode; be sure to close the session to release JDBC resources!
+Dec 14, 2013 7:51:15 PM org.apache.coyote.http11.Http11Protocol pause
+INFO: Pausing Coyote HTTP/1.1 on http-8080
+Dec 14, 2013 7:51:16 PM org.apache.catalina.core.StandardService stop
+INFO: Stopping service Catalina
+19:51:16,701  INFO SessionFactoryImpl:927 - closing
+Dec 14, 2013 7:51:16 PM org.apache.coyote.http11.Http11Protocol destroy
+INFO: Stopping Coyote HTTP/1.1 on http-8080

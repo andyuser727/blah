@@ -1,0 +1,13 @@
+<Context path="/gwtTest/">
+
+
+			  <Resource name="jdbc/Andy"
+              auth="Container"
+              type="javax.sql.DataSource"
+              username="sa"
+              password="bliss27"
+              driverClassName="com.microsoft.sqlserver.jdbc.SQLServerDriver"
+              url="jdbc:sqlserver://172.16.63.129;databaseName=Andy" maxActive="8" maxIdle="4"/>
+
+
+</Context>

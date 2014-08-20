@@ -1,0 +1,82 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+             xmlns:g='urn:import:com.google.gwt.user.client.ui'
+             xmlns:c='urn:import:com.google.gwt.user.cellview.client'>
+
+    <ui:style>
+        .important {
+            font-weight: bold;
+        }
+
+        .floatRight {
+            float: right;
+        }
+
+        .floatLeft {
+            float: left;
+        }
+
+        .newLine {
+            display: block;
+        }
+
+        .width100 {
+            width: 100px;
+        }
+
+        .width300 {
+            width: 300px;
+        }
+
+        .width1000 {
+            width: 1000px;
+        }
+
+    </ui:style>
+    <g:HTMLPanel>
+        <g:SimplePanel ui:field="contentWrapperPanel">
+            <g:FlowPanel>
+                <g:FlowPanel ui:field="searchPanel">
+                </g:FlowPanel>
+                <g:FlowPanel ui:field="datePanel">
+
+                </g:FlowPanel>
+                <g:FlowPanel>
+                    <g:Button ui:field='btnAdd' text='Add Category'></g:Button>
+                    <g:Button ui:field='btnProcessDeletes' text='Delete Items'></g:Button>
+                </g:FlowPanel>
+                <g:FlowPanel>
+                    <g:CheckBox ui:field='selectAll' width='20px'/>
+                    <g:Label ui:field='selectAllLabel' title="Title?" text="Select All"/>
+                </g:FlowPanel>
+                <g:FlowPanel ui:field='tablePanel'>
+                    <c:SimplePager ui:field='pager' location='CENTER'/>
+                </g:FlowPanel>
+                <g:DialogBox ui:field="addDialog" animationEnabled="true" visible="false" glassEnabled="true" modal="true">
+                    <g:FlowPanel>
+                        <g:FlowPanel>
+                            <g:Label addStyleNames='{style.floatLeft} {style.width100}'>Test1</g:Label>
+                            <g:TextBox addStyleNames='{style.floatLeft}' ui:field="test1"/>
+                        </g:FlowPanel>
+                        <g:FlowPanel>
+                            <g:Label addStyleNames='{style.floatLeft} {style.width100}'>Test2</g:Label>
+                            <g:TextBox ui:field="test2"/>
+                        </g:FlowPanel>
+                        <g:FlowPanel>
+                            <g:Label addStyleNames='{style.floatLeft} {style.width100}'>Code</g:Label>
+                            <g:TextBox ui:field="code"/>
+                        </g:FlowPanel>
+                        <g:FlowPanel>
+                            <g:Label addStyleNames='{style.floatLeft} {style.width100}'>Description</g:Label>
+                            <g:TextBox ui:field="description"/>
+                        </g:FlowPanel>
+                        <g:FlowPanel>
+                            <g:Button ui:field='btnCancel' text='Cancel'></g:Button>
+                            <g:Button ui:field='btnSave' text='Save'></g:Button>
+                        </g:FlowPanel>
+                    </g:FlowPanel>
+                </g:DialogBox>
+            </g:FlowPanel>
+        </g:SimplePanel>
+    </g:HTMLPanel>
+</ui:UiBinder>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+    http://www.springframework.org/schema/util
+    http://www.springframework.org/schema/util/spring-util-3.0.xsd">
+
+    <bean id="h2DataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
+        <property name="driverClassName" value="org.h2.Driver"/>
+        <property name="url" value="jdbc:h2:mem:test_mem"/>
+        <property name="defaultAutoCommit" value="true"/>
+        <property name="username" value="sa"/>
+        <property name="password" value=""/>
+    </bean>
+
+    <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+        <property name="driverClassName" value="com.microsoft.sqlserver.jdbc.SQLServerDriver"/>
+        <property name="url" value="jdbc:sqlserver://192.168.19.128;databaseName=test"/>
+        <property name="username" value="sa"/>
+        <property name="password" value="bliss27"/>
+    </bean>
+
+    <bean id="mysqlDataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+        <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
+        <property name="url" value="jdbc:mysql://localhost:3306/pis"/>
+        <property name="username" value="root"/>
+        <property name="password" value=""/>
+    </bean>
+
+    <!--<bean id="hibernateFilter" class="org.springframework.orm.hibernate3.support.OpenSessionInViewFilter"/>-->
+
+    <bean id="sessionFactory" class="org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean">
+        <property name="dataSource" ref="mysqlDataSource"/>
+        <property name="annotatedClasses">
+            <list>
+                <value>com.ajs.domain.Product</value>
+                <value>com.ajs.domain.Employee</value>
+                <value>com.ajs.domain.Category</value>
+                <value>com.ajs.domain.Item</value>
+                <value>com.ajs.domain.Invoice</value>
+                <value>com.ajs.domain.InvoiceCacheTest</value>
+                <value>com.ajs.domain.Person</value>
+                <value>com.ajs.domain.Party</value>
+                <value>com.ajs.domain.Customer</value>
+                <value>com.ajs.domain.InvoiceItemRlship</value>
+                <value>com.ajs.domain.Quote</value>
+                <value>com.ajs.domain.QuoteItemRlship</value>
+                <value>com.ajs.domain.CustomerOrder</value>
+                <value>com.ajs.domain.CustomerOrderItemRlship</value>
+                <value>com.ajs.domain.Payment</value>
+                <value>com.ajs.domain.PaymentInvoiceAllocation</value>
+            </list>
+        </property>
+
+        <property name="configLocations" ref="hibernateCfgLocations"/>
+
+        <property name="hibernateProperties">
+            <props>
+                <prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect</prop>
+                <!--<prop key="hibernate.dialect">org.hibernate.dialect.H2Dialect</prop>-->
+                <!--<prop key="hibernate.dialect">org.hibernate.dialect.SQLServerDialect</prop>-->
+                <prop key="hibernate.show_sql">true</prop>
+                <prop key="hibernate.hbm2ddl.auto">create</prop>
+                <prop key="hibernate.cache.use_second_level_cache">true</prop>
+                <prop key="hibernate.cache.region.factory_class">net.sf.ehcache.hibernate.EhCacheRegionFactory</prop>
+                <prop key="net.sf.ehcache.configurationResourceName">/ehcache-cfg.xml</prop>
+            </props>
+        </property>
+    </bean>
+
+    <util:list id="hibernateCfgLocations">
+        <value>classpath:hibernate-config.cfg.xml</value>
+    </util:list>
+
+
+    <bean id="transactionManager" class="org.springframework.orm.hibernate3.HibernateTransactionManager">
+        <property name="sessionFactory" ref="sessionFactory"/>
+    </bean>
+
+    <bean id="employeeDao" class="com.ajs.dao.EmployeeDao"/>
+    <bean id="invoiceDao" class="com.ajs.dao.InvoiceDao"/>
+    <bean id="itemDao" class="com.ajs.dao.ItemDao"/>
+    <bean id="invoiceCacheTestDao" class="com.ajs.dao.InvoiceCacheTestDao"/>
+    <bean id="invoiceItemRlshipDao" class="com.ajs.dao.InvoiceItemRlshipDao"/>
+
+</beans>
