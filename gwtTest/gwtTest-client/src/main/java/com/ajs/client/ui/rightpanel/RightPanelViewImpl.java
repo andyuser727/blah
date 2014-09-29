@@ -17,12 +17,11 @@ public class RightPanelViewImpl extends Composite implements RightPanelActivity.
     @UiField
     protected Label rightPanelLabel;
 
-//    @UiField
-//    protected SimplePanel contentWrapperPanel;
-
     public RightPanelViewImpl() {
 
         initWidget(uiBinder.createAndBindUi(this));
+
+
     }
 
     @Override

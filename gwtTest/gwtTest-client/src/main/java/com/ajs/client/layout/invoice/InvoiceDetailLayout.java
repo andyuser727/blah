@@ -29,6 +29,7 @@ public class InvoiceDetailLayout extends VLayout {
         HLayout buttonLayout = new HLayout();
         buttonLayout.addMember(cancelButton);
         buttonLayout.addMember(saveInvoiceButton);
+        buttonLayout.addMember(addItemButton);
         buttonLayout.setPadding(20);
         buttonLayout.setAlign(Alignment.LEFT);
         buttonLayout.setWidth(300);
@@ -43,23 +44,26 @@ public class InvoiceDetailLayout extends VLayout {
         itemLayout.setAlign(Alignment.LEFT);
         itemLayout.setWidth(300);
 
-        HLayout addItemLayout = new HLayout();
-        addItemLayout.addMember(addItemButton);
-        addItemLayout.setPadding(20);
-        addItemLayout.setAlign(Alignment.LEFT);
-        addItemLayout.setWidth(300);
+//        HLayout addItemLayout = new HLayout();
+//        addItemLayout.addMember(addItemButton);
+//        addItemLayout.setPadding(20);
+//        addItemLayout.setAlign(Alignment.LEFT);
+//        addItemLayout.setWidth(300);
 
         HLayout selectAllLayout = new HLayout();
+
+//        addItemButton.setStyleName("marginButton",true);
+//        selectAllLayout.addMember(addItemButton);
         selectAllLayout.addMember(form);
         selectAllLayout.setAlign(Alignment.LEFT);
         selectAllLayout.setHeight(20);
-        selectAllLayout.setWidth(300);
+        selectAllLayout.setWidth(400);
 
 
 
 
         addMember(hlayout);
-        addMember(addItemLayout);
+//        addMember(addItemLayout);
         addMember(selectAllLayout);
         addMember(itemLayout);
         addMember(buttonLayout);

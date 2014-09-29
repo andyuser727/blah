@@ -15,8 +15,7 @@ import com.smartgwt.client.widgets.Window;
 public class PaymentWindow extends Window {
 
     public PaymentWindow(boolean newPayment) {
-        setWidth(950);
-//        setHeight(650);
+
 
         if (newPayment) {
             setTitle("Add Payment");
@@ -29,8 +28,10 @@ public class PaymentWindow extends Window {
 
         setScrollbarSize(0);
         setAlign(Alignment.LEFT);
-        setAutoSize(true);
-        moveTo(400, 100);
+        setWidth(950);
+        setHeight(660);
+        moveTo(270, 20);
+//        setAutoSize(true);
     }
 
 }

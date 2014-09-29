@@ -15,30 +15,21 @@ public class ApplicationContainerPanel extends Composite {
 
     private static final Binder binder = GWT.create(Binder.class);
 
-//    @UiField
-//    protected DockLayoutPanel mainDockPanel;
-
     @UiField
     protected SimplePanel contentWrapperPanel;
 
-//    @UiField
-//    protected FlowPanel headerPanel;
-
     @UiField
     protected SimplePanel tabPanel;
-
-//    @UiField
-//    FlowPanel mainPanel;
 
     @UiField
     protected SimplePanel rightPanel;
 
     @UiField
     protected Image companyLogo;
-//
+
     @UiField
     protected SimplePanel mainNavPanel;
-//
+
     @UiField
     protected Image invoiceLogo;
 
@@ -58,8 +49,8 @@ public class ApplicationContainerPanel extends Composite {
         this.eventBus = eventBus;
 
         initWidget(binder.createAndBindUi(this));
-        companyLogo.setUrl("/gwttestl/header-photo.jpg");
 
+        companyLogo.setUrl("/gwttestl/header-photo.jpg");
         invoiceLogo.setUrl("/gwttestl/invoice-icon.jpeg");
         invoiceLogo.setHeight("50px");
         invoiceLogo.setWidth("50px");
@@ -72,17 +63,15 @@ public class ApplicationContainerPanel extends Composite {
         paymentLogo.setUrl("/gwttestl/payment-icon.jpeg");
         paymentLogo.setHeight("55px");
         paymentLogo.setWidth("55px");
-//
-//        mainDockPanel.setWidgetSize(mainNavPanel, 25);
-//        mainDockPanel.setWidgetSize(rightPanel, 25);
 
-        this.tabPanel.setWidget(tabMenuPanel);
-        this.tabPanel.setSize("920px", "23px");
-//        tabPanel.addStyleName("box-shadow: 10px 10px 5px #888888");
-
-        contentWrapperPanel.setSize("870px", "441px");
-        mainNavPanel.setHeight("493px");
-    }
+        tabPanel.setWidget(tabMenuPanel);
+        tabPanel.setSize("826px", "23px");
+        mainNavPanel.setHeight("497px");
+        contentWrapperPanel.setStyleName("shadow", true);
+        contentWrapperPanel.setStyleName("border", true);
+        contentWrapperPanel.setWidth("826px");
+        contentWrapperPanel.setHeight("438px");
+}
 
     public AcceptsOneWidget getContentWrapperPanel() {
         return new AcceptsOneWidget() {
@@ -101,15 +90,6 @@ public class ApplicationContainerPanel extends Composite {
             }
         };
     }
-
-//    public AcceptsOneWidget getMainNavPanel() {
-//        return new AcceptsOneWidget() {
-//            public void setWidget(IsWidget w) {
-//                Widget widget = Widget.asWidgetOrNull(w);
-//                mainPanel.setWidget(widget);
-//            }
-//        };
-//    }
 
     public AcceptsOneWidget getRightPanel() {
         return new AcceptsOneWidget() {

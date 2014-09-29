@@ -2,7 +2,6 @@ package com.ajs.client.panel;
 
 import com.ajs.client.place.*;
 import com.google.gwt.place.shared.PlaceController;
-import com.google.gwt.user.client.Command;
 import com.google.gwt.user.client.ui.Composite;
 import com.google.inject.Inject;
 import com.google.inject.Provider;
@@ -35,47 +34,24 @@ public class TabMenuPanel extends Composite {
         this.paymentListPlaceProvider = paymentListPlaceProvider;
         this.placeController = placeController;
 
-//        MenuBar menu = new MenuBar();
-//        menu.addItem("Invoices", new GoToInvoiceListPlace());
-//        menu.addItem("Categories", new GoToCategoryListPlace());
-
-
-        //
-
         final TabSet topTabSet = new TabSet();
         topTabSet.setTabBarPosition(Side.TOP);
-        topTabSet.setWidth(900);
-        topTabSet.setHeight(473);
-        topTabSet.addStyleName("shadow");
-
-        topTabSet.setStyleName("shadow", true);
+        topTabSet.setWidth(930);
+        topTabSet.setHeight(465);
+        topTabSet.setTabBarAlign(Side.TOP);
 
         Tab tTab1 = new Tab("Invoices");
-        tTab1.setWidth(200);
 
         Tab tTab2 = new Tab("Payments");
-//        Img tImg2 = new Img("/gwttestl/deleteIcon16.jpg", 48, 48);
-//        tTab2.setPane(tImg2);
-        tTab2.setWidth(200);
 
         Tab tTab3 = new Tab("Customer Orders");
-        tTab3.setWidth(200);
 
         Tab tTab4 = new Tab("Quotes");
-//        Img tImg2 = new Img("/gwttestl/deleteIcon16.jpg", 48, 48);
-//        tTab2.setPane(tImg2);
-        tTab4.setWidth(200);
-
-        Tab tTab5 = new Tab("Quotes2");
-//        Img tImg2 = new Img("/gwttestl/deleteIcon16.jpg", 48, 48);
-//        tTab2.setPane(tImg2);
-        tTab5.setWidth(200);
 
         topTabSet.addTab(tTab1);
         topTabSet.addTab(tTab2);
         topTabSet.addTab(tTab3);
         topTabSet.addTab(tTab4);
-        topTabSet.addTab(tTab5);
 
         tTab1.addTabSelectedHandler(new TabSelectedHandler() {
             @Override
@@ -118,37 +94,4 @@ public class TabMenuPanel extends Composite {
         //
         initWidget(topTabSet);
     }
-
-    private class ChangePlace implements Command {
-        @Override
-        public void execute() {
-        }
-    }
-
-//    private class GoToCategoryListPlace implements Command {
-//        @Override
-//        public void execute() {
-//            CategoryListPlace categoryListPlace = categoryListPlaceProvider.get();
-//            // TODO use constructor with map
-//            placeController.goTo(categoryListPlace);
-//        }
-//    }
-//
-//    private class GoToInvoiceListPlace implements Command {
-//        @Override
-//        public void execute() {
-//            InvoiceListPlace invoiceListPlace = invoiceListPlaceProvider.get();
-//            // TODO use constructor with map
-//            placeController.goTo(invoiceListPlace);
-//        }
-//    }
-//
-//    private class GoToQuoteListPlace implements Command {
-//        @Override
-//        public void execute() {
-//            QuoteListPlace quoteListPlace = quoteListPlaceProvider.get();
-//            // TODO use constructor with map
-//            placeController.goTo(quoteListPlace);
-//        }
-//    }
 }

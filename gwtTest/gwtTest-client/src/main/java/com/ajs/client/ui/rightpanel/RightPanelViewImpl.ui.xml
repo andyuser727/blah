@@ -50,17 +50,8 @@
             background-color: #ffffff;
         }
     </ui:style>
-
-    <g:HTMLPanel>
-
-
-        <!--<g:SimplePanel ui:field="employeeTablePanel"/>-->
-        <!--<g:SimplePanel ui:field="contentWrapperPanel">-->
-            <g:FlowPanel height="490px" width="70px" addStyleNames='{style.floatRight} {style.shadow} {style.border} {style.paddingContent} {style.bgGrey}'>
+            <g:FlowPanel height="465px" addStyleNames='{style.floatRight} {style.shadow} {style.border} {style.paddingContent} {style.bgGrey}'>
                 <g:Label ui:field="rightPanelLabel"/>
 
             </g:FlowPanel>
-        <!--</g:SimplePanel>-->
-
-    </g:HTMLPanel>
 </ui:UiBinder>

@@ -15,7 +15,7 @@ import com.smartgwt.client.widgets.Window;
 public class InvoiceWindow extends Window {
 
     public InvoiceWindow(boolean newInvoice) {
-        setWidth(950);
+
         if (newInvoice) {
             setTitle("Add Invoice");
         } else {
@@ -27,8 +27,11 @@ public class InvoiceWindow extends Window {
         centerInPage();
         setScrollbarSize(0);
         setAlign(Alignment.LEFT);
-        setAutoSize(true);
-        moveTo(400, 100);
+        setWidth(950);
+        setHeight(620);
+        moveTo(270, 20);
+//        setAutoSize(true);
+
     }
 
 }

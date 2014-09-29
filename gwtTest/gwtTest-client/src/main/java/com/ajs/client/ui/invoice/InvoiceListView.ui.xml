@@ -38,12 +38,6 @@
 
     </ui:style>
     <g:HTMLPanel>
-        <!--<g:SimplePanel ui:field="contentWrapperPanel" height="500px" addStyleNames='{style.bgwhite}'>-->
-
-            <!--<g:FlowPanel addStyleNames='{style.border} {style.paddingContent}'>-->
-
                 <g:FlowPanel ui:field="gridPanel"></g:FlowPanel>
-            <!--</g:FlowPanel>-->
-        <!--</g:SimplePanel>-->
     </g:HTMLPanel>
 </ui:UiBinder>

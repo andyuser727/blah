@@ -403,8 +403,9 @@ public class InvoiceListActivity extends BaseAbstractActivity {
 
         invoiceGrid.setFields(id, customerName, customerReference, invoiceNumber, description, amount, invoiceDate);
 
-        invoiceGrid.setHeight(200);
-        invoiceGrid.setWidth(800);
+        invoiceGrid.setMargin(10);
+        invoiceGrid.setHeight(300);
+        invoiceGrid.setWidth(900);
         invoiceGrid.setTitle("Invoices");
         invoiceGrid.setDataSource(invoiceDataSource);
         invoiceGrid.setAutoFetchData(true);
@@ -432,6 +433,7 @@ public class InvoiceListActivity extends BaseAbstractActivity {
         });
 
         Button addButton = new Button("Add Invoice");
+        addButton.setStyleName("marginButton", true);
         addButton.addClickHandler(new ClickHandler() {
             @Override
             public void onClick(final ClickEvent clickEvent) {
@@ -439,6 +441,8 @@ public class InvoiceListActivity extends BaseAbstractActivity {
             }
         });
         Button deleteButton = new Button("Delete Items");
+
+        deleteButton.setStyleName("marginButton", true);
 
         ((InvoiceListView) display).getGridPanel().add(addButton);
         ((InvoiceListView) display).getGridPanel().add(deleteButton);

@@ -218,8 +218,9 @@ public class PaymentListActivity extends BaseAbstractActivity {
 
         paymentGrid.setFields(id, customerName, customerReference, paymentNumber, description, amount, paymentDate);
 
-        paymentGrid.setHeight(670);
-        paymentGrid.setWidth(1300);
+        paymentGrid.setMargin(10);
+        paymentGrid.setHeight(300);
+        paymentGrid.setWidth(900);
         paymentGrid.setTitle("Payments");
         paymentGrid.setDataSource(paymentDataSource);
         paymentGrid.setAutoFetchData(true);
@@ -247,6 +248,7 @@ public class PaymentListActivity extends BaseAbstractActivity {
         });
 
         Button addButton = new Button("Add Payment");
+        addButton.setStyleName("marginButton", true);
         addButton.addClickHandler(new ClickHandler() {
                                       @Override
                                       public void onClick(final ClickEvent clickEvent) {
@@ -254,6 +256,7 @@ public class PaymentListActivity extends BaseAbstractActivity {
                                       }
                                   });
         Button deleteButton = new Button("Delete Items");
+        deleteButton.setStyleName("marginButton", true);
 
         ((PaymentListView) display).getGridPanel().add(addButton);
         ((PaymentListView) display).getGridPanel().add(deleteButton);
