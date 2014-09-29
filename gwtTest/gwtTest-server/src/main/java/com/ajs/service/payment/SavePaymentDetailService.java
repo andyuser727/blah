@@ -1,17 +1,17 @@
 package com.ajs.service.payment;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+import org.springframework.transaction.annotation.Transactional;
 import com.ajs.dao.*;
 import com.ajs.domain.Customer;
 import com.ajs.domain.Invoice;
 import com.ajs.domain.Payment;
 import com.ajs.domain.PaymentInvoiceAllocation;
-import com.ajs.shared.dto.payment.PaymentDetailDto;
-import com.ajs.shared.commands.payment.SavePaymentDetail;
 import com.ajs.service.Handler;
 import com.ajs.shared.AppResponse;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
-import org.springframework.transaction.annotation.Transactional;
+import com.ajs.shared.commands.payment.SavePaymentDetail;
+import com.ajs.shared.dto.payment.PaymentDetailDto;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
@@ -66,7 +66,8 @@ public class SavePaymentDetailService implements Handler<SavePaymentDetail> {
         BigDecimal amountAllocated = new BigDecimal("0");
         if (paymentInvoiceAllocations != null){
             for (PaymentInvoiceAllocation paymentInvoiceAllocation : paymentInvoiceAllocations){
-                amountAllocated = amountAllocated.add(paymentInvoiceAllocation.getAllocatedAmount());
+                amountAllocated = amountAllocated.add(paymentInvoiceAllocation.getAllocatedAmount() == null ? new BigDecimal("0") : paymentInvoiceAllocation.getAllocatedAmount()) ;
+
             }
         }
 
@@ -99,7 +100,9 @@ public class SavePaymentDetailService implements Handler<SavePaymentDetail> {
         persistedPaymentDto.setRemainingAmount(payment.getTotalAmount().subtract(
                 amountAllocated.add(dto.getPaymentDetailDto().getAmountToAllocate() == null ?
                         new BigDecimal("0") : dto.getPaymentDetailDto().getAmountToAllocate())));
-        persistedPaymentDto.setAllocatedAmount(amountAllocated.add(dto.getPaymentDetailDto().getAmountToAllocate()));
+        if (dto.getPaymentDetailDto().getAmountToAllocate() != null) {
+            persistedPaymentDto.setAllocatedAmount(amountAllocated.add(dto.getPaymentDetailDto().getAmountToAllocate()));
+        }
         paymentDetailDtos.add(persistedPaymentDto);
         response.setDtos(paymentDetailDtos);
 

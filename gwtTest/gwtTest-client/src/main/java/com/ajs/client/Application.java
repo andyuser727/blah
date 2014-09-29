@@ -4,7 +4,6 @@ import com.ajs.client.ioc.Injector;
 import com.ajs.client.mvp.AppPlaceFactory;
 import com.ajs.client.mvp.AppPlaceHistoryMapper;
 import com.ajs.client.panel.ApplicationContainerPanel;
-import com.ajs.client.place.CategoryListPlace;
 import com.ajs.client.place.InvoiceListPlace;
 import com.ajs.shared.AppService;
 import com.ajs.shared.AppServiceAsync;
@@ -44,10 +43,14 @@ public class Application implements EntryPoint
 
         // Main Navigation container Activity Mapper with our implementation
         ActivityMapper navActivityMapper = injector.getNavActivityMapper();
+        ActivityMapper rightPanelActivityMapper = injector.getRightPanelActivityMapper();
         // Main Navigation container ActivityManager keeps track of all
         // Activities
         ActivityManager navActivityManager = new ActivityManager(navActivityMapper, eventBus);
         navActivityManager.setDisplay(applicationContainerPanel.getMainNavPanel());
+//
+        ActivityManager rightPanelActivityManager = new ActivityManager(rightPanelActivityMapper, eventBus);
+        rightPanelActivityManager.setDisplay(applicationContainerPanel.getRightPanel());
 
         AppPlaceFactory factory = injector.getAppPlaceFactory();
         InvoiceListPlace defaultPlace = factory.getInvoiceListPlace();

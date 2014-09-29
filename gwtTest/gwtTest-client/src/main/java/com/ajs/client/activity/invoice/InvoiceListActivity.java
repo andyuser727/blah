@@ -1,34 +1,31 @@
 package com.ajs.client.activity.invoice;
 
-import java.math.BigDecimal;
-import java.util.*;
-
+import com.ajs.client.activity.BaseAbstractActivity;
+import com.ajs.client.datasource.invoice.InvoiceDataSource;
+import com.ajs.client.datasource.item.ItemListDataSource;
+import com.ajs.client.datasource.item.ItemsForInvoiceDataSource;
+import com.ajs.client.form.invoice.InvoiceDetailForm;
+import com.ajs.client.layout.invoice.InvoiceDetailLayout;
+import com.ajs.client.layout.item.ItemListLayout;
+import com.ajs.client.listgrid.item.ItemListGrid;
+import com.ajs.client.place.InvoiceListPlace;
+import com.ajs.client.ui.invoice.InvoiceListView;
+import com.ajs.client.window.invoice.InvoiceWindow;
+import com.ajs.client.window.item.ItemListWindow;
+import com.ajs.shared.AppResponse;
+import com.ajs.shared.AppServiceAsync;
 import com.ajs.shared.SimpleResponse;
 import com.ajs.shared.Test;
-import com.ajs.client.activity.BaseAbstractActivity;
-import com.ajs.shared.commands.*;
+import com.ajs.shared.commands.LoadCustomerList;
 import com.ajs.shared.commands.invoice.LoadInvoiceDetail;
 import com.ajs.shared.commands.invoice.LoadInvoiceList;
 import com.ajs.shared.commands.invoice.ProcessInvoiceDeletes;
 import com.ajs.shared.commands.invoice.SaveInvoiceDetail;
 import com.ajs.shared.commands.item.LoadItemList;
 import com.ajs.shared.commands.item.SaveItemDetail;
-import com.ajs.client.datasource.invoice.InvoiceDataSource;
-import com.ajs.client.datasource.item.ItemListDataSource;
-import com.ajs.client.datasource.item.ItemsForInvoiceDataSource;
-import com.ajs.shared.dto.party.CustomerDetailDto;
 import com.ajs.shared.dto.invoice.InvoiceDetailDto;
 import com.ajs.shared.dto.item.ItemDetailDto;
-import com.ajs.client.form.invoice.InvoiceDetailForm;
-import com.ajs.client.layout.invoice.InvoiceDetailLayout;
-import com.ajs.client.layout.item.ItemListLayout;
-import com.ajs.client.listgrid.item.ItemListGrid;
-import com.ajs.client.place.InvoiceListPlace;
-import com.ajs.shared.AppResponse;
-import com.ajs.shared.AppServiceAsync;
-import com.ajs.client.ui.invoice.InvoiceListView;
-import com.ajs.client.window.invoice.InvoiceWindow;
-import com.ajs.client.window.item.ItemListWindow;
+import com.ajs.shared.dto.party.CustomerDetailDto;
 import com.google.gwt.event.shared.EventBus;
 import com.google.gwt.place.shared.PlaceController;
 import com.google.gwt.user.client.rpc.AsyncCallback;
@@ -44,15 +41,23 @@ import com.smartgwt.client.widgets.events.ClickHandler;
 import com.smartgwt.client.widgets.events.CloseClickEvent;
 import com.smartgwt.client.widgets.events.CloseClickHandler;
 import com.smartgwt.client.widgets.form.DynamicForm;
-import com.smartgwt.client.widgets.form.fields.*;
+import com.smartgwt.client.widgets.form.fields.CheckboxItem;
+import com.smartgwt.client.widgets.form.fields.TextAreaItem;
+import com.smartgwt.client.widgets.form.fields.TextItem;
 import com.smartgwt.client.widgets.form.fields.events.ChangedEvent;
 import com.smartgwt.client.widgets.form.fields.events.ChangedHandler;
 import com.smartgwt.client.widgets.grid.ListGrid;
 import com.smartgwt.client.widgets.grid.ListGridField;
 import com.smartgwt.client.widgets.grid.ListGridRecord;
-import com.smartgwt.client.widgets.grid.events.*;
+import com.smartgwt.client.widgets.grid.events.HeaderDoubleClickEvent;
+import com.smartgwt.client.widgets.grid.events.HeaderDoubleClickHandler;
+import com.smartgwt.client.widgets.grid.events.RecordClickEvent;
+import com.smartgwt.client.widgets.grid.events.RecordClickHandler;
 import com.smartgwt.client.widgets.layout.HLayout;
 import com.smartgwt.client.widgets.layout.VLayout;
+
+import java.math.BigDecimal;
+import java.util.*;
 
 public class InvoiceListActivity extends BaseAbstractActivity {
 
@@ -398,8 +403,8 @@ public class InvoiceListActivity extends BaseAbstractActivity {
 
         invoiceGrid.setFields(id, customerName, customerReference, invoiceNumber, description, amount, invoiceDate);
 
-        invoiceGrid.setHeight(670);
-        invoiceGrid.setWidth(1350);
+        invoiceGrid.setHeight(200);
+        invoiceGrid.setWidth(800);
         invoiceGrid.setTitle("Invoices");
         invoiceGrid.setDataSource(invoiceDataSource);
         invoiceGrid.setAutoFetchData(true);
@@ -425,6 +430,18 @@ public class InvoiceListActivity extends BaseAbstractActivity {
                 // method stub
             }
         });
+
+        Button addButton = new Button("Add Invoice");
+        addButton.addClickHandler(new ClickHandler() {
+            @Override
+            public void onClick(final ClickEvent clickEvent) {
+                doAddNewInvoice();
+            }
+        });
+        Button deleteButton = new Button("Delete Items");
+
+        ((InvoiceListView) display).getGridPanel().add(addButton);
+        ((InvoiceListView) display).getGridPanel().add(deleteButton);
 
         ((InvoiceListView) display).getGridPanel().add(invoiceGrid);
     }

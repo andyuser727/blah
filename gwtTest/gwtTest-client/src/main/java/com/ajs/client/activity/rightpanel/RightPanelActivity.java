@@ -1,4 +1,4 @@
-package com.ajs.client.activity.nav;
+package com.ajs.client.activity.rightpanel;
 
 import com.ajs.shared.AppServiceAsync;
 import com.google.gwt.activity.shared.AbstractActivity;
@@ -8,27 +8,24 @@ import com.google.gwt.user.client.ui.Widget;
 import com.google.inject.Inject;
 
 /**
- * Created with IntelliJ IDEA.
- * User: AndySmith
- * Date: 05/12/2013
- * Time: 20:01
- * To change this template use File | Settings | File Templates.
+ * Created with IntelliJ IDEA. User: AndySmith Date: 05/12/2013 Time: 20:01 To change this template use File | Settings
+ * | File Templates.
  */
-public class NavActivity extends AbstractActivity {
+public class RightPanelActivity extends AbstractActivity {
 
-    public interface INavViewDisplay {
+    public interface IRightPanelViewDisplay {
         Widget asWidget();
-        void setNavLabel(String text);
+        void setRightPanelLabel(String text);
     }
 
     private final AppServiceAsync appServiceAsync;
     private final EventBus eventBus;
-    private final INavViewDisplay display;
+    private final IRightPanelViewDisplay display;
 
 
     @Inject
-    public NavActivity(EventBus eventBus, INavViewDisplay display,
-                       AppServiceAsync appServiceAsync) {
+    public RightPanelActivity(EventBus eventBus, IRightPanelViewDisplay display,
+                              AppServiceAsync appServiceAsync) {
         this.appServiceAsync = appServiceAsync;
         this.eventBus = eventBus;
         this.display = display;
@@ -37,7 +34,7 @@ public class NavActivity extends AbstractActivity {
     @Override
     public void start(AcceptsOneWidget container, EventBus eventBus) {
         container.setWidget(display.asWidget());
-        display.setNavLabel("Place Holder");
+        display.setRightPanelLabel("Right Panel");
     }
 
 

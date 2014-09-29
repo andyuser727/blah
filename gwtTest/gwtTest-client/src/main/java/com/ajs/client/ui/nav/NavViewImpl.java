@@ -13,7 +13,10 @@ public class NavViewImpl extends Composite implements NavActivity.INavViewDispla
     }
 
     @UiField
-    protected SimplePanel contentWrapperPanel;
+    protected Label navLabel;
+
+    //    @UiField
+    //    protected SimplePanel contentWrapperPanel;
 
 //    @UiField
 //    protected Button btnAdd, btnGB;
@@ -24,4 +27,8 @@ public class NavViewImpl extends Composite implements NavActivity.INavViewDispla
     }
 
 
+    @Override
+    public void setNavLabel(final String text) {
+        navLabel.setText(text);
+    }
 }

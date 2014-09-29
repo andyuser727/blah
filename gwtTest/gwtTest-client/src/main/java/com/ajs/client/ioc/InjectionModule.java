@@ -1,12 +1,18 @@
 package com.ajs.client.ioc;
 
-import com.ajs.shared.Test;
 import com.ajs.client.activity.nav.NavActivity;
+import com.ajs.client.activity.rightpanel.RightPanelActivity;
+import com.ajs.client.datasource.customerorder.CustomerOrderDataSource;
 import com.ajs.client.datasource.invoice.InvoiceDataSource;
 import com.ajs.client.datasource.payment.PaymentDataSource;
-import com.ajs.client.mvp.*;
+import com.ajs.client.datasource.quote.QuoteDataSource;
+import com.ajs.client.mvp.AppActivityMapper;
+import com.ajs.client.mvp.AppPlaceFactory;
+import com.ajs.client.mvp.InjectablePlaceController;
 import com.ajs.client.providers.TestProvider;
 import com.ajs.client.ui.nav.NavViewImpl;
+import com.ajs.client.ui.rightpanel.RightPanelViewImpl;
+import com.ajs.shared.Test;
 import com.google.gwt.activity.shared.ActivityMapper;
 import com.google.gwt.event.shared.EventBus;
 import com.google.gwt.event.shared.SimpleEventBus;
@@ -24,6 +30,8 @@ public class InjectionModule extends AbstractGinModule {
 
         bind(InvoiceDataSource.class).in(Singleton.class);
         bind(PaymentDataSource.class).in(Singleton.class);
+        bind(CustomerOrderDataSource.class).in(Singleton.class);
+        bind(QuoteDataSource.class).in(Singleton.class);
 
 
         bind(Test.class).toProvider(TestProvider.class).in(Singleton.class);
@@ -32,6 +40,7 @@ public class InjectionModule extends AbstractGinModule {
         bind(ActivityMapper.class).to(AppActivityMapper.class).in(Singleton.class);
         // TODO change
         bind(NavActivity.INavViewDisplay.class).to(NavViewImpl.class);
+        bind(RightPanelActivity.IRightPanelViewDisplay.class).to(RightPanelViewImpl.class);
     }
 
 

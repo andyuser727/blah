@@ -1,35 +1,35 @@
 package com.ajs.client.activity.payment;
 
-import java.math.BigDecimal;
-import java.util.*;
-
 import com.ajs.client.activity.BaseAbstractActivity;
-import com.ajs.shared.commands.*;
-import com.ajs.shared.commands.invoice.LoadInvoiceList;
-import com.ajs.shared.commands.payment.LoadPaymentDetail;
-import com.ajs.shared.commands.payment.LoadPaymentList;
-import com.ajs.shared.commands.payment.SavePaymentDetail;
 import com.ajs.client.datasource.invoice.InvoicesForCustomerDataSource;
 import com.ajs.client.datasource.payment.PaymentDataSource;
-import com.ajs.shared.dto.invoice.InvoiceDetailDto;
-import com.ajs.shared.dto.party.CustomerDetailDto;
-import com.ajs.shared.dto.payment.PaymentDetailDto;
-import com.ajs.shared.dto.item.ItemDetailDto;
 import com.ajs.client.form.payment.PaymentDetailForm;
 import com.ajs.client.layout.payment.PaymentDetailLayout;
 import com.ajs.client.listgrid.invoice.InvoicesForCustomerListGrid;
 import com.ajs.client.place.PaymentListPlace;
-import com.ajs.shared.AppResponse;
-import com.ajs.shared.AppServiceAsync;
 import com.ajs.client.ui.payment.PaymentListView;
 import com.ajs.client.window.payment.PaymentWindow;
+import com.ajs.shared.AppResponse;
+import com.ajs.shared.AppServiceAsync;
+import com.ajs.shared.Test;
+import com.ajs.shared.commands.LoadCustomerList;
+import com.ajs.shared.commands.invoice.LoadInvoiceList;
+import com.ajs.shared.commands.payment.LoadPaymentDetail;
+import com.ajs.shared.commands.payment.LoadPaymentList;
+import com.ajs.shared.commands.payment.SavePaymentDetail;
+import com.ajs.shared.dto.invoice.InvoiceDetailDto;
+import com.ajs.shared.dto.item.ItemDetailDto;
+import com.ajs.shared.dto.party.CustomerDetailDto;
+import com.ajs.shared.dto.payment.PaymentDetailDto;
 import com.google.gwt.event.shared.EventBus;
 import com.google.gwt.place.shared.PlaceController;
 import com.google.gwt.user.client.rpc.AsyncCallback;
 import com.google.gwt.user.client.ui.AcceptsOneWidget;
 import com.google.inject.Inject;
 import com.google.inject.Provider;
-import com.smartgwt.client.types.*;
+import com.smartgwt.client.types.ListGridFieldType;
+import com.smartgwt.client.types.SelectionAppearance;
+import com.smartgwt.client.types.SelectionStyle;
 import com.smartgwt.client.widgets.Button;
 import com.smartgwt.client.widgets.Img;
 import com.smartgwt.client.widgets.Window;
@@ -42,7 +42,15 @@ import com.smartgwt.client.widgets.form.fields.events.ChangeHandler;
 import com.smartgwt.client.widgets.grid.ListGrid;
 import com.smartgwt.client.widgets.grid.ListGridField;
 import com.smartgwt.client.widgets.grid.ListGridRecord;
-import com.smartgwt.client.widgets.grid.events.*;
+import com.smartgwt.client.widgets.grid.events.HeaderDoubleClickEvent;
+import com.smartgwt.client.widgets.grid.events.HeaderDoubleClickHandler;
+import com.smartgwt.client.widgets.grid.events.RecordClickEvent;
+import com.smartgwt.client.widgets.grid.events.RecordClickHandler;
+
+import java.math.BigDecimal;
+import java.util.LinkedHashMap;
+import java.util.List;
+import java.util.Map;
 
 public class PaymentListActivity extends BaseAbstractActivity {
 
@@ -76,19 +84,27 @@ public class PaymentListActivity extends BaseAbstractActivity {
 
     private Window dlg;
 
+    private Provider<Test> testProvider;
+
     @Inject
     public PaymentListActivity(PaymentDataSource paymentDataSource,
                                EventBus eventBus,
                                PaymentListView display,
                                PlaceController placeController,
                                AppServiceAsync appServiceAsync,
-                               Provider<PaymentListPlace> paymentListPlaceProvider) {
+                               Provider<PaymentListPlace> paymentListPlaceProvider,
+                               Provider<Test> testProvider) {
         super(display);
         this.paymentDataSource = paymentDataSource;
         this.appServiceAsync = appServiceAsync;
         this.eventBus = eventBus;
         this.placeController = placeController;
         this.paymentListPlaceProvider = paymentListPlaceProvider;
+        this.testProvider = testProvider;
+
+//        com.google.gwt.user.client.Window.alert(testProvider.get().getMessage());
+//
+//        TestImpl test = new TestImpl();
     }
 
     @Override
@@ -203,7 +219,7 @@ public class PaymentListActivity extends BaseAbstractActivity {
         paymentGrid.setFields(id, customerName, customerReference, paymentNumber, description, amount, paymentDate);
 
         paymentGrid.setHeight(670);
-        paymentGrid.setWidth(1350);
+        paymentGrid.setWidth(1300);
         paymentGrid.setTitle("Payments");
         paymentGrid.setDataSource(paymentDataSource);
         paymentGrid.setAutoFetchData(true);
@@ -229,6 +245,18 @@ public class PaymentListActivity extends BaseAbstractActivity {
                 // method stub
             }
         });
+
+        Button addButton = new Button("Add Payment");
+        addButton.addClickHandler(new ClickHandler() {
+                                      @Override
+                                      public void onClick(final ClickEvent clickEvent) {
+                                          doAddNewPayment();
+                                      }
+                                  });
+        Button deleteButton = new Button("Delete Items");
+
+        ((PaymentListView) display).getGridPanel().add(addButton);
+        ((PaymentListView) display).getGridPanel().add(deleteButton);
 
         ((PaymentListView) display).getGridPanel().add(paymentGrid);
     }
@@ -416,10 +444,11 @@ public class PaymentListActivity extends BaseAbstractActivity {
                         editPayment();
                         if (result.getValidationMessages() != null) {
                             addPaymentLayout.showMessages(result.getValidationMessages());
-//                            paymentWindow.setHeight(720);
                         }
                         else {
-//                            paymentWindow.setHeight(650);
+                            placeController.goTo(paymentListPlaceProvider.get());
+                            addPaymentLayout.hide();
+                            paymentWindow.hide();
                         }
                     }
                 });

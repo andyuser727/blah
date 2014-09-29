@@ -168,7 +168,7 @@
                     <strict>true</strict>
                     <draftCompile>${gwt.draftCompile}</draftCompile>
                     <style>${gwt.style}</style>
-                    <genParam>${gwt.genParam}</genParam>
+                    <!--<genParam>${gwt.genParam}</genParam>-->
                     <noserver>true</noserver>
                     <runTarget>${runTarget}</runTarget>
                 </configuration>

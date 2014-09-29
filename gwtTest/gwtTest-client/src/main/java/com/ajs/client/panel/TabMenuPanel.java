@@ -44,8 +44,11 @@ public class TabMenuPanel extends Composite {
 
         final TabSet topTabSet = new TabSet();
         topTabSet.setTabBarPosition(Side.TOP);
-        topTabSet.setWidth("100%");
-        topTabSet.setHeight(23);
+        topTabSet.setWidth(900);
+        topTabSet.setHeight(473);
+        topTabSet.addStyleName("shadow");
+
+        topTabSet.setStyleName("shadow", true);
 
         Tab tTab1 = new Tab("Invoices");
         tTab1.setWidth(200);
@@ -63,10 +66,16 @@ public class TabMenuPanel extends Composite {
 //        tTab2.setPane(tImg2);
         tTab4.setWidth(200);
 
+        Tab tTab5 = new Tab("Quotes2");
+//        Img tImg2 = new Img("/gwttestl/deleteIcon16.jpg", 48, 48);
+//        tTab2.setPane(tImg2);
+        tTab5.setWidth(200);
+
         topTabSet.addTab(tTab1);
         topTabSet.addTab(tTab2);
         topTabSet.addTab(tTab3);
         topTabSet.addTab(tTab4);
+        topTabSet.addTab(tTab5);
 
         tTab1.addTabSelectedHandler(new TabSelectedHandler() {
             @Override

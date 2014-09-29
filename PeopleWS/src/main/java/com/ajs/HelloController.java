@@ -38,6 +38,7 @@ public class HelloController {
         private String hours2;
         private String hours3;
         private String distanceMsg = "";
+        private String joinTrial = "http://www.google.com";
 
         /**
          * Gets the id for the site
@@ -300,6 +301,14 @@ public class HelloController {
         public void setDistanceMsg(final String distanceMsg) {
             this.distanceMsg = distanceMsg;
         }
+
+        public String getJoinTrial() {
+            return joinTrial;
+        }
+
+        public void setJoinTrial(final String joinTrial) {
+            this.joinTrial = joinTrial;
+        }
     }
 
     @Autowired
@@ -318,10 +327,9 @@ public class HelloController {
     @RequestMapping(value = "/boobiwaa.app", method = RequestMethod.GET)
     public ModelAndView getBoobiWaa(ModelMap model) {
 
-        Map<String, Object> modelMap = new HashMap<String, Object>();
-        modelMap.put("boobi", "I am a boobi waa");
+        model.put("boobi", "I am a boobi waa");
 
-        return new ModelAndView("boobi", modelMap);
+        return new ModelAndView("boobi", model);
 
     }
 
@@ -380,9 +388,7 @@ public class HelloController {
 
     @RequestMapping(value = "/map.app", method = RequestMethod.GET)
     public ModelAndView getMapView(ModelMap model) {
-
-
-        return new ModelAndView("map", model);
+        return new ModelAndView("sitemap", model);
 
     }
 
@@ -433,7 +439,7 @@ public class HelloController {
     }
 
 
-    @RequestMapping(value = "/invoice.app", method = RequestMethod.POST, headers = "Accept=application/json")
+    @RequestMapping(value = "/invoice.app", method = RequestMethod.GET, headers = "Accept=application/json")
     public
     @ResponseBody
     List<Invoice> getEnquiriesBySearchAjax() {

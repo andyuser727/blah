@@ -1,6 +1,7 @@
 package com.ajs.client.panel;
 
 import com.google.gwt.core.client.GWT;
+import com.google.gwt.event.shared.EventBus;
 import com.google.gwt.uibinder.client.UiBinder;
 import com.google.gwt.uibinder.client.UiField;
 import com.google.gwt.user.client.ui.*;
@@ -14,24 +15,30 @@ public class ApplicationContainerPanel extends Composite {
 
     private static final Binder binder = GWT.create(Binder.class);
 
-    @UiField
-    protected DockLayoutPanel mainDockPanel;
+//    @UiField
+//    protected DockLayoutPanel mainDockPanel;
 
     @UiField
     protected SimplePanel contentWrapperPanel;
 
-    @UiField
-    protected FlowPanel headerPanel;
+//    @UiField
+//    protected FlowPanel headerPanel;
 
     @UiField
     protected SimplePanel tabPanel;
 
+//    @UiField
+//    FlowPanel mainPanel;
+
+    @UiField
+    protected SimplePanel rightPanel;
+
     @UiField
     protected Image companyLogo;
-
+//
     @UiField
-    protected ScrollPanel mainNavPanel;
-
+    protected SimplePanel mainNavPanel;
+//
     @UiField
     protected Image invoiceLogo;
 
@@ -44,8 +51,11 @@ public class ApplicationContainerPanel extends Composite {
     @UiField
     protected Image paymentLogo;
 
+    private EventBus eventBus;
     @Inject
-    public ApplicationContainerPanel(final TabMenuPanel tabMenuPanel) {
+    public ApplicationContainerPanel(final TabMenuPanel tabMenuPanel, final EventBus eventBus) {
+
+        this.eventBus = eventBus;
 
         initWidget(binder.createAndBindUi(this));
         companyLogo.setUrl("/gwttestl/header-photo.jpg");
@@ -62,11 +72,16 @@ public class ApplicationContainerPanel extends Composite {
         paymentLogo.setUrl("/gwttestl/payment-icon.jpeg");
         paymentLogo.setHeight("55px");
         paymentLogo.setWidth("55px");
+//
+//        mainDockPanel.setWidgetSize(mainNavPanel, 25);
+//        mainDockPanel.setWidgetSize(rightPanel, 25);
 
-        mainDockPanel.setWidgetSize(mainNavPanel, 25);
         this.tabPanel.setWidget(tabMenuPanel);
-        this.tabPanel.setSize("350px", "23px");
-        contentWrapperPanel.setSize("1400px", "1000px");
+        this.tabPanel.setSize("920px", "23px");
+//        tabPanel.addStyleName("box-shadow: 10px 10px 5px #888888");
+
+        contentWrapperPanel.setSize("870px", "441px");
+        mainNavPanel.setHeight("493px");
     }
 
     public AcceptsOneWidget getContentWrapperPanel() {
@@ -83,6 +98,24 @@ public class ApplicationContainerPanel extends Composite {
             public void setWidget(IsWidget w) {
                 Widget widget = Widget.asWidgetOrNull(w);
                 mainNavPanel.setWidget(widget);
+            }
+        };
+    }
+
+//    public AcceptsOneWidget getMainNavPanel() {
+//        return new AcceptsOneWidget() {
+//            public void setWidget(IsWidget w) {
+//                Widget widget = Widget.asWidgetOrNull(w);
+//                mainPanel.setWidget(widget);
+//            }
+//        };
+//    }
+
+    public AcceptsOneWidget getRightPanel() {
+        return new AcceptsOneWidget() {
+            public void setWidget(IsWidget w) {
+                Widget widget = Widget.asWidgetOrNull(w);
+                rightPanel.setWidget(widget);
             }
         };
     }

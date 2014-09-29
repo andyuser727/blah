@@ -38,16 +38,12 @@
 
     </ui:style>
     <g:HTMLPanel>
-        <g:SimplePanel ui:field="contentWrapperPanel" height="775px" addStyleNames='{style.bgwhite}'>
+        <!--<g:SimplePanel ui:field="contentWrapperPanel" height="500px" addStyleNames='{style.bgwhite}'>-->
 
-            <g:FlowPanel addStyleNames='{style.border} {style.paddingContent}'>
-                <g:FlowPanel addStyleNames='{style.paddingButton}'>
-                    <g:Button ui:field='btnAddInvoice' text='Add Invoice' addStyleNames='{style.floatRight}'></g:Button>
-                    <g:Button ui:field='btnProcessDeletes' text='Delete Items' addStyleNames='{style.floatRight}'></g:Button>
-                </g:FlowPanel>
+            <!--<g:FlowPanel addStyleNames='{style.border} {style.paddingContent}'>-->
 
                 <g:FlowPanel ui:field="gridPanel"></g:FlowPanel>
-            </g:FlowPanel>
-        </g:SimplePanel>
+            <!--</g:FlowPanel>-->
+        <!--</g:SimplePanel>-->
     </g:HTMLPanel>
 </ui:UiBinder>

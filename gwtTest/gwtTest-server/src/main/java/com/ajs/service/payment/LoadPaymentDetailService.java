@@ -1,16 +1,16 @@
 package com.ajs.service.payment;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+import org.springframework.transaction.annotation.Transactional;
 import com.ajs.dao.PaymentDao;
 import com.ajs.dao.PaymentInvoiceAllocationDao;
 import com.ajs.domain.Payment;
 import com.ajs.domain.PaymentInvoiceAllocation;
-import com.ajs.shared.dto.payment.PaymentDetailDto;
-import com.ajs.shared.commands.payment.LoadPaymentDetail;
 import com.ajs.service.Handler;
 import com.ajs.shared.AppResponse;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
-import org.springframework.transaction.annotation.Transactional;
+import com.ajs.shared.commands.payment.LoadPaymentDetail;
+import com.ajs.shared.dto.payment.PaymentDetailDto;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
@@ -50,7 +50,7 @@ public class LoadPaymentDetailService implements Handler<LoadPaymentDetail> {
         if (paymentInvoiceAllocations != null){
 
             for (PaymentInvoiceAllocation paymentInvoiceAllocation : paymentInvoiceAllocations){
-                amountAllocated = amountAllocated.add(paymentInvoiceAllocation.getAllocatedAmount());
+                amountAllocated = amountAllocated.add(paymentInvoiceAllocation.getAllocatedAmount() == null ? new BigDecimal("0") : paymentInvoiceAllocation.getAllocatedAmount()) ;
 
             }
         }
