@@ -1,17 +1,17 @@
 package com.ajs.service.invoice;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+import org.springframework.transaction.annotation.Transactional;
 import com.ajs.dao.InvoiceDao;
 import com.ajs.domain.Invoice;
 import com.ajs.domain.InvoiceItemRlship;
 import com.ajs.domain.Item;
-import com.ajs.shared.dto.invoice.InvoiceDetailDto;
-import com.ajs.shared.commands.invoice.LoadInvoiceDetail;
-import com.ajs.shared.dto.item.ItemDetailDto;
 import com.ajs.service.Handler;
 import com.ajs.shared.AppResponse;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
-import org.springframework.transaction.annotation.Transactional;
+import com.ajs.shared.commands.invoice.LoadInvoiceDetail;
+import com.ajs.shared.dto.invoice.InvoiceDetailDto;
+import com.ajs.shared.dto.item.ItemDetailDto;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -46,19 +46,19 @@ public class LoadInvoiceDetailService implements Handler<LoadInvoiceDetail> {
         invoiceDetailDtos.add(invoiceDetailDto);
 
         Map<Long, ItemDetailDto> itemDtos = new HashMap<Long, ItemDetailDto>();
-        if (invoice.getInvoiceItemRlships() != null && invoice.getInvoiceItemRlships().size() > 0)
-
-            // TODO SHIT CHANGE IT LAZY
+        if (invoice.getInvoiceItemRlships() != null && invoice.getInvoiceItemRlships().size() > 0) {
             for (InvoiceItemRlship invoiceItemRlship : invoice.getInvoiceItemRlships()) {
-                ItemDetailDto itemDto = new ItemDetailDto();
+                ItemDetailDto itemDetailDto = new ItemDetailDto();
                 Item item = invoiceItemRlship.getItem();
-                itemDto.setCode(item.getCode());
-                itemDto.setDescription(item.getDescription());
-                itemDto.setName(item.getName());
-                itemDto.setAmount(item.getAmount());
-                itemDto.setId(item.getId());
-                itemDtos.put(item.getId(), itemDto);
+                itemDetailDto.setCode(item.getCode());
+                itemDetailDto.setDescription(item.getDescription());
+                itemDetailDto.setName(item.getName());
+                itemDetailDto.setAmount(item.getAmount());
+                itemDetailDto.setQuantity(invoiceItemRlship.getQuantity());
+                itemDetailDto.setId(item.getId());
+                itemDtos.put(item.getId(), itemDetailDto);
             }
+        }
 
         invoiceDetailDto.setItemDtoList(itemDtos);
         response.setDtos(invoiceDetailDtos);

@@ -28,10 +28,10 @@ public class PaymentWindow extends Window {
 
         setScrollbarSize(0);
         setAlign(Alignment.LEFT);
-        setWidth(950);
-        setHeight(660);
+//        setWidth(950);
+//        setHeight(600);
         moveTo(270, 20);
-//        setAutoSize(true);
+        setAutoSize(true);
     }
 
 }

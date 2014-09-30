@@ -30,9 +30,9 @@ public class PaymentDetailForm extends DynamicForm {
 
     public PaymentDetailForm(){
 
-        setHeight100();
+//        setHeight100();
         setWidth("300px");
-        setPadding(50);
+        setPadding(20);
         setLayoutAlign(VerticalAlignment.BOTTOM);
         setAlign(Alignment.LEFT);
         setNumCols(6);

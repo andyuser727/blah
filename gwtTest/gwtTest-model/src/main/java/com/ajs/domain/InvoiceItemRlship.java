@@ -14,7 +14,6 @@ import javax.persistence.Entity;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
-import java.util.Set;
 
 @Entity
 @Table(name="INVOICE_ITEM_RLSHIP")
@@ -22,6 +21,8 @@ public class InvoiceItemRlship extends PersistentObject {
 
     private Item item;
     private Invoice invoice;
+
+    private Integer quantity;
 
     public InvoiceItemRlship(){
     }
@@ -46,5 +47,13 @@ public class InvoiceItemRlship extends PersistentObject {
 
     public void setInvoice(Invoice invoice) {
         this.invoice = invoice;
+    }
+
+    public Integer getQuantity() {
+        return quantity;
+    }
+
+    public void setQuantity(final Integer quantity) {
+        this.quantity = quantity;
     }
 }

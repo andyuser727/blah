@@ -125,12 +125,13 @@ public class PaymentListActivity extends BaseAbstractActivity {
 
     private void createLoadingWindow() {
         dlg = new Window();
-        dlg.setWidth(950);
+        dlg.setWidth("100%");
         dlg.setHeight(25);
         dlg.setIsModal(true);
         dlg.setShowModalMask(true);
-        dlg.centerInPage();
-        Img loadingImg = new Img("/gwttestl/ezgif-save.gif", 950, 20);
+//        dlg.centerInPage();
+        dlg.moveTo(0, 0);
+        Img loadingImg = new Img("/gwttestl/ezgif-save.gif", 3000, 20);
         dlg.addMember(loadingImg);
     }
 
@@ -216,7 +217,7 @@ public class PaymentListActivity extends BaseAbstractActivity {
         ListGridField id = new ListGridField("id", "ID");
         id.setType(ListGridFieldType.INTEGER);
 
-        paymentGrid.setFields(id, customerName, customerReference, paymentNumber, description, amount, paymentDate);
+        paymentGrid.setFields(customerName, customerReference, paymentNumber, description, amount, paymentDate);
 
         paymentGrid.setMargin(10);
         paymentGrid.setHeight(300);

@@ -1,7 +1,10 @@
 package com.ajs.client.datasource.item;
 
 import com.smartgwt.client.data.DataSource;
-import com.smartgwt.client.data.fields.*;
+import com.smartgwt.client.data.fields.DataSourceBooleanField;
+import com.smartgwt.client.data.fields.DataSourceFloatField;
+import com.smartgwt.client.data.fields.DataSourceIntegerField;
+import com.smartgwt.client.data.fields.DataSourceTextField;
 
 /**
  * Created with IntelliJ IDEA.
@@ -19,6 +22,7 @@ public class ItemListDataSource extends DataSource {
     private static DataSourceTextField itemName = new DataSourceTextField("itemName", "Item Name");
     private static DataSourceTextField itemCode = new DataSourceTextField("itemCode", "Item Code");
     private static DataSourceFloatField amount = new DataSourceFloatField("amount", "Amount");
+    private static DataSourceIntegerField quantity = new  DataSourceIntegerField("quantity", "Quantity");
     private static DataSourceTextField itemDescription = new DataSourceTextField("itemDescription", "Item Description");
 
     protected ItemListDataSource() {
@@ -34,10 +38,12 @@ public class ItemListDataSource extends DataSource {
             id.setHidden(true);
             itemName.setAttribute("width", "10%");
             itemCode.setAttribute("width", "10%");
+            quantity.setAttribute("width", "10%");
+            quantity.setAttribute("width", "10%");
             amount.setAttribute("width", "10%");
             itemDescription.setAttribute("width", "50%");
 
-            instance.setFields(remove, id, itemName, itemCode, itemDescription, amount);
+            instance.setFields(remove, id, itemName, itemCode, itemDescription, amount, quantity);
         }
         return instance;
     }

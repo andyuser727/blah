@@ -27,10 +27,10 @@ public class InvoiceWindow extends Window {
         centerInPage();
         setScrollbarSize(0);
         setAlign(Alignment.LEFT);
-        setWidth(950);
-        setHeight(620);
+//        setWidth(950);
+//        setHeight(620);
         moveTo(270, 20);
-//        setAutoSize(true);
+        setAutoSize(true);
 
     }
 

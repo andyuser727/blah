@@ -1,32 +1,29 @@
 package com.ajs.client.activity.quote;
 
-import java.math.BigDecimal;
-import java.util.*;
-
 import com.ajs.client.activity.BaseAbstractActivity;
+import com.ajs.client.datasource.item.ItemListDataSource;
+import com.ajs.client.datasource.quote.ItemsForQuoteDataSource;
+import com.ajs.client.datasource.quote.QuoteDataSource;
+import com.ajs.client.form.quote.QuoteDetailForm;
+import com.ajs.client.layout.item.ItemListLayout;
+import com.ajs.client.layout.quote.QuoteDetailLayout;
+import com.ajs.client.listgrid.item.ItemListGrid;
+import com.ajs.client.place.QuoteListPlace;
+import com.ajs.client.ui.quote.QuoteListView;
+import com.ajs.client.window.item.ItemListWindow;
+import com.ajs.client.window.quote.QuoteWindow;
+import com.ajs.shared.AppResponse;
+import com.ajs.shared.AppServiceAsync;
 import com.ajs.shared.SimpleResponse;
-import com.ajs.shared.commands.*;
+import com.ajs.shared.commands.LoadCustomerList;
 import com.ajs.shared.commands.item.LoadItemList;
 import com.ajs.shared.commands.item.SaveItemDetail;
 import com.ajs.shared.commands.quote.LoadQuoteDetail;
 import com.ajs.shared.commands.quote.LoadQuoteList;
 import com.ajs.shared.commands.quote.SaveQuoteDetail;
-import com.ajs.client.datasource.quote.ItemsForQuoteDataSource;
-import com.ajs.client.datasource.quote.QuoteDataSource;
-import com.ajs.client.datasource.item.ItemListDataSource;
+import com.ajs.shared.dto.item.ItemDetailDto;
 import com.ajs.shared.dto.party.CustomerDetailDto;
 import com.ajs.shared.dto.quote.QuoteDetailDto;
-import com.ajs.shared.dto.item.ItemDetailDto;
-import com.ajs.client.form.quote.QuoteDetailForm;
-import com.ajs.client.layout.quote.QuoteDetailLayout;
-import com.ajs.client.layout.item.ItemListLayout;
-import com.ajs.client.listgrid.item.ItemListGrid;
-import com.ajs.client.place.QuoteListPlace;
-import com.ajs.shared.AppResponse;
-import com.ajs.shared.AppServiceAsync;
-import com.ajs.client.ui.quote.QuoteListView;
-import com.ajs.client.window.quote.QuoteWindow;
-import com.ajs.client.window.item.ItemListWindow;
 import com.google.gwt.event.shared.EventBus;
 import com.google.gwt.place.shared.PlaceController;
 import com.google.gwt.user.client.rpc.AsyncCallback;
@@ -42,15 +39,23 @@ import com.smartgwt.client.widgets.events.ClickHandler;
 import com.smartgwt.client.widgets.events.CloseClickEvent;
 import com.smartgwt.client.widgets.events.CloseClickHandler;
 import com.smartgwt.client.widgets.form.DynamicForm;
-import com.smartgwt.client.widgets.form.fields.*;
+import com.smartgwt.client.widgets.form.fields.CheckboxItem;
+import com.smartgwt.client.widgets.form.fields.TextAreaItem;
+import com.smartgwt.client.widgets.form.fields.TextItem;
 import com.smartgwt.client.widgets.form.fields.events.ChangedEvent;
 import com.smartgwt.client.widgets.form.fields.events.ChangedHandler;
 import com.smartgwt.client.widgets.grid.ListGrid;
 import com.smartgwt.client.widgets.grid.ListGridField;
 import com.smartgwt.client.widgets.grid.ListGridRecord;
-import com.smartgwt.client.widgets.grid.events.*;
+import com.smartgwt.client.widgets.grid.events.HeaderDoubleClickEvent;
+import com.smartgwt.client.widgets.grid.events.HeaderDoubleClickHandler;
+import com.smartgwt.client.widgets.grid.events.RecordClickEvent;
+import com.smartgwt.client.widgets.grid.events.RecordClickHandler;
 import com.smartgwt.client.widgets.layout.HLayout;
 import com.smartgwt.client.widgets.layout.VLayout;
+
+import java.math.BigDecimal;
+import java.util.*;
 
 public class QuoteListActivity extends BaseAbstractActivity {
 
@@ -155,7 +160,7 @@ public class QuoteListActivity extends BaseAbstractActivity {
     private void resetItemsForQuoteGrid() {
 
         if (itemsForQuoteGrid == null) {
-            itemsForQuoteGrid = new ItemListGrid(false, true, false);
+            itemsForQuoteGrid = new ItemListGrid(false, true, false, null);
         } else {
             itemsForQuoteGrid.destroy();
         }
@@ -169,7 +174,7 @@ public class QuoteListActivity extends BaseAbstractActivity {
     private void resetItemListGrid() {
 
         if (itemListGrid == null) {
-            itemListGrid = new ItemListGrid(false, false, false);
+            itemListGrid = new ItemListGrid(false, false, false, null);
         } else {
             itemListGrid.destroy();
         }
@@ -324,7 +329,7 @@ public class QuoteListActivity extends BaseAbstractActivity {
 
     private void createItemsListGrid() {
 
-        itemListGrid = new ItemListGrid(false, false, false);
+        itemListGrid = new ItemListGrid(false, false, false, null);
 
         itemListGrid.addRecordClickHandler(new RecordClickHandler() {
             public void onRecordClick(RecordClickEvent event) {
@@ -744,7 +749,7 @@ public class QuoteListActivity extends BaseAbstractActivity {
         resetItemsForQuoteGrid();
         resetItemsForQuoteDataSource();
         quoteDetailForm = new QuoteDetailForm();
-        itemsForQuoteGrid = new ItemListGrid(false, true, false);
+        itemsForQuoteGrid = new ItemListGrid(false, true, false, null);
         createQuoteButtons();
 
         //

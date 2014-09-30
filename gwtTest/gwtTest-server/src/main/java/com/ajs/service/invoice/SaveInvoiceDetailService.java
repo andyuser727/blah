@@ -1,5 +1,8 @@
 package com.ajs.service.invoice;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+import org.springframework.transaction.annotation.Transactional;
 import com.ajs.dao.CustomerDao;
 import com.ajs.dao.InvoiceDao;
 import com.ajs.dao.InvoiceItemRlshipDao;
@@ -10,14 +13,9 @@ import com.ajs.domain.InvoiceItemRlship;
 import com.ajs.domain.Item;
 import com.ajs.service.SimpleHandler;
 import com.ajs.shared.SimpleResponse;
-import com.ajs.shared.dto.invoice.InvoiceDetailDto;
 import com.ajs.shared.commands.invoice.SaveInvoiceDetail;
+import com.ajs.shared.dto.invoice.InvoiceDetailDto;
 import com.ajs.shared.dto.item.ItemDetailDto;
-import com.ajs.service.Handler;
-import com.ajs.shared.AppResponse;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
-import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Map;
 
@@ -44,12 +42,19 @@ public class SaveInvoiceDetailService implements SimpleHandler<SaveInvoiceDetail
 
         InvoiceDetailDto invoiceDetailDto = dto.getInvoiceDetailDto();
 
-        Invoice invoice = null;
+        Invoice invoice;
         if (dto.getInvoiceDetailDto().getId() != null) {
             invoice = invoiceDao.find(dto.getInvoiceDetailDto().getId());
         } else {
             invoice = new Invoice();
             invoiceDao.save(invoice);
+        }
+
+        for (ItemDetailDto itemDetailDto : invoiceDetailDto.getItemDtoList().values()){
+            InvoiceItemRlship invoiceItemRlship = invoiceItemRlshipDao.findRelationship(invoice.getId(), itemDetailDto.getId());
+            invoiceItemRlship.setQuantity(itemDetailDto.getQuantity());
+            invoiceItemRlshipDao.save(invoiceItemRlship);
+
         }
 
         Map<Long, ItemDetailDto> newItemDtos = dto.getNewItemDtos();
@@ -87,6 +92,7 @@ public class SaveInvoiceDetailService implements SimpleHandler<SaveInvoiceDetail
                 invoiceItemRlshipDao.save(invoiceItemRlship);
                 invoiceItemRlship.setInvoice(invoice);
                 invoiceItemRlship.setItem(item);
+                invoiceItemRlship.setQuantity(itemDetailDto.getQuantity());
             }
         }
 

@@ -1,7 +1,10 @@
 package com.ajs.client.datasource.invoice;
 
 import com.smartgwt.client.data.DataSource;
-import com.smartgwt.client.data.fields.*;
+import com.smartgwt.client.data.fields.DataSourceDateField;
+import com.smartgwt.client.data.fields.DataSourceFloatField;
+import com.smartgwt.client.data.fields.DataSourceIntegerField;
+import com.smartgwt.client.data.fields.DataSourceTextField;
 
 /**
  * Created with IntelliJ IDEA.
@@ -23,22 +26,22 @@ public class InvoiceDataSource extends DataSource {
 //        test.set
 
         DataSourceTextField customerName = new DataSourceTextField("customerName", "Customer Name");
-        customerName.setAttribute("width", "10%");
+        customerName.setAttribute("width", "100px");
 
         DataSourceTextField customerReference = new DataSourceTextField("customerReference", "Customer Ref");
-        customerReference.setAttribute("width", "10%");
+        customerReference.setAttribute("width", "120px");
 
         DataSourceTextField invoiceNumber = new DataSourceTextField("invoiceNumber", "Invoice Number");
-        invoiceNumber.setAttribute("width", "10%");
+        invoiceNumber.setAttribute("width", "100px");
 
         DataSourceFloatField amount = new DataSourceFloatField("amount", "Amount");
-        amount.setAttribute("width", "10%");
+        amount.setAttribute("width", "100px");
 
         DataSourceTextField description = new DataSourceTextField("description", "Description");
-        description.setAttribute("width", "50%");
+        description.setAttribute("width", "322px");
 
         DataSourceDateField invoiceDate = new DataSourceDateField("invoiceDate", "Invoice Date");
-        invoiceDate.setAttribute("width", "10%");
+        invoiceDate.setAttribute("width", "90px");
 
         setFields(id, customerName, customerReference, invoiceNumber, description, amount, invoiceDate);
     }

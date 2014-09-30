@@ -49,10 +49,7 @@ import com.smartgwt.client.widgets.form.fields.events.ChangedHandler;
 import com.smartgwt.client.widgets.grid.ListGrid;
 import com.smartgwt.client.widgets.grid.ListGridField;
 import com.smartgwt.client.widgets.grid.ListGridRecord;
-import com.smartgwt.client.widgets.grid.events.HeaderDoubleClickEvent;
-import com.smartgwt.client.widgets.grid.events.HeaderDoubleClickHandler;
-import com.smartgwt.client.widgets.grid.events.RecordClickEvent;
-import com.smartgwt.client.widgets.grid.events.RecordClickHandler;
+import com.smartgwt.client.widgets.grid.events.*;
 import com.smartgwt.client.widgets.layout.HLayout;
 import com.smartgwt.client.widgets.layout.VLayout;
 
@@ -168,7 +165,12 @@ public class InvoiceListActivity extends BaseAbstractActivity {
     private void resetItemsForInvoiceGrid() {
 
         if (itemsForInvoiceGrid == null) {
-            itemsForInvoiceGrid = new ItemListGrid(true, false, false);
+            itemsForInvoiceGrid = new ItemListGrid(true, false, false, new ChangeHandler() {
+                @Override
+                public void onChange(final ChangeEvent changeEvent) {
+                    invoiceDetailDto.getItemDtoList().get(changeEvent.getValue());
+                }
+            });
         } else {
             itemsForInvoiceGrid.destroy();
         }
@@ -182,7 +184,7 @@ public class InvoiceListActivity extends BaseAbstractActivity {
     private void resetItemListGrid() {
 
         if (itemListGrid == null) {
-            itemListGrid = new ItemListGrid(false, false, false);
+            itemListGrid = new ItemListGrid(false, false, false, null);
         } else {
             itemListGrid.destroy();
         }
@@ -282,16 +284,22 @@ public class InvoiceListActivity extends BaseAbstractActivity {
                     newItemDtos = new HashMap<Long, ItemDetailDto>();
                 }
 
+                int rowNum = 0;
                 for (ListGridRecord listGridRecord : itemListGrid.getSelectedRecords()) {
                     ItemDetailDto itemDetailDto = new ItemDetailDto();
                     itemDetailDto.setAmount(listGridRecord.getAttribute("amount") == null ? null : new BigDecimal(listGridRecord.getAttribute("amount")));
                     itemDetailDto.setCode(listGridRecord.getAttribute("itemCode"));
                     itemDetailDto.setName(listGridRecord.getAttribute("itemName"));
                     itemDetailDto.setDescription(listGridRecord.getAttribute("itemDescription"));
+
+                    itemDetailDto.setQuantity(Integer.valueOf(itemListGrid.getEditedRecord(rowNum).getAttribute("quantity") == null ? null : itemListGrid.getEditedRecord(rowNum).getAttribute("quantity")));
                     itemDetailDto.setId(Long.valueOf(listGridRecord.getAttribute("id")));
+//                    com.google.gwt.user.client.Window.alert(itemListGrid.getEditedRecord(rowNum).getAttribute("quantity"));
 
                     itemIdsToExclude.add(Long.valueOf(Long.valueOf(listGridRecord.getAttribute("id"))));
                     newItemDtos.put(Long.valueOf(Long.valueOf(listGridRecord.getAttribute("id"))), itemDetailDto);
+
+                    rowNum++;
                 }
 
                 itemListWindow.hide();
@@ -352,12 +360,14 @@ public class InvoiceListActivity extends BaseAbstractActivity {
 
     private void createItemsListGrid() {
 
-        itemListGrid = new ItemListGrid(false, false, false);
+        itemListGrid = new ItemListGrid(false, false, false, null);
 
         itemListGrid.addRecordClickHandler(new RecordClickHandler() {
             public void onRecordClick(RecordClickEvent event) {
 
-                if (!(event.getFieldNum() == 0)) {
+                itemListGrid.saveAllEdits();
+
+                if (!(event.getFieldNum() == 0) && !(event.getFieldNum() == 5) && !(event.getFieldNum() == 6)) {
 
                     ItemDetailDto itemDetailDto = new ItemDetailDto();
                     itemDetailDto.setAmount(event.getRecord().getAttribute("amount") == null ? null : new BigDecimal(event.getRecord().getAttribute("amount")));
@@ -365,6 +375,7 @@ public class InvoiceListActivity extends BaseAbstractActivity {
                     itemDetailDto.setName(event.getRecord().getAttribute("itemName"));
                     itemDetailDto.setDescription(event.getRecord().getAttribute("itemDescription"));
                     itemDetailDto.setId(Long.valueOf(event.getRecord().getAttribute("id")));
+                    itemDetailDto.setQuantity(Integer.valueOf(event.getRecord().getAttribute("quantity")));
 
                     itemIdsToExclude.add(itemDetailDto.getId());
 
@@ -401,7 +412,7 @@ public class InvoiceListActivity extends BaseAbstractActivity {
         ListGridField id = new ListGridField("id", "ID");
         id.setType(ListGridFieldType.INTEGER);
 
-        invoiceGrid.setFields(id, customerName, customerReference, invoiceNumber, description, amount, invoiceDate);
+        invoiceGrid.setFields(customerName, customerReference, invoiceNumber, description, amount, invoiceDate);
 
         invoiceGrid.setMargin(10);
         invoiceGrid.setHeight(300);
@@ -440,8 +451,8 @@ public class InvoiceListActivity extends BaseAbstractActivity {
                 doAddNewInvoice();
             }
         });
-        Button deleteButton = new Button("Delete Items");
 
+        Button deleteButton = new Button("Delete Items");
         deleteButton.setStyleName("marginButton", true);
 
         ((InvoiceListView) display).getGridPanel().add(addButton);
@@ -615,7 +626,6 @@ public class InvoiceListActivity extends BaseAbstractActivity {
         itemDescription = new TextAreaItem();
         itemDescription.setTitle("Description");
 
-//        addItemWindow.addItem(newItemLayout);
         addItemWindow.addItem(createNewItemLayout());
         addItemWindow.show();
     }
@@ -674,7 +684,7 @@ public class InvoiceListActivity extends BaseAbstractActivity {
                 record.setAttribute("itemDescription", itemDetailDto.getDescription());
                 record.setAttribute("amount", itemDetailDto.getAmount() == null ? null : itemDetailDto.getAmount().floatValue());
                 record.setAttribute("id", itemDetailDto.getId().intValue());
-                record.setAttribute("quantity", 1);
+                record.setAttribute("quantity", itemDetailDto.getQuantity());
 
                 itemsForInvoiceDataSource.addData(record);
             }
@@ -791,10 +801,14 @@ public class InvoiceListActivity extends BaseAbstractActivity {
         resetItemsForInvoiceGrid();
         resetItemsForInvoiceDataSource();
         invoiceDetailForm = new InvoiceDetailForm();
-        itemsForInvoiceGrid = new ItemListGrid(true, false, false);
+        itemsForInvoiceGrid = new ItemListGrid(true, false, false, new ChangeHandler() {
+            @Override
+            public void onChange(final ChangeEvent changeEvent) {
+                invoiceDetailDto.getItemDtoList().get(Long.valueOf(itemsForInvoiceGrid.getRecord(changeEvent.getRowNum()).getAttribute("id"))).setQuantity(changeEvent.getValue() == null ? 0 : Integer.valueOf((String)changeEvent.getValue()));
+            }
+        });
         createInvoiceButtons();
 
-        //
         CheckboxItem selectAllCheckbox;
         selectAllCheckbox = new CheckboxItem();
         selectAllCheckbox.setTitle("Select All");
@@ -813,8 +827,6 @@ public class InvoiceListActivity extends BaseAbstractActivity {
         form.setFields(selectAllCheckbox);
         form.setLayoutAlign(VerticalAlignment.BOTTOM);
         form.setAlign(Alignment.LEFT);
-
-        //
 
         addInvoiceLayout = new InvoiceDetailLayout(itemsForInvoiceGrid, invoiceDetailForm, cancelButton, saveInvoiceButton, addItemButton, form);
         invoiceWindow = new InvoiceWindow(newInvoice);
@@ -853,15 +865,14 @@ public class InvoiceListActivity extends BaseAbstractActivity {
     }
 
     private void showWaitingForServer() {
-
         dlg = new Window();
-        dlg.setWidth(950);
+        dlg.setWidth("100%");
         dlg.setHeight(25);
         dlg.setIsModal(true);
         dlg.setShowModalMask(true);
-        dlg.centerInPage();
-        Img loadingImg = new Img("/gwttestl/ezgif-save.gif", 950, 20);
+        Img loadingImg = new Img("/gwttestl/ezgif-save.gif", 3000, 20);
         dlg.addMember(loadingImg);
+        dlg.moveTo(0, 0);
         dlg.show();
     }
 

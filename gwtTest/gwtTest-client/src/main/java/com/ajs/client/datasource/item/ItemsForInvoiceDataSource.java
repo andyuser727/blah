@@ -1,7 +1,10 @@
 package com.ajs.client.datasource.item;
 
 import com.smartgwt.client.data.DataSource;
-import com.smartgwt.client.data.fields.*;
+import com.smartgwt.client.data.fields.DataSourceBooleanField;
+import com.smartgwt.client.data.fields.DataSourceFloatField;
+import com.smartgwt.client.data.fields.DataSourceIntegerField;
+import com.smartgwt.client.data.fields.DataSourceTextField;
 import com.smartgwt.client.types.FieldType;
 
 /**
@@ -21,7 +24,7 @@ public class ItemsForInvoiceDataSource extends DataSource {
     private static DataSourceTextField itemName = new DataSourceTextField("itemName", "Item Name");
     private static DataSourceTextField itemCode = new DataSourceTextField("itemCode", "Item Code");
     private static DataSourceFloatField amount = new DataSourceFloatField("amount", "Amount");
-    private static DataSourceIntegerField quantity = new  DataSourceIntegerField("quantity");
+    private static DataSourceIntegerField quantity = new  DataSourceIntegerField("quantity", "Quantity");
     private static DataSourceTextField itemDescription = new DataSourceTextField("itemDescription", "Item Description");
 
     protected ItemsForInvoiceDataSource() {

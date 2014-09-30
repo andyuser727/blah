@@ -4,7 +4,9 @@ import com.ajs.client.activity.nav.NavActivity;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.uibinder.client.UiBinder;
 import com.google.gwt.uibinder.client.UiField;
-import com.google.gwt.user.client.ui.*;
+import com.google.gwt.user.client.ui.Composite;
+import com.google.gwt.user.client.ui.Label;
+import com.google.gwt.user.client.ui.Widget;
 
 public class NavViewImpl extends Composite implements NavActivity.INavViewDisplay {
     private static NavViewImplUiBinder uiBinder = GWT.create(NavViewImplUiBinder.class);
@@ -14,12 +16,6 @@ public class NavViewImpl extends Composite implements NavActivity.INavViewDispla
 
     @UiField
     protected Label navLabel;
-
-    //    @UiField
-    //    protected SimplePanel contentWrapperPanel;
-
-//    @UiField
-//    protected Button btnAdd, btnGB;
 
     public NavViewImpl() {
 

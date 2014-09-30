@@ -1,33 +1,29 @@
 package com.ajs.client.activity.customerorder;
 
-import java.math.BigDecimal;
-import java.util.*;
-
 import com.ajs.client.activity.BaseAbstractActivity;
-import com.ajs.shared.SimpleResponse;
-import com.ajs.shared.commands.*;
-import com.ajs.shared.commands.customerorder.LoadCustomerOrderDetail;
-import com.ajs.shared.commands.customerorder.LoadCustomerOrderList;
-//import com.ajs.commands.customerOrder.ProcessCustomerOrderDeletes;
-import com.ajs.shared.commands.customerorder.SaveCustomerOrderDetail;
-import com.ajs.shared.commands.item.LoadItemList;
-import com.ajs.shared.commands.item.SaveItemDetail;
-import com.ajs.client.datasource.customerorder.ItemsForCustomerOrderDataSource;
 import com.ajs.client.datasource.customerorder.CustomerOrderDataSource;
+import com.ajs.client.datasource.customerorder.ItemsForCustomerOrderDataSource;
 import com.ajs.client.datasource.item.ItemListDataSource;
-import com.ajs.shared.dto.party.CustomerDetailDto;
-import com.ajs.shared.dto.customerorder.CustomerOrderDetailDto;
-import com.ajs.shared.dto.item.ItemDetailDto;
 import com.ajs.client.form.customerorder.CustomerOrderDetailForm;
 import com.ajs.client.layout.customerorder.CustomerOrderDetailLayout;
 import com.ajs.client.layout.item.ItemListLayout;
 import com.ajs.client.listgrid.item.ItemListGrid;
 import com.ajs.client.place.CustomerOrderListPlace;
-import com.ajs.shared.AppResponse;
-import com.ajs.shared.AppServiceAsync;
 import com.ajs.client.ui.customerorder.CustomerOrderListView;
 import com.ajs.client.window.customerorder.CustomerOrderWindow;
 import com.ajs.client.window.item.ItemListWindow;
+import com.ajs.shared.AppResponse;
+import com.ajs.shared.AppServiceAsync;
+import com.ajs.shared.SimpleResponse;
+import com.ajs.shared.commands.LoadCustomerList;
+import com.ajs.shared.commands.customerorder.LoadCustomerOrderDetail;
+import com.ajs.shared.commands.customerorder.LoadCustomerOrderList;
+import com.ajs.shared.commands.customerorder.SaveCustomerOrderDetail;
+import com.ajs.shared.commands.item.LoadItemList;
+import com.ajs.shared.commands.item.SaveItemDetail;
+import com.ajs.shared.dto.customerorder.CustomerOrderDetailDto;
+import com.ajs.shared.dto.item.ItemDetailDto;
+import com.ajs.shared.dto.party.CustomerDetailDto;
 import com.google.gwt.event.shared.EventBus;
 import com.google.gwt.place.shared.PlaceController;
 import com.google.gwt.user.client.rpc.AsyncCallback;
@@ -43,15 +39,25 @@ import com.smartgwt.client.widgets.events.ClickHandler;
 import com.smartgwt.client.widgets.events.CloseClickEvent;
 import com.smartgwt.client.widgets.events.CloseClickHandler;
 import com.smartgwt.client.widgets.form.DynamicForm;
-import com.smartgwt.client.widgets.form.fields.*;
+import com.smartgwt.client.widgets.form.fields.CheckboxItem;
+import com.smartgwt.client.widgets.form.fields.TextAreaItem;
+import com.smartgwt.client.widgets.form.fields.TextItem;
 import com.smartgwt.client.widgets.form.fields.events.ChangedEvent;
 import com.smartgwt.client.widgets.form.fields.events.ChangedHandler;
 import com.smartgwt.client.widgets.grid.ListGrid;
 import com.smartgwt.client.widgets.grid.ListGridField;
 import com.smartgwt.client.widgets.grid.ListGridRecord;
-import com.smartgwt.client.widgets.grid.events.*;
+import com.smartgwt.client.widgets.grid.events.HeaderDoubleClickEvent;
+import com.smartgwt.client.widgets.grid.events.HeaderDoubleClickHandler;
+import com.smartgwt.client.widgets.grid.events.RecordClickEvent;
+import com.smartgwt.client.widgets.grid.events.RecordClickHandler;
 import com.smartgwt.client.widgets.layout.HLayout;
 import com.smartgwt.client.widgets.layout.VLayout;
+
+import java.math.BigDecimal;
+import java.util.*;
+
+//import com.ajs.commands.customerOrder.ProcessCustomerOrderDeletes;
 
 public class CustomerOrderListActivity extends BaseAbstractActivity {
 
@@ -156,7 +162,7 @@ public class CustomerOrderListActivity extends BaseAbstractActivity {
     private void resetItemsForCustomerOrderGrid() {
 
         if (itemsForCustomerOrderGrid == null) {
-            itemsForCustomerOrderGrid = new ItemListGrid(false, false, true);
+            itemsForCustomerOrderGrid = new ItemListGrid(false, false, true, null);
         } else {
             itemsForCustomerOrderGrid.destroy();
         }
@@ -170,7 +176,7 @@ public class CustomerOrderListActivity extends BaseAbstractActivity {
     private void resetItemListGrid() {
 
         if (itemListGrid == null) {
-            itemListGrid = new ItemListGrid(false, false, false);
+            itemListGrid = new ItemListGrid(false, false, false, null);
         } else {
             itemListGrid.destroy();
         }
@@ -325,7 +331,7 @@ public class CustomerOrderListActivity extends BaseAbstractActivity {
 
     private void createItemsListGrid() {
 
-        itemListGrid = new ItemListGrid(false, false, false);
+        itemListGrid = new ItemListGrid(false, false, false, null);
 
         itemListGrid.addRecordClickHandler(new RecordClickHandler() {
             public void onRecordClick(RecordClickEvent event) {
@@ -745,7 +751,7 @@ public class CustomerOrderListActivity extends BaseAbstractActivity {
         resetItemsForCustomerOrderGrid();
         resetItemsForCustomerOrderDataSource();
         customerOrderDetailForm = new CustomerOrderDetailForm();
-        itemsForCustomerOrderGrid = new ItemListGrid(false, false, true);
+        itemsForCustomerOrderGrid = new ItemListGrid(false, false, true, null);
         createCustomerOrderButtons();
 
         //
