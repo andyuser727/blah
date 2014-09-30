@@ -32,6 +32,9 @@ public class ItemListGrid extends ListGrid {
         amount.setType(ListGridFieldType.FLOAT);
         ListGridField quantity = new ListGridField("quantity", "Quantity");
         quantity.setType(ListGridFieldType.INTEGER);
+        ListGridField rowNum = new ListGridField("rowNum", "RowNum");
+        quantity.setType(ListGridFieldType.INTEGER);
+
 //        quantity.setValidateOnChange(true);
 //
 //        IntegerRangeValidator integerRangeValidator = new IntegerRangeValidator();

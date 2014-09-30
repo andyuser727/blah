@@ -229,7 +229,7 @@ public class CustomerOrderListActivity extends BaseAbstractActivity {
 
                 createItemsListGrid();
                 createItemListButtons();
-                itemListLayout = new ItemListLayout(itemListGrid, newItemButton, addItemsButton);
+                itemListLayout = new ItemListLayout(itemListGrid, newItemButton, addItemsButton, null);
                 showItemListDialog();
                 loadItemsList();
 

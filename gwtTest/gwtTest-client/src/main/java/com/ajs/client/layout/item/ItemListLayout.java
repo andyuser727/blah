@@ -17,7 +17,8 @@ public class ItemListLayout extends VLayout {
 
     public ItemListLayout(ItemListGrid itemListGrid,
                           Button newItemButton,
-                          Button addItemsButton) {
+                          Button addItemsButton,
+                          Button cancelButton) {
 
         HLayout itemLayout = new HLayout();
         itemLayout.addMember(itemListGrid);
@@ -28,6 +29,7 @@ public class ItemListLayout extends VLayout {
         HLayout buttonLayout = new HLayout();
         buttonLayout.addMember(newItemButton);
         buttonLayout.addMember(addItemsButton);
+        buttonLayout.addMember(cancelButton);
         buttonLayout.setPadding(20);
         buttonLayout.setAlign(Alignment.LEFT);
         buttonLayout.setWidth(300);

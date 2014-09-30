@@ -90,6 +90,7 @@ public class InvoiceListActivity extends BaseAbstractActivity {
 
     private Button saveItemButton;
     private Button cancelButton;
+    private Button cancelAddItemsButton;
     private Button saveInvoiceButton;
     private Button addItemButton;
     private Button newItemButton;
@@ -198,6 +199,7 @@ public class InvoiceListActivity extends BaseAbstractActivity {
     private void createInvoiceButtons() {
 
         cancelButton = new Button();
+        cancelAddItemsButton = new Button();
         saveInvoiceButton = new Button();
         addItemButton = new Button();
         deleteSelectedButton = new Button();
@@ -205,6 +207,7 @@ public class InvoiceListActivity extends BaseAbstractActivity {
         saveInvoiceButton.setTitle("Save");
         addItemButton.setTitle("Add Item");
         deleteSelectedButton.setTitle("Delete Selected");
+        cancelAddItemsButton.setTitle("Cancel");
 
         deleteSelectedButton.addClickHandler(new ClickHandler() {
             @Override
@@ -218,6 +221,13 @@ public class InvoiceListActivity extends BaseAbstractActivity {
             public void onClick(ClickEvent event) {
                 invoiceDetailDto = new InvoiceDetailDto();
                 invoiceWindow.hide();
+            }
+        });
+
+        cancelAddItemsButton.addClickHandler(new ClickHandler() {
+            @Override
+            public void onClick(ClickEvent event) {
+                itemListWindow.hide();
             }
         });
 
@@ -252,7 +262,7 @@ public class InvoiceListActivity extends BaseAbstractActivity {
 
                 createItemsListGrid();
                 createItemListButtons();
-                itemListLayout = new ItemListLayout(itemListGrid, newItemButton, addItemsButton);
+                itemListLayout = new ItemListLayout(itemListGrid, newItemButton, addItemsButton, cancelAddItemsButton);
                 showItemListDialog();
                 loadItemsList();
 
@@ -291,10 +301,9 @@ public class InvoiceListActivity extends BaseAbstractActivity {
                     itemDetailDto.setCode(listGridRecord.getAttribute("itemCode"));
                     itemDetailDto.setName(listGridRecord.getAttribute("itemName"));
                     itemDetailDto.setDescription(listGridRecord.getAttribute("itemDescription"));
-
-                    itemDetailDto.setQuantity(Integer.valueOf(itemListGrid.getEditedRecord(rowNum).getAttribute("quantity") == null ? null : itemListGrid.getEditedRecord(rowNum).getAttribute("quantity")));
+//                    itemDetailDto.setQuantity(Integer.valueOf(null));
+                    itemDetailDto.setQuantity(itemListGrid.getEditedRecord(Integer.valueOf(listGridRecord.getAttribute("rowNum"))).getAttribute("quantity") == null ? null : Integer.valueOf(itemListGrid.getEditedRecord(Integer.valueOf(listGridRecord.getAttribute("rowNum"))).getAttribute("quantity")));
                     itemDetailDto.setId(Long.valueOf(listGridRecord.getAttribute("id")));
-//                    com.google.gwt.user.client.Window.alert(itemListGrid.getEditedRecord(rowNum).getAttribute("quantity"));
 
                     itemIdsToExclude.add(Long.valueOf(Long.valueOf(listGridRecord.getAttribute("id"))));
                     newItemDtos.put(Long.valueOf(Long.valueOf(listGridRecord.getAttribute("id"))), itemDetailDto);
@@ -365,7 +374,7 @@ public class InvoiceListActivity extends BaseAbstractActivity {
         itemListGrid.addRecordClickHandler(new RecordClickHandler() {
             public void onRecordClick(RecordClickEvent event) {
 
-                itemListGrid.saveAllEdits();
+//                itemListGrid.saveAllEdits();
 
                 if (!(event.getFieldNum() == 0) && !(event.getFieldNum() == 5) && !(event.getFieldNum() == 6)) {
 
@@ -564,7 +573,7 @@ public class InvoiceListActivity extends BaseAbstractActivity {
                 });
     }
 
-    void loadCustomers(final boolean newInvoice) {
+    private void loadCustomers(final boolean newInvoice) {
 
         showWaitingForServer();
         LoadCustomerList loadCustomerList = new LoadCustomerList();
@@ -696,6 +705,8 @@ public class InvoiceListActivity extends BaseAbstractActivity {
 
     private void setItemListComponents() {
 
+        int rowNum = 0;
+
         for (ItemDetailDto itemDetailDto : itemDetailDtos) {
             ListGridRecord record = new ListGridRecord();
             record.setAttribute("itemCode", itemDetailDto.getCode());
@@ -703,8 +714,12 @@ public class InvoiceListActivity extends BaseAbstractActivity {
             record.setAttribute("itemDescription", itemDetailDto.getDescription());
             record.setAttribute("amount", itemDetailDto.getAmount() == null ? null : itemDetailDto.getAmount().floatValue());
             record.setAttribute("id", itemDetailDto.getId().intValue());
+            record.setAttribute("rowNum", rowNum);
+            record.setAttribute("quantity", 1);
 
             itemListDataSource.addData(record);
+
+            rowNum++;
         }
         itemListDataSource.fetchData();
         itemListGrid.redraw();
