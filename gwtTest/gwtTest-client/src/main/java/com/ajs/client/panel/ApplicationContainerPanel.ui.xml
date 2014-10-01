@@ -28,7 +28,7 @@
         }
 
         .bgApp {
-            background-color: lightcyan;
+            background-color: #E9EEF2;
         }
     </ui:style>
     <g:FlowPanel addStyleNames='{style.floatLeft}'>

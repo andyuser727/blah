@@ -93,5 +93,8 @@ public class TabMenuPanel extends Composite {
 
         //
         initWidget(topTabSet);
+
+        topTabSet.getPaneContainer().setBackgroundColor("#C7DEED");
+//        topTabSet.getPaneContainer().setStyleName("border", true);
     }
 }

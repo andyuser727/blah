@@ -32,7 +32,8 @@ public class InvoiceDetailLayout extends VLayout {
         buttonLayout.addMember(addItemButton);
         buttonLayout.setPadding(20);
         buttonLayout.setAlign(Alignment.LEFT);
-        buttonLayout.setWidth(300);
+        buttonLayout.setWidth(1000);
+        buttonLayout.setBackgroundColor("#E9F5F2");
 
         HLayout hlayout = new HLayout();
         hlayout.addMember(invoiceDetailForm);
@@ -42,7 +43,8 @@ public class InvoiceDetailLayout extends VLayout {
         itemLayout.addMember(itemsForInvoiceGrid);
         itemLayout.setPadding(20);
         itemLayout.setAlign(Alignment.LEFT);
-        itemLayout.setWidth(300);
+        itemLayout.setWidth(1000);
+        itemLayout.setBackgroundColor("#E9F5F2");
 
 //        HLayout addItemLayout = new HLayout();
 //        addItemLayout.addMember(addItemButton);
@@ -57,7 +59,8 @@ public class InvoiceDetailLayout extends VLayout {
         selectAllLayout.addMember(form);
         selectAllLayout.setAlign(Alignment.LEFT);
         selectAllLayout.setHeight(20);
-        selectAllLayout.setWidth(400);
+        selectAllLayout.setWidth(1000);
+        selectAllLayout.setBackgroundColor("#E9F5F2");
 
 
 

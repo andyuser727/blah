@@ -4,10 +4,10 @@
         >
     <ui:style>
         .border {
-            border-top: solid #dcdcdc;
-            border-right: solid #dcdcdc;
-            border-bottom: solid #dcdcdc;
-            border-left: solid #dcdcdc;
+            border-top: solid #ffffff;
+            border-right: solid #ffffff;
+            border-bottom: solid #ffffff;
+            border-left: solid #ffffff;
             border-image: none;
             border-width: 2px;
         }
@@ -18,7 +18,7 @@
         }
 
         .bgGrey {
-            background-color: #ffffff;
+            background-color: #E4F2ED;
         }
     </ui:style>
     <g:FlowPanel height="465px" addStyleNames='{style.bgGrey} {style.shadow} {style.border}'>

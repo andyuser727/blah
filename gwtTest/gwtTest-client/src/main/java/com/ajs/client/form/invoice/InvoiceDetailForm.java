@@ -27,11 +27,12 @@ public class InvoiceDetailForm extends DynamicForm {
 
     public InvoiceDetailForm(){
 
-        setWidth("300px");
+        setWidth("1000px");
         setPadding(30);
         setLayoutAlign(VerticalAlignment.BOTTOM);
         setAlign(Alignment.LEFT);
         setNumCols(6);
+        setBackgroundColor("#E9F5F2");
 
         customerReference = new TextItem();
         customerReference.setTitle("Customer Reference");
