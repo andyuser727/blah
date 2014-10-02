@@ -88,7 +88,7 @@
     <orderEntry type="library" scope="PROVIDED" name="Maven: com.google.gwt:gwt-user:2.4.0" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: javax.validation:validation-api:1.0.0.GA" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: javax.validation:validation-api:sources:1.0.0.GA" level="project" />
-    <orderEntry type="library" name="Maven: com.smartgwt:smartgwt:4.0" level="project" />
+    <orderEntry type="library" name="Maven: com.smartgwt:smartgwt:5.0" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-context-support:sources:3.2.2.RELEASE" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.quartz-scheduler:quartz:sources:1.8.6" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.springframework.batch:spring-batch-core:sources:2.2.0.RELEASE" level="project" />

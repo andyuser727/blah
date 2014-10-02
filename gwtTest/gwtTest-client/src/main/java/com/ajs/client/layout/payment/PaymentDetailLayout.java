@@ -33,7 +33,7 @@ public class PaymentDetailLayout extends VLayout {
         msgLayout = new VLayout();
 
         loadingLayout = new HLayout();
-        Img loadingImg = new Img("/gwttestl/ezgif-save.gif", 950, 20);
+        Img loadingImg = new Img("/gwttestl/ezgif-save.gif", 900, 20);
         loadingLayout.addMember(loadingImg);
 
 
@@ -43,7 +43,8 @@ public class PaymentDetailLayout extends VLayout {
         buttonLayout.addMember(applyPaymentButton);
         buttonLayout.setPadding(20);
         buttonLayout.setAlign(Alignment.LEFT);
-        buttonLayout.setWidth(300);
+        buttonLayout.setWidth(900);
+        buttonLayout.setBackgroundColor("#E9F5F2");
 
         HLayout hlayout = new HLayout();
         hlayout.addMember(paymentDetailForm);
@@ -53,7 +54,8 @@ public class PaymentDetailLayout extends VLayout {
         invoicesForCustomerLayout.addMember(invoicesForCustomerListGrid);
         invoicesForCustomerLayout.setPadding(20);
         invoicesForCustomerLayout.setAlign(Alignment.LEFT);
-        invoicesForCustomerLayout.setWidth(300);
+        invoicesForCustomerLayout.setWidth(900);
+        invoicesForCustomerLayout.setBackgroundColor("#E9F5F2");
 
         addMember(loadingLayout);
         loadingLayout.hide();
@@ -75,7 +77,7 @@ public class PaymentDetailLayout extends VLayout {
 
             StaticTextItem msgLabel = new StaticTextItem();
             msgLabel.setValue(msg);
-            msgLabel.setWidth(950);
+            msgLabel.setWidth(900);
             msgLabel.setShowTitle(false);
             msgLabel.setTextBoxStyle("italic");
             form.setFields(msgLabel);
@@ -86,10 +88,6 @@ public class PaymentDetailLayout extends VLayout {
 
     public void hideMsgLayout() {
         msgLayout.hide();
-    }
-
-    public void showMsgLayout() {
-        msgLayout.show();
     }
 
     public void hideLoadingLayout() {

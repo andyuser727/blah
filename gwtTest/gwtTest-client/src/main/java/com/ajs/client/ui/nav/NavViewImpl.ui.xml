@@ -4,12 +4,14 @@
         >
     <ui:style>
         .border {
-            border-top: solid #ffffff;
-            border-right: solid #ffffff;
-            border-bottom: solid #ffffff;
-            border-left: solid #ffffff;
+            border-top: solid #B5B5B0;
+            border-right: solid #B5B5B0;
+            border-bottom: solid #B5B5B0;
+            border-left: solid #B5B5B0;
             border-image: none;
             border-width: 2px;
+            border-left-width: 0.5px;
+            border-top-width: 0.5px;
         }
 
         .shadow {

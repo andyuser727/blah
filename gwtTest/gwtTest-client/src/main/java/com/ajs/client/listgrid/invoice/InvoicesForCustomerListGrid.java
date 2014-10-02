@@ -48,7 +48,7 @@ public class InvoicesForCustomerListGrid extends ListGrid {
         setCanSelectAll(false);
         setSelectionAppearance(SelectionAppearance.CHECKBOX);
         setSelectionType(SelectionStyle.SINGLE);
-        setWidth(890);
+        setWidth(853);
 
         setFields(invoiceNumber, invoiceDescription, invoiceDate, amount);
     }

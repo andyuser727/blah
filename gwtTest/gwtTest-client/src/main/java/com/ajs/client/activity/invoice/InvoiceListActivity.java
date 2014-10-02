@@ -885,9 +885,10 @@ public class InvoiceListActivity extends BaseAbstractActivity {
         dlg.setHeight(25);
         dlg.setIsModal(true);
         dlg.setShowModalMask(true);
-        Img loadingImg = new Img("/gwttestl/ezgif-save.gif", 3000, 20);
+        Img loadingImg = new Img("/gwttestl/loading.gif", 1500, 25);
         dlg.addMember(loadingImg);
         dlg.moveTo(0, 0);
+//        dlg.centerInPage();
         dlg.show();
     }
 
