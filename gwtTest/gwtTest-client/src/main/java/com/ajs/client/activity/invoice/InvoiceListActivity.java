@@ -32,6 +32,7 @@ import com.google.gwt.user.client.rpc.AsyncCallback;
 import com.google.gwt.user.client.ui.AcceptsOneWidget;
 import com.google.inject.Inject;
 import com.google.inject.Provider;
+import com.smartgwt.client.data.Criteria;
 import com.smartgwt.client.types.*;
 import com.smartgwt.client.widgets.Button;
 import com.smartgwt.client.widgets.Img;
@@ -663,7 +664,7 @@ public class InvoiceListActivity extends BaseAbstractActivity {
 
             invoiceDataSource.addData(record);
         }
-        invoiceDataSource.fetchData();
+        invoiceDataSource.fetchData(new Criteria());
         invoiceGrid.redraw();
     }
 
@@ -699,7 +700,7 @@ public class InvoiceListActivity extends BaseAbstractActivity {
             }
         }
 
-        itemsForInvoiceDataSource.fetchData();
+        itemsForInvoiceDataSource.fetchData(new Criteria());
         itemsForInvoiceGrid.redraw();
     }
 
@@ -721,7 +722,7 @@ public class InvoiceListActivity extends BaseAbstractActivity {
 
             rowNum++;
         }
-        itemListDataSource.fetchData();
+        itemListDataSource.fetchData(new Criteria());
         itemListGrid.redraw();
     }
 

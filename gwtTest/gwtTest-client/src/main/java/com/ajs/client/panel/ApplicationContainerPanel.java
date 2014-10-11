@@ -68,8 +68,9 @@ public class ApplicationContainerPanel extends Composite {
         tabPanel.setSize("826px", "23px");
         mainNavPanel.setHeight("497px");
         contentWrapperPanel.setStyleName("shadow", true);
+//        contentWrapperPanel.setStyleName("marginRight100", true);
         contentWrapperPanel.setStyleName("border", true);
-        contentWrapperPanel.setWidth("826px");
+        contentWrapperPanel.setWidth("924px");
         contentWrapperPanel.setHeight("438px");
 }
 

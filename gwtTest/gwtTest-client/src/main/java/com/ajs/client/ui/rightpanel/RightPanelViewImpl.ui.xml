@@ -28,7 +28,7 @@
         }
 
         .paddingContent {
-            padding-right: 100px;
+            margin-left: 100px;
         }
 
         .paddingImage {
@@ -52,7 +52,7 @@
             background-color: #F7F1DC;
         }
     </ui:style>
-            <g:FlowPanel height="465px" addStyleNames='{style.floatRight} {style.shadow} {style.border} {style.paddingContent} {style.bgGrey}'>
+            <g:FlowPanel height="465px" addStyleNames='{style.floatRight} {style.shadow} {style.border} {style.bgGrey}'>
                 <g:Label ui:field="rightPanelLabel"/>
 
             </g:FlowPanel>

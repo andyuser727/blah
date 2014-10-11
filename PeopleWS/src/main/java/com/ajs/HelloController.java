@@ -334,9 +334,7 @@ public class HelloController {
     }
 
     @RequestMapping(value = "/sitesForTrial.app", method = RequestMethod.GET, headers = "Accept=application/json")
-    public
-    @ResponseBody
-    List<SiteDetails> getSites() {
+    public @ResponseBody List<SiteDetails> getSites() {
 
         List<SiteDetails> list = new ArrayList<SiteDetails>();
 
@@ -388,7 +386,7 @@ public class HelloController {
 
     @RequestMapping(value = "/map.app", method = RequestMethod.GET)
     public ModelAndView getMapView(ModelMap model) {
-        return new ModelAndView("sitemap", model);
+        return new ModelAndView("map", model);
 
     }
 

@@ -21,6 +21,7 @@ public class InvoiceWindow extends Window {
         } else {
             setTitle("Invoice Details");
         }
+        setWidth(700);
         setShowMinimizeButton(false);
         setIsModal(true);
         setShowModalMask(true);

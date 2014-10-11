@@ -63,7 +63,7 @@ public class ItemListGrid extends ListGrid {
 
         if (attachedToInvoice) {
             setDataSource(ItemsForInvoiceDataSource.getInstance());
-            setWidth(890);
+            setWidth(820);
             ListGridField delete = new ListGridField("remove", "Delete");
             delete.setCanEdit(true);
             quantity.setCanEdit(true);

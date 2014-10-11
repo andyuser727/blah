@@ -128,7 +128,6 @@ h1 {
 
 .shadow {
     box-shadow: 10px 10px 5px #888888;
-    padding-right: 100px;
 }
 
 .sendButton {
@@ -172,4 +171,8 @@ h1 {
 }
 .bgApp {
     background-color: lightcyan;
+}
+
+.marginRight100 {
+    margin-right: 100px;
 }

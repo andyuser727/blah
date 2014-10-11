@@ -27,6 +27,7 @@ import com.google.gwt.user.client.rpc.AsyncCallback;
 import com.google.gwt.user.client.ui.AcceptsOneWidget;
 import com.google.inject.Inject;
 import com.google.inject.Provider;
+import com.smartgwt.client.data.Criteria;
 import com.smartgwt.client.types.ListGridFieldType;
 import com.smartgwt.client.types.SelectionAppearance;
 import com.smartgwt.client.types.SelectionStyle;
@@ -389,7 +390,7 @@ public class PaymentListActivity extends BaseAbstractActivity {
 
             paymentDataSource.addData(record);
         }
-        paymentDataSource.fetchData();
+        paymentDataSource.fetchData(new Criteria());
         paymentGrid.redraw();
     }
 
@@ -408,7 +409,7 @@ public class PaymentListActivity extends BaseAbstractActivity {
 
             invoicesForCustomerDataSource.addData(record);
         }
-        invoicesForCustomerDataSource.fetchData();
+        invoicesForCustomerDataSource.fetchData(new Criteria());
         invoicesForCustomerListGrid.redraw();
     }
 

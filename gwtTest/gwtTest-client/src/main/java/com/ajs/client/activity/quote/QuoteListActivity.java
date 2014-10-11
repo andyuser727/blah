@@ -30,6 +30,7 @@ import com.google.gwt.user.client.rpc.AsyncCallback;
 import com.google.gwt.user.client.ui.AcceptsOneWidget;
 import com.google.inject.Inject;
 import com.google.inject.Provider;
+import com.smartgwt.client.data.Criteria;
 import com.smartgwt.client.types.*;
 import com.smartgwt.client.widgets.Button;
 import com.smartgwt.client.widgets.Img;
@@ -605,7 +606,7 @@ public class QuoteListActivity extends BaseAbstractActivity {
 
             quoteDataSource.addData(record);
         }
-        quoteDataSource.fetchData();
+        quoteDataSource.fetchData(new Criteria());
         quoteGrid.redraw();
     }
 
@@ -639,7 +640,7 @@ public class QuoteListActivity extends BaseAbstractActivity {
             }
         }
 
-        itemsForQuoteDataSource.fetchData();
+        itemsForQuoteDataSource.fetchData(new Criteria());
         itemsForQuoteGrid.redraw();
     }
 
@@ -655,7 +656,7 @@ public class QuoteListActivity extends BaseAbstractActivity {
 
             itemListDataSource.addData(record);
         }
-        itemListDataSource.fetchData();
+        itemListDataSource.fetchData(new Criteria());
         itemListGrid.redraw();
     }
 

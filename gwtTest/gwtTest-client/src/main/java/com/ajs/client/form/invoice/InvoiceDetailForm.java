@@ -27,7 +27,7 @@ public class InvoiceDetailForm extends DynamicForm {
 
     public InvoiceDetailForm(){
 
-        setWidth("1000px");
+        setWidth("860px");
         setPadding(30);
         setLayoutAlign(VerticalAlignment.BOTTOM);
         setAlign(Alignment.LEFT);
